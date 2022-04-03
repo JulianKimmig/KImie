@@ -1,3 +1,4 @@
+import logging
 import os
 
 # sets the user dir to a hidden dir in the home dir
@@ -94,3 +95,12 @@ def get_temp_dir() -> str:
     import tempfile
 
     return os.path.join(tempfile.gettempdir(), "KImie")
+
+
+def enter_test_mode():
+    # set the user folder to the temp folder
+    set_user_folder(get_temp_dir())
+    # logger in debug mode
+    from KImie import KIMIE_LOGGER
+
+    KIMIE_LOGGER.setLevel(logging.DEBUG)
