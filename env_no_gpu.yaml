@@ -18,6 +18,7 @@ dependencies:
   - numba
   - ipykernel
   - coloredlogs
+  - openpyxl
   #dev
   - pytest
   - black
