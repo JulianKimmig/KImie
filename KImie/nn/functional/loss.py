@@ -19,7 +19,7 @@ def rell1_loss(input, target, size_average=None, reduce=None, reduction="mean"):
         )
     if size_average is not None or reduce is not None:
         reduction = _Reduction.legacy_get_string(size_average, reduce)
-    target[target == 0] = 10 ** -32
+    target[target == 0] = 10**-32
     ret = torch.abs((input - target) / target)
     if reduction != "none":
         ret = torch.mean(ret) if reduction == "mean" else torch.sum(ret)
@@ -30,10 +30,13 @@ class RMSELoss(torch.nn.Module):
     def __init__(self):
         super().__init__()
         self.mse = torch.nn.MSELoss()
-        
-    def forward(self,yhat,y):
-        return torch.sqrt(self.mse(yhat,y))
-    
+
+    def forward(self, yhat, y):
+        return torch.sqrt(self.mse(yhat, y))
+
+
 class CrossEntropyLossFromOneHot(torch.nn.CrossEntropyLoss):
     def forward(self, input: Tensor, target: Tensor) -> Tensor:
-        return super(CrossEntropyLossFromOneHot, self).forward(input,torch.argmax(target, dim=1))
+        return super(CrossEntropyLossFromOneHot, self).forward(
+            input, torch.argmax(target, dim=1)
+        )

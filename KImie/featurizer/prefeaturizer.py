@@ -311,6 +311,8 @@ class UnknownFeaturizerError(NotImplementedError):
 
 class PrefeaturizerException(Exception):
     pass
+
+
 class Prefeaturizer:
     def __init__(
         self,

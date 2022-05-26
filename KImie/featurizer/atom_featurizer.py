@@ -70,4 +70,3 @@ _available_featurizer["atom_all_single_val_feats"] = atom_all_single_val_feats
 
 def get_available_featurizer():
     return _available_featurizer
-

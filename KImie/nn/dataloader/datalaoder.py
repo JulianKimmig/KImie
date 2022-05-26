@@ -22,7 +22,7 @@ class InMemoryLoader(pl.LightningDataModule):
         self.dataloader_kwargs = dataloader_kwargs
         self.dataloader = dataloader
         self.data = [d for d in data]
-        self._seed=seed
+        self._seed = seed
 
     def setup(self, stage=None):
         data = self.data
@@ -32,7 +32,7 @@ class InMemoryLoader(pl.LightningDataModule):
             split[((l - split.sum()) % len(split))] += 1
 
         indices = np.arange(sum(split))
-        #randomize indices
+        # randomize indices
         np.random.RandomState(self._seed).shuffle(indices)
 
         self.train_ds, self.val_ds, self.test_ds = [

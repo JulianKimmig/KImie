@@ -7,6 +7,7 @@ from KImie.featurizer.featurizer import FeaturizerList
 from tests._kimie_test_base import KImieTest
 import numpy as np
 
+
 class MolecularFeaturizerTest(KImieTest):
     def setUp(self) -> None:
         laoder = PreparedMolDataLoader(ESOL())
@@ -117,47 +118,56 @@ class AtomFeaturizerTest(KImieTest):
     def test_normalization(self):
         raise NotImplementedError()
 
-
     def test_split_and_merge(self):
-        from  KImie.featurizer.utils import merge_atom_featurizer_data, split_atom_featurizer_data
+        from KImie.featurizer.utils import (
+            merge_atom_featurizer_data,
+            split_atom_featurizer_data,
+        )
         from KImie.featurizer.atom_featurizer import atom_ConnectedAtoms_featurizer
         from KImie.featurizer.prefeaturizer import Prefeaturizer
+
         feat = atom_ConnectedAtoms_featurizer
-        ds=ESOL()
+        ds = ESOL()
 
         laoder = PreparedMolDataLoader(ds)
-        pref = Prefeaturizer(laoder,featurizer=feat)
+        pref = Prefeaturizer(laoder, featurizer=feat)
 
-        pref_data=[p for p  in pref]
-        assert len(pref_data)==ds.expected_mol_count 
+        pref_data = [p for p in pref]
+        assert len(pref_data) == ds.expected_mol_count
 
-        ipd,split_indices = merge_atom_featurizer_data(pref)
-        assert ipd.shape[1] == len(feat) 
-        assert ds.expected_mol_count == split_indices.shape[0]+1
+        ipd, split_indices = merge_atom_featurizer_data(pref)
+        assert ipd.shape[1] == len(feat)
+        assert ds.expected_mol_count == split_indices.shape[0] + 1
 
-        for i,e in enumerate(np.split(ipd,split_indices)):
-            np.testing.assert_array_equal(e,pref_data[i])
+        for i, e in enumerate(np.split(ipd, split_indices)):
+            np.testing.assert_array_equal(e, pref_data[i])
 
-        for i,e in enumerate(split_atom_featurizer_data(ipd,split_indices)):
-            np.testing.assert_array_equal(e,pref_data[i])
+        for i, e in enumerate(split_atom_featurizer_data(ipd, split_indices)):
+            np.testing.assert_array_equal(e, pref_data[i])
 
     def test_reduce_features(self):
-        from  KImie.featurizer.utils import reduce_features
-        a = np.zeros((10,4))
-        a[0,0]=0.1
-        a[0,2]=0.9  
-        a[1,2]=0.2
-        a[6,1]=0.3
-        redf,nf_names = reduce_features(a,feature_names=["a","b","c","d"])
-        assert redf.shape[1]==3, redf.shape
-        assert redf.shape[0]==a.shape[0], f"{redf.shape[0]},{a.shape[0]}"
-        assert nf_names == ["a","b","c"], nf_names
+        from KImie.featurizer.utils import reduce_features
 
-        redf,nf_names = reduce_features(a,min_rel_content=0.1,max_rel_content=0.9,feature_names=["a","b","c","d"])
-        assert redf.shape[1]==1, redf.shape
-        assert redf.shape[0]==a.shape[0], f"{redf.shape[0]},{a.shape[0]}"
+        a = np.zeros((10, 4))
+        a[0, 0] = 0.1
+        a[0, 2] = 0.9
+        a[1, 2] = 0.2
+        a[6, 1] = 0.3
+        redf, nf_names = reduce_features(a, feature_names=["a", "b", "c", "d"])
+        assert redf.shape[1] == 3, redf.shape
+        assert redf.shape[0] == a.shape[0], f"{redf.shape[0]},{a.shape[0]}"
+        assert nf_names == ["a", "b", "c"], nf_names
+
+        redf, nf_names = reduce_features(
+            a,
+            min_rel_content=0.1,
+            max_rel_content=0.9,
+            feature_names=["a", "b", "c", "d"],
+        )
+        assert redf.shape[1] == 1, redf.shape
+        assert redf.shape[0] == a.shape[0], f"{redf.shape[0]},{a.shape[0]}"
         assert nf_names == ["c"], nf_names
 
-        redf = reduce_features(a,min_rel_content=0.1,max_rel_content=0.9)
-        assert redf.shape[1]==1, redf.shape
-        assert redf.shape[0]==a.shape[0], f"{redf.shape[0]},{a.shape[0]}"
+        redf = reduce_features(a, min_rel_content=0.1, max_rel_content=0.9)
+        assert redf.shape[1] == 1, redf.shape
+        assert redf.shape[0] == a.shape[0], f"{redf.shape[0]},{a.shape[0]}"

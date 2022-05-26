@@ -29,7 +29,6 @@ class Atom_ConnectedAtoms_Featurizer(FixedSizeAtomFeaturizer):
         d["possible_values"] = self.atoms
         return d
 
-   
     def describe_features(self):
         if self._feature_descriptions is None:
             n = str(self)
@@ -186,25 +185,43 @@ class Atom_PartialCharge_Featurizer(SingleValueAtomFeaturizer):
     dtype = np.float32
     featurize = staticmethod(_get_gasteiger_charge)
 
+
 atom_PartialCharge_featurizer = Atom_PartialCharge_Featurizer()
 
 
-_pauling_en = np.array([ATOM_PROPS.loc[n,'EN_pauling_scale'] if n in ATOM_PROPS.index else np.nan  for n in ATOMIC_SYMBOL_NUMBERS.values()])
+_pauling_en = np.array(
+    [
+        ATOM_PROPS.loc[n, "EN_pauling_scale"] if n in ATOM_PROPS.index else np.nan
+        for n in ATOMIC_SYMBOL_NUMBERS.values()
+    ]
+)
+
+
 class Atom_PaulingElectronegativity_Featurizer(SingleValueAtomFeaturizer):
     dtype = np.float32
+
     def featurize(self, atom):
         return _pauling_en[atom.GetAtomicNum()]
 
+
 atom_PaulingElectronegativity_featurizer = Atom_PaulingElectronegativity_Featurizer()
 
-_allen_en = np.array([ATOM_PROPS.loc[n,'EN_allen_scale'] if n in ATOM_PROPS.index else np.nan  for n in ATOMIC_SYMBOL_NUMBERS.values()])
+_allen_en = np.array(
+    [
+        ATOM_PROPS.loc[n, "EN_allen_scale"] if n in ATOM_PROPS.index else np.nan
+        for n in ATOMIC_SYMBOL_NUMBERS.values()
+    ]
+)
+
+
 class Atom_AllenElectronegativity_Featurizer(SingleValueAtomFeaturizer):
     dtype = np.float32
+
     def featurize(self, atom):
         return _allen_en[atom.GetAtomicNum()]
 
-atom_AllenElectronegativity_featurizer = Atom_AllenElectronegativity_Featurizer()
 
+atom_AllenElectronegativity_featurizer = Atom_AllenElectronegativity_Featurizer()
 
 
 _available_featurizer = {

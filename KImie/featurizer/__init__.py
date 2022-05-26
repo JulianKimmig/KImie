@@ -199,4 +199,3 @@ def get_normalization_data() -> Dict[str, List[Dict[str, Dict[str, Any]]]]:
     Returns the normalization data dictionary
     """
     return _NORMALIZATION_DATA
-

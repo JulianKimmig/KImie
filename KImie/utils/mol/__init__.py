@@ -1,6 +1,8 @@
 from rdkit import Chem
 import pandas as pd
 import os
+
+
 def _gen_atom_n():
     d = {}
     em = Chem.RWMol()
@@ -18,4 +20,6 @@ def _gen_atom_n():
 
 ATOMIC_SYMBOL_NUMBERS = _gen_atom_n()
 
-ATOM_PROPS = pd.read_csv(os.path.join(os.path.dirname(__file__),"atom_props.csv"),index_col=0)
+ATOM_PROPS = pd.read_csv(
+    os.path.join(os.path.dirname(__file__), "atom_props.csv"), index_col=0
+)

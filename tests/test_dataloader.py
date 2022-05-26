@@ -10,8 +10,6 @@ class MolDataloaderTest(KImieTest):
         laoder = PreparedMolDataLoader(ESOL())
         for mol in laoder:
             assert check_mol_is_prepared(mol)
-    
-    
 
     def test_in_memory_lighning(self):
         from KImie.dataloader.lighning import InMemoryLoader
@@ -69,6 +67,5 @@ class MolDataloaderTest(KImieTest):
             assert i.shape[1] == 12, f"{i.shape[1]} features, expected 12"
             break
 
-
-        #test seed
+        # test seed
         raise NotImplementedError()
