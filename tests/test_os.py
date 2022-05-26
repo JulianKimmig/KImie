@@ -1,17 +1,13 @@
 import datetime
 import os
 import time
-import unittest
 
 from KImie.utils.logging import get_logs_as_dataframe, KIMIE_LOGGER
 from KImie.utils.sys import get_temp_dir, set_user_folder, get_user_folder
+from tests._kimie_test_base import KImieTest
 
 
-class OSTest(unittest.TestCase):
-    def setUp(self) -> None:
-        set_user_folder(get_temp_dir(), permanent=False)
-        KIMIE_LOGGER.setLevel("DEBUG")
-
+class OSTest(KImieTest):
     def test_logging(self):
         t = datetime.datetime.now()
         KIMIE_LOGGER.debug(f"logging test")

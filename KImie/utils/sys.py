@@ -104,3 +104,4 @@ def enter_test_mode():
     from KImie import KIMIE_LOGGER
 
     KIMIE_LOGGER.setLevel(logging.DEBUG)
+    KIMIE_LOGGER.info(f"entered test mode using folder: {get_user_folder()}")

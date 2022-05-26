@@ -19,6 +19,8 @@ try:
         _available_featurizer[n] = f
 
     __all__ += _autogen_ochem_alerts_molecule_featurizer.__all__
+except ImportError as e:
+    raise e
 except Exception as e:
     KIMIE_LOGGER.exception(e)
 
@@ -38,6 +40,8 @@ try:
         _available_featurizer[n] = f
 
     __all__ += _autogen_rdkit_atomtype_molecule_featurizer.__all__
+except ImportError as e:
+    raise e
 except Exception as e:
     KIMIE_LOGGER.exception(e)
 
@@ -59,6 +63,8 @@ try:
         _available_featurizer[n] = f
 
     __all__ += _autogen_rdkit_feats_array_molecule_featurizer.__all__
+except ImportError as e:
+    raise e
 except Exception as e:
     KIMIE_LOGGER.exception(e)
 
@@ -82,6 +88,8 @@ try:
         _available_featurizer[n] = f
 
     __all__ += _autogen_rdkit_feats_numeric_molecule_featurizer.__all__
+except ImportError as e:
+    raise e
 except Exception as e:
     KIMIE_LOGGER.exception(e)
 
@@ -103,6 +111,8 @@ try:
         _available_featurizer[n] = f
 
     __all__ += _autogen_rdkit_feats_str_molecule_featurizer.__all__
+except ImportError as e:
+    raise e
 except Exception as e:
     KIMIE_LOGGER.exception(e)
 
@@ -124,6 +134,8 @@ try:
         _available_featurizer[n] = f
 
     __all__ += _autogen_rdkit_feats_vec_molecule_featurizer.__all__
+except ImportError as e:
+    raise e
 except Exception as e:
     KIMIE_LOGGER.exception(e)
 

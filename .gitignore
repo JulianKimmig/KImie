@@ -92,3 +92,5 @@ venv.bak/
 /upload_to_pypi.py
 
 /.local/
+.vscode/
+KImie.code-workspace

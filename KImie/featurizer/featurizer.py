@@ -248,9 +248,13 @@ class OneHotFeaturizer(FixedSizeFeaturizer):
 
 
 class FeaturizerList(Featurizer):
+    dtype = None
+
     def __init__(self, feature_list, name=None, *args, **kwargs):
         if name == None:
             name = "FeatureList({})".format(",".join([str(f) for f in feature_list]))
+        if not "dtype" in kwargs and self.dtype is not None:
+            kwargs["dtype"] = self.dtype
         if not "dtype" in kwargs and len(feature_list) > 0:
             kwargs["dtype"] = (
                 np.concatenate([np.ones(1, dtype=f.get_dtype()) for f in feature_list])

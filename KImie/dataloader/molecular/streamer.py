@@ -80,7 +80,7 @@ class SDFStreamer(MolStreamer):
         dataloader,
         file_getter,
         *args,
-        gz=True,
+        gz=False,
         cached=False,
         # threads="all-1", #Not implemented due to error with closing MultithreadedSDMolSupplier
         **kwargs

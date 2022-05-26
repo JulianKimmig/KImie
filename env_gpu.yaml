@@ -11,14 +11,16 @@ dependencies:
   - numpy
   - networkx
   - pip
-  - pytorch==1.9
+  - pytorch==1.9.0
   - torchvision
   - torchaudio
+  - pytorch-lightning>=1.5
   - pyg
-  - numba
+  - numba>=0.55
   - ipykernel
   - coloredlogs
   - openpyxl
+  - ipywidgets
   #dev
   - pytest
   - black

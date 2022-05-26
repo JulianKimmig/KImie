@@ -80,6 +80,7 @@ class PreparedMolAdjacencyListDataLoader(PreparedMolDataLoader):
         adj_files = [f for f in os.listdir(self.raw_file_path) if f.endswith(".npy")]
         if len(adj_files) < self.expected_mol_count:
             for i, mol in self._raw_gen(desc="generate prepared mols adjecency list"):
+                mol = prepare_mol_for_featurization(mol)
                 adj_matrix = GetAdjacencyMatrix(mol)
                 row, col = np.where(adj_matrix)
                 adj_list = np.unique(np.sort(np.vstack((row, col)).T, axis=1), axis=0)
