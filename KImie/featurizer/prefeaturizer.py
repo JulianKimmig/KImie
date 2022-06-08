@@ -302,7 +302,7 @@ def molecule_fixed_size_iterator(data_path, featurizer):
         selector[ignored_array] = False
         data_array = data_array[selector]
         for i in range(data_array.shape[0]):
-            yield featurizer.postfeaturize(data_array[i])
+            yield featurizer.postfeaturize(data_array[[i]])
 
 
 class UnknownFeaturizerError(NotImplementedError):
