@@ -13,6 +13,7 @@ class InMemoryLoader(pl.LightningDataModule):
         batch_size=32,
         dataloader: Type[DataLoader] = DataLoader,
         seed=None,
+        shuffle=True,
         **dataloader_kwargs
     ):
         super().__init__()
@@ -22,6 +23,8 @@ class InMemoryLoader(pl.LightningDataModule):
         self.dataloader_kwargs = dataloader_kwargs
         self.dataloader = dataloader
         self.data = [d for d in data]
+        if not shuffle:
+            seed=-1
         self._seed = seed
 
     def setup(self, stage=None):
@@ -33,7 +36,8 @@ class InMemoryLoader(pl.LightningDataModule):
 
         indices = np.arange(sum(split))
         # randomize indices
-        np.random.RandomState(self._seed).shuffle(indices)
+        if self._seed is None or self._seed >= 0:
+            np.random.RandomState(self._seed).shuffle(indices)
 
         self.train_ds, self.val_ds, self.test_ds = [
             Subset(data, indices[offset - length : offset])
