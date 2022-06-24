@@ -5,14 +5,14 @@ import pickle
 import numpy as np
 import pandas as pd
 from KImie.featurizer.molecule_featurizer import prepare_mol_for_featurization
-from rdkit.Chem import GetAdjacencyMatrix
+
 from tqdm import tqdm
 
 from KImie import KIMIE_LOGGER, get_user_folder
 from KImie.dataloader.molecular.dataloader import MolDataLoader
 from KImie.dataloader.molecular.streamer import PickledMolStreamer
 from KImie.dataloader.streamer import NumpyStreamer, CSVStreamer
-
+from KImie.utils.mol import mol_to_graph_data
 
 class PreparedMolDataLoader(MolDataLoader):
     raw_file = "mols"
@@ -81,9 +81,7 @@ class PreparedMolAdjacencyListDataLoader(PreparedMolDataLoader):
         if len(adj_files) < self.expected_mol_count:
             for i, mol in self._raw_gen(desc="generate prepared mols adjecency list"):
                 mol = prepare_mol_for_featurization(mol)
-                adj_matrix = GetAdjacencyMatrix(mol)
-                row, col = np.where(adj_matrix)
-                adj_list = np.unique(np.sort(np.vstack((row, col)).T, axis=1), axis=0)
+                nodes,edge_list = mol_to_graph_data(mol)
                 np.save(os.path.join(self.raw_file_path, f"{i}.npy"), adj_list)
 
 
