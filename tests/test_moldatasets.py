@@ -306,3 +306,9 @@ class BradleyDoublePlusGoodMPTest(BaseTestClass.DataSetTest):
             [13, 14],
         ]
     )
+
+from KImie.dataloader.molecular.nmrshiftdb2 import NMRShiftDB2_1H
+class NMRShiftDB2_1HTest(BaseTestClass.DataSetTest):
+    DS_NAME = "NMRShiftDB2_1H"
+    DS_CLASS = NMRShiftDB2_1H
+
