@@ -21,6 +21,8 @@ class DataLoader:
     citation = None
     local_source = None
 
+    dl_chunk_size = 2**16
+
     def __init__(self, parent_dir=None, data_streamer_kwargs=None):
         if data_streamer_kwargs is None:
             data_streamer_kwargs = {}
@@ -46,30 +48,44 @@ class DataLoader:
             trg = os.path.join(self.parent_dir, os.path.basename(self.local_source))
             shutil.copyfile(self.local_source, trg)
         else:
+            fname=None
             try:
-                response = requests.get(self.source, stream=True, timeout=10)
-                total_length = response.headers.get("content-length")
-                chunk_size = 2**16
-                if total_length:
-                    total_length = int(total_length)
+                if self.dl_chunk_size!=0:
+                    response = requests.get(self.source, stream=True, timeout=10)
+                    total_length = response.headers.get("content-length")
 
-                if "Content-Disposition" in response.headers.keys():
-                    fname = re.findall(
-                        "filename=(.+)", response.headers["Content-Disposition"]
-                    )[0]
+                    if total_length:
+                        total_length = int(total_length)
+
+                    if "Content-Disposition" in response.headers.keys():
+                        fname = re.findall(
+                            "filename=(.+)", response.headers["Content-Disposition"]
+                        )[0]
+                    else:
+                        fname = self.source.split("/")[-1]
+
+                    with open(os.path.join(self.parent_dir, fname), "wb") as handle, tqdm(
+                        total=total_length, unit="byte", unit_scale=True
+                    ) as pbar:
+                        for data in response.iter_content(chunk_size=self.dl_chunk_size):
+                            handle.write(data)
+                            pbar.update(len(data))
                 else:
-                    fname = self.source.split("/")[-1]
+                    response = requests.get(self.source, timeout=10)
+                    if "Content-Disposition" in response.headers.keys():
+                        fname = re.findall(
+                            "filename=(.+)", response.headers["Content-Disposition"]
+                        )[0]
+                    else:
+                        fname = self.source.split("/")[-1]
 
-                with open(os.path.join(self.parent_dir, fname), "wb") as handle, tqdm(
-                    total=total_length, unit="byte", unit_scale=True
-                ) as pbar:
-                    for data in response.iter_content(chunk_size=None):
-                        handle.write(data)
-                        pbar.update(len(data))
+                    with open(os.path.join(self.parent_dir, fname), "wb") as handle:
+                        handle.write(response.content)
                 trg = os.path.join(self.parent_dir, fname)
             except BaseException as e:
-                if os.path.exists(os.path.join(self.parent_dir, fname)):
-                    os.remove(os.path.join(self.parent_dir, fname))
+                if fname is not None:
+                    if os.path.exists(os.path.join(self.parent_dir, fname)):
+                        os.remove(os.path.join(self.parent_dir, fname))
                 raise e
         fp = self.process_download_data(trg)
 
