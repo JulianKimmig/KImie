@@ -26,7 +26,7 @@ ATOM_PROPS = pd.read_csv(
 )
 
 
-def mol_to_graphdata(mol:Chem.Mol) -> Tuple[np.ndarray,np.ndarray]:
+def mol_to_graph_data(mol:Chem.Mol) -> Tuple[np.ndarray,np.ndarray]:
     adj_matrix = GetAdjacencyMatrix(mol)
     nodes = np.arange(adj_matrix.shape[0])
     row, col = np.where(adj_matrix)
