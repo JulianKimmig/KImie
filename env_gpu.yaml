@@ -25,5 +25,5 @@ dependencies:
   - pytest
   - black
   #gpu
-  - cudatoolkit=11.1
+  - cudatoolkit>=11.1
   
