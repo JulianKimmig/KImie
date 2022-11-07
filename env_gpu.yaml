@@ -11,7 +11,7 @@ dependencies:
   - numpy
   - networkx
   - pip
-  - pytorch
+  - pytorch>=1.9.0
   - torchvision
   - torchaudio
   - pytorch-lightning>=1.5
