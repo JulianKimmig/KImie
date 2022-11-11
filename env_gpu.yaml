@@ -1,4 +1,5 @@
 channels:
+  - nvidia
   - pytorch
   - pyg
   - conda-forge
@@ -12,8 +13,6 @@ dependencies:
   - networkx
   - pip
   - pytorch>=1.9.0
-  - torchvision
-  - torchaudio
   - pytorch-lightning>=1.5
   - pyg
   - numba>=0.55
@@ -25,5 +24,5 @@ dependencies:
   - pytest
   - black
   #gpu
-  - cudatoolkit>=11.1
+  - pytorch-cuda
   
