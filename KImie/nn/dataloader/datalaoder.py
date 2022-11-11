@@ -38,10 +38,12 @@ class InMemoryLoader(pl.LightningDataModule):
         # randomize indices
         if self._seed is None or self._seed >= 0:
             np.random.RandomState(self._seed).shuffle(indices)
-
+        
+        
+        self.train_indices, self.val_indices, self.test_indices = (indices[offset - length : offset] for offset, length in zip(np.add.accumulate(split), split))
         self.train_ds, self.val_ds, self.test_ds = [
-            Subset(data, indices[offset - length : offset])
-            for offset, length in zip(np.add.accumulate(split), split)
+            Subset(data, ind)
+            for ind in (self.train_indices, self.val_indices, self.test_indices)
         ]
 
     def train_dataloader(self):
