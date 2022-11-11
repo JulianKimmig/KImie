@@ -82,7 +82,7 @@ class PreparedMolAdjacencyListDataLoader(PreparedMolDataLoader):
             for i, mol in self._raw_gen(desc="generate prepared mols adjecency list"):
                 mol = prepare_mol_for_featurization(mol)
                 nodes,edge_list = mol_to_graph_data(mol)
-                np.save(os.path.join(self.raw_file_path, f"{i}.npy"), adj_list)
+                np.save(os.path.join(self.raw_file_path, f"{i}.npy"), edge_list)
 
 
 class PreparedMolPropertiesDataLoader(PreparedMolDataLoader):
