@@ -14,6 +14,7 @@ from KImie.dataloader.molecular.streamer import PickledMolStreamer
 from KImie.dataloader.streamer import NumpyStreamer, CSVStreamer
 from KImie.utils.mol import mol_to_graph_data
 
+
 class PreparedMolDataLoader(MolDataLoader):
     raw_file = "mols"
     data_streamer_generator = PickledMolStreamer.generator(
@@ -53,6 +54,7 @@ class PreparedMolDataLoader(MolDataLoader):
                     pickle.dump(pmol, f)
 
     def _raw_gen(self, desc=None):
+        KIMIE_LOGGER.debug("generate raw mols")
         pin = self._mdl.data_streamer._iter_None
         self._mdl.data_streamer._iter_None = True
         self._mdl.close()
@@ -81,7 +83,7 @@ class PreparedMolAdjacencyListDataLoader(PreparedMolDataLoader):
         if len(adj_files) < self.expected_mol_count:
             for i, mol in self._raw_gen(desc="generate prepared mols adjecency list"):
                 mol = prepare_mol_for_featurization(mol)
-                nodes,edge_list = mol_to_graph_data(mol)
+                nodes, edge_list = mol_to_graph_data(mol)
                 np.save(os.path.join(self.raw_file_path, f"{i}.npy"), edge_list)
 
 

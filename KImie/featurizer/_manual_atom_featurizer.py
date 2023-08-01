@@ -45,7 +45,6 @@ def atom_symbol_one_hot_from_set_of_mols_featurizer(
 
     _possible_values = []
     for mol in list_of_mols:
-
         if isinstance(mol, Molecule):
             mol = mol.get_mol(with_H=True)
         if not isinstance(mol, Mol):

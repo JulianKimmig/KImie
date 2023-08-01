@@ -144,7 +144,6 @@ class DataStreamer:
 
 class NumpyStreamer(DataStreamer):
     def __init__(self, dataloader, folder_getter, *args, cached=False, **kwargs):
-
         super(NumpyStreamer, self).__init__(
             dataloader,
             *args,
@@ -172,7 +171,6 @@ class CSVStreamer(DataStreamer):
     def __init__(
         self, dataloader, file_getter, *args, cached=False, chunksize=None, **kwargs
     ):
-
         super(CSVStreamer, self).__init__(
             dataloader,
             *args,
@@ -207,5 +205,39 @@ class CSVStreamer(DataStreamer):
             with pd.read_csv(file, chunksize=self.chunksize, index_col=0) as reader:
                 for chunk in reader:
                     yield (chunk)
+
+        return _it()
+
+
+class MemoryStreamer(DataStreamer):
+    def __init__(self, dataloader, data, *args, cached=False, **kwargs):
+        super(MemoryStreamer, self).__init__(
+            dataloader,
+            *args,
+            **kwargs,
+            cached=cached,
+            progress_bar_kwargs=dict(unit="array", unit_scale=True),
+        )
+        self._data = data
+
+    def get_iterator(self):
+        def _it():
+            for d in self._data:
+                yield d
+
+        return _it()
+
+
+class DfStreamer(MemoryStreamer):
+    def get_iterator(self):
+        if not isinstance(self._data, pd.DataFrame):
+            raise ValueError("data is not a pandas dataframe")
+
+        def _it():
+            if not isinstance(self._data, pd.DataFrame):
+                raise ValueError("data is not a pandas dataframe")
+
+            for i, d in self._data.iterrows():
+                yield d
 
         return _it()

@@ -48,9 +48,9 @@ class DataLoader:
             trg = os.path.join(self.parent_dir, os.path.basename(self.local_source))
             shutil.copyfile(self.local_source, trg)
         else:
-            fname=None
+            fname = None
             try:
-                if self.dl_chunk_size!=0:
+                if self.dl_chunk_size != 0:
                     response = requests.get(self.source, stream=True, timeout=10)
                     total_length = response.headers.get("content-length")
 
@@ -64,10 +64,14 @@ class DataLoader:
                     else:
                         fname = self.source.split("/")[-1]
 
-                    with open(os.path.join(self.parent_dir, fname), "wb") as handle, tqdm(
+                    with open(
+                        os.path.join(self.parent_dir, fname), "wb"
+                    ) as handle, tqdm(
                         total=total_length, unit="byte", unit_scale=True
                     ) as pbar:
-                        for data in response.iter_content(chunk_size=self.dl_chunk_size):
+                        for data in response.iter_content(
+                            chunk_size=self.dl_chunk_size
+                        ):
                             handle.write(data)
                             pbar.update(len(data))
                 else:
@@ -87,6 +91,7 @@ class DataLoader:
                     if os.path.exists(os.path.join(self.parent_dir, fname)):
                         os.remove(os.path.join(self.parent_dir, fname))
                 raise e
+        KIMIE_LOGGER.debug("processing downloaded data")
         fp = self.process_download_data(trg)
 
         return fp
@@ -95,7 +100,7 @@ class DataLoader:
         return raw_file
 
     def download(self):
-        print(f"downlaod data from {self.source}")
+        KIMIE_LOGGER.debug(f"downlaod data from {self.source}")
         dl = self._downlaod()
         dl = os.path.abspath(dl)
         if not dl == self.raw_file_path:

@@ -17,7 +17,6 @@ class Lipo1(MolDataLoader):
     local_source = os.path.join(os.path.dirname(__file__), "local", "Lipophilicity.csv")
 
     def process_download_data(self, raw_file):
-
         df = pd.read_csv(raw_file)
         df = self.df_smiles_to_mol(df, "smiles")
         for r, d in df.iterrows():

@@ -49,7 +49,6 @@ class MolStreamer(DataStreamer):
 
 class PickledMolStreamer(MolStreamer):
     def __init__(self, dataloader, folder_getter, *args, cached=False, **kwargs):
-
         super(PickledMolStreamer, self).__init__(
             dataloader,
             *args,

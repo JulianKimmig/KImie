@@ -61,6 +61,7 @@ def parallelize(
         [i * pl + r, (i + 1) * pl + r] for i in range(r, p)
     ]
     sub_data = (data[i:k] for i, k in sr)
+
     # sub_data = np.array_split(data, min(max_split, int(np.ceil(len(data) / cores))))
     class ResAdder:
         def __init__(self, target=None, is_array=False):

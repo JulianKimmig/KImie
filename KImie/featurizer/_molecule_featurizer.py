@@ -16,7 +16,6 @@ from KImie import KIMIE_LOGGER
 def prepare_mol_for_featurization(
     mol, addHs=True, renumber=True, conformers=True, sanitize=True
 ) -> Mol:
-
     if addHs:
         if mol.GetNumAtoms(onlyHeavy=False) != mol.GetNumAtoms(onlyHeavy=True):
             mol = AddHs(mol, addCoords=True)

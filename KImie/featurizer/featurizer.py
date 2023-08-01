@@ -60,7 +60,6 @@ class Featurizer:
     def __init__(
         self, name=None, dtype=None, feature_descriptions=None, *args, **kwargs
     ):
-
         if name is None:
             if self.NAME is None:
                 name = f"{self.__class__.__module__}.{self.__class__.__name__}"

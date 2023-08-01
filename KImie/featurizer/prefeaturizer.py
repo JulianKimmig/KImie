@@ -408,7 +408,7 @@ class Prefeaturizer:
         return self._data_path
 
     def _set_info(self, key, value):
-        change=(key not in self._info) or (self._info[key] != value)
+        change = (key not in self._info) or (self._info[key] != value)
         self._info[key] = value
         with open(self._info_file, "w+") as f:
             json.dump(self._info, f, indent=4)
@@ -440,13 +440,11 @@ class Prefeaturizer:
     def delete(self):
         self._set_info("done", False)
         self._set_info("working", False)
-        
+
         if os.path.exists(self.data_path):
             shutil.rmtree(self.data_path)
-        
 
     def prefeaturize(self, recalculate=False, ignore_working=False):
-
         self.dataloader.close()  # just in case it was already in iteration
 
         # check and create info_file

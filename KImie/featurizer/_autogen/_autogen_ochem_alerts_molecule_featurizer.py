@@ -8,7 +8,9 @@ molecule_functional_group_12_Diamines_featurizer = MoleculeHasSubstructureFeatur
 
 
 molecule_functional_group_1H_Azirines_Hs_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#7R1]1-[#6R1]=[#6R1]-1", feature_descriptions=None, name="autogen_ochem_alerts_1H-Azirines (HS)"
+    smarts="[#7R1]1-[#6R1]=[#6R1]-1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_1H-Azirines (HS)",
 )
 
 
@@ -335,7 +337,9 @@ molecule_functional_group_1_2_Dioxolenes_Hs_featurizer = (
 
 
 molecule_functional_group_1_2_Diphenols_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c([OH1])c([OH1])", feature_descriptions=None, name="autogen_ochem_alerts_1,2 – Diphenols"
+    smarts="c([OH1])c([OH1])",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_1,2 – Diphenols",
 )
 
 
@@ -375,7 +379,9 @@ molecule_functional_group_1_2_Dithiols_featurizer = MoleculeHasSubstructureFeatu
 
 molecule_functional_group_1_2_Dithiophenols_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="c([SH1])c([SH1])", feature_descriptions=None, name="autogen_ochem_alerts_1,2 – Dithiophenols"
+        smarts="c([SH1])c([SH1])",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_1,2 – Dithiophenols",
     )
 )
 
@@ -485,7 +491,9 @@ molecule_functional_group_1_3_Dioxolenes_Hs_featurizer = (
 
 
 molecule_functional_group_1_3_Diphenols_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c([OH1])[aR1]c([OH1])", feature_descriptions=None, name="autogen_ochem_alerts_1,3 – Diphenols"
+    smarts="c([OH1])[aR1]c([OH1])",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_1,3 – Diphenols",
 )
 
 
@@ -571,7 +579,9 @@ molecule_functional_group_1_4_DihydroxyAromaticCompounds_featurizer = (
 
 
 molecule_functional_group_1_4_Diphenols_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1([OH1])aac([OH1])aa1", feature_descriptions=None, name="autogen_ochem_alerts_1,4 - Diphenols"
+    smarts="c1([OH1])aac([OH1])aa1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_1,4 - Diphenols",
 )
 
 
@@ -640,7 +650,9 @@ molecule_functional_group_28_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_2H_Azirines_Hs_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#7R1]1=[#6R1]-[#6R1]-1", feature_descriptions=None, name="autogen_ochem_alerts_2H-Azirines (HS)"
+    smarts="[#7R1]1=[#6R1]-[#6R1]-1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_2H-Azirines (HS)",
 )
 
 
@@ -806,7 +818,9 @@ molecule_functional_group_2_Azetines_Hs_featurizer = MoleculeHasSubstructureFeat
 
 molecule_functional_group_2_Chloropyridine_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="n1c(cccc1)Cl", feature_descriptions=None, name="autogen_ochem_alerts_2-Chloropyridine"
+        smarts="n1c(cccc1)Cl",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_2-Chloropyridine",
     )
 )
 
@@ -1046,12 +1060,16 @@ molecule_functional_group_8_Quinolinols_featurizer = MoleculeHasSubstructureFeat
 
 
 molecule_functional_group_A10_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[nH1]1[nH]cnc1=O", feature_descriptions=None, name="autogen_ochem_alerts_A10"
+    smarts="[nH1]1[nH]cnc1=O",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_A10",
 )
 
 
 molecule_functional_group_A11_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OH1]C1=N[NH1]C=N1", feature_descriptions=None, name="autogen_ochem_alerts_A11"
+    smarts="[OH1]C1=N[NH1]C=N1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_A11",
 )
 
 
@@ -1076,7 +1094,9 @@ molecule_functional_group_A15_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_A16_Tetrazole_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[nH1]nnn", feature_descriptions=None, name="autogen_ochem_alerts_A16 - tetrazole"
+    smarts="[nH1]nnn",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_A16 - tetrazole",
 )
 
 
@@ -1086,12 +1106,16 @@ molecule_functional_group_A17_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_A18_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OH1]C1=NC(=O)NO1", feature_descriptions=None, name="autogen_ochem_alerts_A18"
+    smarts="[OH1]C1=NC(=O)NO1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_A18",
 )
 
 
 molecule_functional_group_A19_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OH1]C1=NC(=O)ON1", feature_descriptions=None, name="autogen_ochem_alerts_A19"
+    smarts="[OH1]C1=NC(=O)ON1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_A19",
 )
 
 
@@ -1114,27 +1138,37 @@ molecule_functional_group_A1_E_G_CarboxylicAcid_featurizer = (
 
 
 molecule_functional_group_A20_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[nH1]1cnnc1C(F)(F)F", feature_descriptions=None, name="autogen_ochem_alerts_A20"
+    smarts="[nH1]1cnnc1C(F)(F)F",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_A20",
 )
 
 
 molecule_functional_group_A21_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[nH1]1cnc(n1)C(F)(F)F", feature_descriptions=None, name="autogen_ochem_alerts_A21"
+    smarts="[nH1]1cnc(n1)C(F)(F)F",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_A21",
 )
 
 
 molecule_functional_group_A22_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[nH1]1C(=O)CC(=O)O1", feature_descriptions=None, name="autogen_ochem_alerts_A22"
+    smarts="[nH1]1C(=O)CC(=O)O1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_A22",
 )
 
 
 molecule_functional_group_A23_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OH1]C1=CC(=O)NO1", feature_descriptions=None, name="autogen_ochem_alerts_A23"
+    smarts="[OH1]C1=CC(=O)NO1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_A23",
 )
 
 
 molecule_functional_group_A24_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OH1]C1=CC(=O)ON1", feature_descriptions=None, name="autogen_ochem_alerts_A24"
+    smarts="[OH1]C1=CC(=O)ON1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_A24",
 )
 
 
@@ -1148,17 +1182,23 @@ molecule_functional_group_A25_Benzosulphimide_featurizer = (
 
 
 molecule_functional_group_A26_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OH1]C1=NS(=O)(=O)c2ccccc21", feature_descriptions=None, name="autogen_ochem_alerts_A26"
+    smarts="[OH1]C1=NS(=O)(=O)c2ccccc21",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_A26",
 )
 
 
 molecule_functional_group_A27_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OH1]C1=NC(=O)c2ccccc21", feature_descriptions=None, name="autogen_ochem_alerts_A27"
+    smarts="[OH1]C1=NC(=O)c2ccccc21",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_A27",
 )
 
 
 molecule_functional_group_A28_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OH1]C1=COC=CC1=O", feature_descriptions=None, name="autogen_ochem_alerts_A28"
+    smarts="[OH1]C1=COC=CC1=O",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_A28",
 )
 
 
@@ -1168,7 +1208,9 @@ molecule_functional_group_A29_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_A2_E_G_Imide_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[NH1]([P,S]=O)([P,S]=O)", feature_descriptions=None, name="autogen_ochem_alerts_A2 - e.g.,imide"
+    smarts="[NH1]([P,S]=O)([P,S]=O)",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_A2 - e.g.,imide",
 )
 
 
@@ -1207,7 +1249,9 @@ molecule_functional_group_A32_ArylSulphonamide_featurizer = (
 
 
 molecule_functional_group_A33_Phenol_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OH1]c1c[c,n]ccc1", feature_descriptions=None, name="autogen_ochem_alerts_A33 - phenol"
+    smarts="[OH1]c1c[c,n]ccc1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_A33 - phenol",
 )
 
 
@@ -1227,12 +1271,16 @@ molecule_functional_group_A5_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_A6_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OH1]C1=NC(=O)CC1=O", feature_descriptions=None, name="autogen_ochem_alerts_A6"
+    smarts="[OH1]C1=NC(=O)CC1=O",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_A6",
 )
 
 
 molecule_functional_group_A7_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OH1]C1NC(=O)C(=O)C1", feature_descriptions=None, name="autogen_ochem_alerts_A7"
+    smarts="[OH1]C1NC(=O)C(=O)C1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_A7",
 )
 
 
@@ -1333,7 +1381,9 @@ molecule_functional_group_Acetates_featurizer = MoleculeHasSubstructureFeaturize
 
 
 molecule_functional_group_Acethylenes_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[CH2,CH3]C#C[CH2,CH3]", feature_descriptions=None, name="autogen_ochem_alerts_Acethylenes"
+    smarts="[CH2,CH3]C#C[CH2,CH3]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Acethylenes",
 )
 
 
@@ -1471,7 +1521,9 @@ molecule_functional_group_AcidImides__2_featurizer = MoleculeHasSubstructureFeat
 
 molecule_functional_group_Acid_Anhydrides_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="C(=O)OC(=O)", feature_descriptions=None, name="autogen_ochem_alerts_Acid_anhydrides"
+        smarts="C(=O)OC(=O)",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Acid_anhydrides",
     )
 )
 
@@ -1514,7 +1566,9 @@ molecule_functional_group_Acoh_8_AromaticCarbon_Alcohol_featurizer = MoleculeHas
 
 
 molecule_functional_group_Acridine_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1c2cc4ccccc4nc2ccc1", feature_descriptions=None, name="autogen_ochem_alerts_Acridine"
+    smarts="c1c2cc4ccccc4nc2ccc1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Acridine",
 )
 
 
@@ -1565,13 +1619,17 @@ molecule_functional_group_Acrylonitrile_featurizer = MoleculeHasSubstructureFeat
 
 
 molecule_functional_group_Acrylonitriles_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[NX1]#CC=C", feature_descriptions=None, name="autogen_ochem_alerts_Acrylonitriles"
+    smarts="[NX1]#CC=C",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Acrylonitriles",
 )
 
 
 molecule_functional_group_Acrylonitriles__2_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="N#CC=[C!H0]", feature_descriptions=None, name="autogen_ochem_alerts_Acrylonitriles"
+        smarts="N#CC=[C!H0]",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Acrylonitriles",
     )
 )
 
@@ -1847,12 +1905,16 @@ molecule_functional_group_AcyclicAnhydrides_featurizer = MoleculeHasSubstructure
 
 
 molecule_functional_group_AcyclicCc_O_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C=[C!r]O", feature_descriptions=None, name="autogen_ochem_alerts_Acyclic C=C-O"
+    smarts="C=[C!r]O",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Acyclic C=C-O",
 )
 
 
 molecule_functional_group_AcyclicCc_O__2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C=C-!@O-*", feature_descriptions="A = any atom/group", name="autogen_ochem_alerts_Acyclic C=C-O"
+    smarts="C=C-!@O-*",
+    feature_descriptions="A = any atom/group",
+    name="autogen_ochem_alerts_Acyclic C=C-O",
 )
 
 
@@ -1895,17 +1957,17 @@ molecule_functional_group_AcyclicN_C_N_featurizer = MoleculeHasSubstructureFeatu
 )
 
 
-molecule_functional_group_AcyclicN_NAndNotNBoundToCarbonylOrSulfone_featurizer = (
-    MoleculeHasSubstructureFeaturizer(
-        smarts="[N;!$(N-[C,S]=*)]-,=;!@[N;!$(N-[C,S]=*)]",
-        feature_descriptions="A = any atom/group",
-        name="autogen_ochem_alerts_Acyclic N-,=N and not N bound to carbonyl or sulfone",
-    )
+molecule_functional_group_AcyclicN_NAndNotNBoundToCarbonylOrSulfone_featurizer = MoleculeHasSubstructureFeaturizer(
+    smarts="[N;!$(N-[C,S]=*)]-,=;!@[N;!$(N-[C,S]=*)]",
+    feature_descriptions="A = any atom/group",
+    name="autogen_ochem_alerts_Acyclic N-,=N and not N bound to carbonyl or sulfone",
 )
 
 
 molecule_functional_group_AcyclicN_S_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="N-!@[SX2]-*", feature_descriptions="A = any atom/group", name="autogen_ochem_alerts_Acyclic N-S"
+    smarts="N-!@[SX2]-*",
+    feature_descriptions="A = any atom/group",
+    name="autogen_ochem_alerts_Acyclic N-S",
 )
 
 
@@ -1958,7 +2020,9 @@ molecule_functional_group_AcylChlorides_featurizer = MoleculeHasSubstructureFeat
 
 
 molecule_functional_group_AcylCyanide_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="N#CC(=O)", feature_descriptions=None, name="autogen_ochem_alerts_Acyl cyanide"
+    smarts="N#CC(=O)",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Acyl cyanide",
 )
 
 
@@ -2014,13 +2078,17 @@ molecule_functional_group_AcylHalides__3_featurizer = MoleculeHasSubstructureFea
 
 
 molecule_functional_group_AcylHydrazine_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C(=O)N[NH2]", feature_descriptions=None, name="autogen_ochem_alerts_Acyl hydrazine"
+    smarts="C(=O)N[NH2]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Acyl hydrazine",
 )
 
 
 molecule_functional_group_AcylHydrazine__2_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="[N;R0][N;R0]C(=O)", feature_descriptions=None, name="autogen_ochem_alerts_Acyl hydrazine"
+        smarts="[N;R0][N;R0]C(=O)",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Acyl hydrazine",
     )
 )
 
@@ -2104,7 +2172,9 @@ molecule_functional_group_Acylbenzotriazoles_featurizer = (
 
 
 molecule_functional_group_Acylimidazoles_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#6][CX3](=[OX1])n1cncc1", feature_descriptions=None, name="autogen_ochem_alerts_Acylimidazoles"
+    smarts="[#6][CX3](=[OX1])n1cncc1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Acylimidazoles",
 )
 
 
@@ -2116,7 +2186,9 @@ molecule_functional_group_Acylsulfides_featurizer = MoleculeHasSubstructureFeatu
 
 
 molecule_functional_group_Adamantyl_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C12CC3CC(C1)CC(C2)C3", feature_descriptions=None, name="autogen_ochem_alerts_Adamantyl"
+    smarts="C12CC3CC(C1)CC(C2)C3",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Adamantyl",
 )
 
 
@@ -2144,7 +2216,9 @@ molecule_functional_group_Alcohols_featurizer = MoleculeHasSubstructureFeaturize
 
 
 molecule_functional_group_Alcohols__2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#6][OX2H]", feature_descriptions="R = any carbon atom", name="autogen_ochem_alerts_Alcohols"
+    smarts="[#6][OX2H]",
+    feature_descriptions="R = any carbon atom",
+    name="autogen_ochem_alerts_Alcohols",
 )
 
 
@@ -2251,7 +2325,9 @@ molecule_functional_group_Aldehydes__4_featurizer = MoleculeHasSubstructureFeatu
 
 
 molecule_functional_group_Aldehydes__5_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#6][CH]=O", feature_descriptions="R = any carbon atom", name="autogen_ochem_alerts_Aldehydes"
+    smarts="[#6][CH]=O",
+    feature_descriptions="R = any carbon atom",
+    name="autogen_ochem_alerts_Aldehydes",
 )
 
 
@@ -2417,7 +2493,9 @@ molecule_functional_group_Aliphaticether_featurizer = MoleculeHasSubstructureFea
 
 
 molecule_functional_group_AlkaliMetals_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#3,#11,#19,#37,#55,#87]", feature_descriptions=None, name="autogen_ochem_alerts_Alkali metals"
+    smarts="[#3,#11,#19,#37,#55,#87]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Alkali metals",
 )
 
 
@@ -2746,7 +2824,9 @@ molecule_functional_group_Alkynes_featurizer = MoleculeHasSubstructureFeaturizer
 
 
 molecule_functional_group_Alkynes__2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[CX2]#[CX2]", feature_descriptions="R1, R2 = H, alkyl, aryl", name="autogen_ochem_alerts_Alkynes"
+    smarts="[CX2]#[CX2]",
+    feature_descriptions="R1, R2 = H, alkyl, aryl",
+    name="autogen_ochem_alerts_Alkynes",
 )
 
 
@@ -2930,7 +3010,9 @@ molecule_functional_group_AllTypesOf3_ValentPhosphorusAndSimilar_9_featurizer = 
 
 
 molecule_functional_group_Allene_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="*=C=*", feature_descriptions="A = any atom but H", name="autogen_ochem_alerts_Allene"
+    smarts="*=C=*",
+    feature_descriptions="A = any atom but H",
+    name="autogen_ochem_alerts_Allene",
 )
 
 
@@ -3112,7 +3194,9 @@ molecule_functional_group_AlphaBeta_UnsaturatedKetones_CenterOfMichaelReactivity
 
 molecule_functional_group_AlphaBeta_UnsaturatedNitriles_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="C=CC#[NX1]", feature_descriptions=None, name="autogen_ochem_alerts_α, β-Unsaturated nitriles"
+        smarts="C=CC#[NX1]",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_α, β-Unsaturated nitriles",
     )
 )
 
@@ -3319,7 +3403,9 @@ molecule_functional_group_Alpha_Halonitriles_featurizer = (
 
 molecule_functional_group_Alpha_HydroxyNitriles_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="N#CC[OH]", feature_descriptions=None, name="autogen_ochem_alerts_α-Hydroxy nitriles"
+        smarts="N#CC[OH]",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_α-Hydroxy nitriles",
     )
 )
 
@@ -3333,7 +3419,9 @@ molecule_functional_group_Alpha_Hydroxyacids_featurizer = (
 
 molecule_functional_group_Alpha_Naphthols_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="[OH]c1cccc2ccccc12", feature_descriptions=None, name="autogen_ochem_alerts_α-Naphthols"
+        smarts="[OH]c1cccc2ccccc12",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_α-Naphthols",
     )
 )
 
@@ -3351,7 +3439,9 @@ molecule_functional_group_Amidotetrazole_featurizer = MoleculeHasSubstructureFea
 
 molecule_functional_group_Amidotetrazole__2_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="c1nnnn1C=O", feature_descriptions=None, name="autogen_ochem_alerts_Amidotetrazole"
+        smarts="c1nnnn1C=O",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Amidotetrazole",
     )
 )
 
@@ -3369,7 +3459,9 @@ molecule_functional_group_Aminals__2_featurizer = MoleculeHasSubstructureFeaturi
 
 
 molecule_functional_group_Aminals__3_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1ccc[nv3X2]c1[#6](~[#7])~[#7]", feature_descriptions=None, name="autogen_ochem_alerts_Aminals"
+    smarts="c1ccc[nv3X2]c1[#6](~[#7])~[#7]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Aminals",
 )
 
 
@@ -3429,7 +3521,9 @@ molecule_functional_group_Aminoacids_featurizer = MoleculeHasSubstructureFeaturi
 
 
 molecule_functional_group_Aminonitrile_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="NC#N", feature_descriptions="Naliph = aliphatic N", name="autogen_ochem_alerts_Aminonitrile"
+    smarts="NC#N",
+    feature_descriptions="Naliph = aliphatic N",
+    name="autogen_ochem_alerts_Aminonitrile",
 )
 
 
@@ -3494,12 +3588,16 @@ molecule_functional_group_AmmoniumSalts_featurizer = MoleculeHasSubstructureFeat
 
 
 molecule_functional_group_Analine_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1ccccc1[NH2,NH3+]", feature_descriptions=None, name="autogen_ochem_alerts_Analine"
+    smarts="c1ccccc1[NH2,NH3+]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Analine",
 )
 
 
 molecule_functional_group_Anhydride_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C(=O)OC(=O)", feature_descriptions="R = any atom/group", name="autogen_ochem_alerts_Anhydride"
+    smarts="C(=O)OC(=O)",
+    feature_descriptions="R = any atom/group",
+    name="autogen_ochem_alerts_Anhydride",
 )
 
 
@@ -3569,7 +3667,9 @@ molecule_functional_group_Anil_Alk_D_featurizer = MoleculeHasSubstructureFeaturi
 
 
 molecule_functional_group_Anil_Alk_Ene_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1ccc4c(c1)NCC9C4C=CC9", feature_descriptions=None, name="autogen_ochem_alerts_Anil_alk_ene"
+    smarts="c1ccc4c(c1)NCC9C4C=CC9",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Anil_alk_ene",
 )
 
 
@@ -3941,7 +4041,9 @@ molecule_functional_group_Anil_Oh_No_Alk_B_featurizer = (
 
 
 molecule_functional_group_Aniline_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1cc([NH2])ccc1", feature_descriptions=None, name="autogen_ochem_alerts_Aniline"
+    smarts="c1cc([NH2])ccc1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Aniline",
 )
 
 
@@ -3983,7 +4085,9 @@ molecule_functional_group_AnthraceneAndAnthracene_ContainingCompounds_featurizer
 
 
 molecule_functional_group_Anthracenes_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c12ccccc1cc3ccccc3c2", feature_descriptions=None, name="autogen_ochem_alerts_Anthracenes"
+    smarts="c12ccccc1cc3ccccc3c2",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Anthracenes",
 )
 
 
@@ -4101,17 +4205,17 @@ molecule_functional_group_Anthrones_featurizer = MoleculeHasSubstructureFeaturiz
 )
 
 
-molecule_functional_group_AnyAtomsExceptOrganogensHalogensPSKNaMgCa_featurizer = (
-    MoleculeHasSubstructureFeaturizer(
-        smarts="[!#1;!#6;!#7;!#8;!#9;!#11;!#12;!#15;!#16;!#17;!#19;!#20;!#35;!#53]",
-        feature_descriptions=None,
-        name="autogen_ochem_alerts_Any atoms except organogens, halogens, P, S, K, Na, Mg, Ca",
-    )
+molecule_functional_group_AnyAtomsExceptOrganogensHalogensPSKNaMgCa_featurizer = MoleculeHasSubstructureFeaturizer(
+    smarts="[!#1;!#6;!#7;!#8;!#9;!#11;!#12;!#15;!#16;!#17;!#19;!#20;!#35;!#53]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Any atoms except organogens, halogens, P, S, K, Na, Mg, Ca",
 )
 
 
 molecule_functional_group_AnyCarbazide_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="O=*N=[N+]=[N-]", feature_descriptions=None, name="autogen_ochem_alerts_Any carbazide"
+    smarts="O=*N=[N+]=[N-]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Any carbazide",
 )
 
 
@@ -4199,7 +4303,9 @@ molecule_functional_group_AromaticAndAliphaticSubstitutedPrimaryAlkylHalides_fea
 
 
 molecule_functional_group_AromaticAzide_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="cN=[N+]=[N-]", feature_descriptions=None, name="autogen_ochem_alerts_Aromatic azide"
+    smarts="cN=[N+]=[N-]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Aromatic azide",
 )
 
 
@@ -4658,17 +4764,23 @@ molecule_functional_group_ArylBromide_featurizer = MoleculeHasSubstructureFeatur
 
 
 molecule_functional_group_ArylBromides_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="aBr", feature_descriptions="R = aryl", name="autogen_ochem_alerts_Aryl bromides"
+    smarts="aBr",
+    feature_descriptions="R = aryl",
+    name="autogen_ochem_alerts_Aryl bromides",
 )
 
 
 molecule_functional_group_ArylChlorides_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="aCl", feature_descriptions="R = aryl", name="autogen_ochem_alerts_Aryl chlorides"
+    smarts="aCl",
+    feature_descriptions="R = aryl",
+    name="autogen_ochem_alerts_Aryl chlorides",
 )
 
 
 molecule_functional_group_ArylFluorides_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="aF", feature_descriptions="R = aryl", name="autogen_ochem_alerts_Aryl fluorides"
+    smarts="aF",
+    feature_descriptions="R = aryl",
+    name="autogen_ochem_alerts_Aryl fluorides",
 )
 
 
@@ -4680,7 +4792,9 @@ molecule_functional_group_ArylHalide_featurizer = MoleculeHasSubstructureFeaturi
 
 
 molecule_functional_group_ArylHalides_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="a[F,Cl,Br,I]", feature_descriptions="R  = aryl", name="autogen_ochem_alerts_Aryl halides"
+    smarts="a[F,Cl,Br,I]",
+    feature_descriptions="R  = aryl",
+    name="autogen_ochem_alerts_Aryl halides",
 )
 
 
@@ -4692,7 +4806,9 @@ molecule_functional_group_ArylIodide_featurizer = MoleculeHasSubstructureFeaturi
 
 
 molecule_functional_group_ArylIodides_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="aI", feature_descriptions="R = aryl", name="autogen_ochem_alerts_Aryl iodides"
+    smarts="aI",
+    feature_descriptions="R = aryl",
+    name="autogen_ochem_alerts_Aryl iodides",
 )
 
 
@@ -4761,7 +4877,9 @@ molecule_functional_group_Azafluorenones_featurizer = MoleculeHasSubstructureFea
 
 
 molecule_functional_group_Azanitrone_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="N=[N+]([O-])C", feature_descriptions=None, name="autogen_ochem_alerts_Azanitrone"
+    smarts="N=[N+]([O-])C",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Azanitrone",
 )
 
 
@@ -4780,7 +4898,9 @@ molecule_functional_group_Azepane_featurizer = MoleculeHasSubstructureFeaturizer
 
 
 molecule_functional_group_Azetes_Hs_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#7R1]1=[#6R1][#6R1]=[#6R1]1", feature_descriptions=None, name="autogen_ochem_alerts_Azetes (HS)"
+    smarts="[#7R1]1=[#6R1][#6R1]=[#6R1]1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Azetes (HS)",
 )
 
 
@@ -4864,7 +4984,9 @@ molecule_functional_group_Azides__4_featurizer = MoleculeHasSubstructureFeaturiz
 
 
 molecule_functional_group_AzidoGroup_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="N=[N+]=[N-]", feature_descriptions="R = any atom/group", name="autogen_ochem_alerts_Azido group"
+    smarts="N=[N+]=[N-]",
+    feature_descriptions="R = any atom/group",
+    name="autogen_ochem_alerts_Azido group",
 )
 
 
@@ -4896,22 +5018,30 @@ molecule_functional_group_Aziridine_Specific_featurizer = (
 
 
 molecule_functional_group_Aziridines_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[CX4]1[NX3][CX4]1", feature_descriptions=None, name="autogen_ochem_alerts_Aziridines"
+    smarts="[CX4]1[NX3][CX4]1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Aziridines",
 )
 
 
 molecule_functional_group_Aziridines_Hs_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#7R1]1-[#6R1]-[#6R1]-1", feature_descriptions=None, name="autogen_ochem_alerts_Aziridines (HS)"
+    smarts="[#7R1]1-[#6R1]-[#6R1]-1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Aziridines (HS)",
 )
 
 
 molecule_functional_group_Aziridines__2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C1[NX3]C1", feature_descriptions="R = any atom/ group", name="autogen_ochem_alerts_Aziridines"
+    smarts="C1[NX3]C1",
+    feature_descriptions="R = any atom/ group",
+    name="autogen_ochem_alerts_Aziridines",
 )
 
 
 molecule_functional_group_Aziridines__3_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[NX3]1[CX4][CX4]1", feature_descriptions=None, name="autogen_ochem_alerts_Aziridines"
+    smarts="[NX3]1[CX4][CX4]1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Aziridines",
 )
 
 
@@ -4930,7 +5060,9 @@ molecule_functional_group_Azlactones_featurizer = MoleculeHasSubstructureFeaturi
 
 
 molecule_functional_group_Azo_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#6][NX2]=[NX2][#6]", feature_descriptions=None, name="autogen_ochem_alerts_Azo"
+    smarts="[#6][NX2]=[NX2][#6]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Azo",
 )
 
 
@@ -5010,12 +5142,16 @@ molecule_functional_group_Azo__2_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_Azoalkanal_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[N;R0]=[N;R0]CC=O", feature_descriptions=None, name="autogen_ochem_alerts_Azoalkanal"
+    smarts="[N;R0]=[N;R0]CC=O",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Azoalkanal",
 )
 
 
 molecule_functional_group_Azoalkanals_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[N;R0]=[N;R0]CC=O", feature_descriptions=None, name="autogen_ochem_alerts_Azoalkanals"
+    smarts="[N;R0]=[N;R0]CC=O",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Azoalkanals",
 )
 
 
@@ -5027,7 +5163,9 @@ molecule_functional_group_Azoarenes_featurizer = MoleculeHasSubstructureFeaturiz
 
 
 molecule_functional_group_Azobenzene_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1ccccc1[N!r]=[N!r]c2ccccc2", feature_descriptions=None, name="autogen_ochem_alerts_Azobenzene"
+    smarts="c1ccccc1[N!r]=[N!r]c2ccccc2",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Azobenzene",
 )
 
 
@@ -5046,12 +5184,16 @@ molecule_functional_group_Azocarbonamides_featurizer = MoleculeHasSubstructureFe
 
 
 molecule_functional_group_Azocyanamide_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[N;R0]=[N;R0]C#N", feature_descriptions=None, name="autogen_ochem_alerts_Azocyanamide"
+    smarts="[N;R0]=[N;R0]C#N",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Azocyanamide",
 )
 
 
 molecule_functional_group_Azogroup_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[$([!R&N]=[!R&N])]", feature_descriptions=None, name="autogen_ochem_alerts_AzoGroup"
+    smarts="[$([!R&N]=[!R&N])]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_AzoGroup",
 )
 
 
@@ -5070,22 +5212,30 @@ molecule_functional_group_AzoxyAlkane_featurizer = MoleculeHasSubstructureFeatur
 
 
 molecule_functional_group_Azulene_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1ccc4c(cc1)ccc4", feature_descriptions=None, name="autogen_ochem_alerts_Azulene"
+    smarts="c1ccc4c(cc1)ccc4",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Azulene",
 )
 
 
 molecule_functional_group_B1_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1cccc2c1ccc([OH])n2", feature_descriptions=None, name="autogen_ochem_alerts_B1"
+    smarts="c1cccc2c1ccc([OH])n2",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_B1",
 )
 
 
 molecule_functional_group_B10_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1ccc([SH])c2c1cccn2", feature_descriptions=None, name="autogen_ochem_alerts_B10"
+    smarts="c1ccc([SH])c2c1cccn2",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_B10",
 )
 
 
 molecule_functional_group_B11_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1ccc([CX3](=[OX1])[OH])c2c1cccn2", feature_descriptions=None, name="autogen_ochem_alerts_B11"
+    smarts="c1ccc([CX3](=[OX1])[OH])c2c1cccn2",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_B11",
 )
 
 
@@ -5131,7 +5281,9 @@ molecule_functional_group_B5_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_B5Exc_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[C,c](=N)N[C,S](=O)", feature_descriptions=None, name="autogen_ochem_alerts_B5EXC"
+    smarts="[C,c](=N)N[C,S](=O)",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_B5EXC",
 )
 
 
@@ -5150,12 +5302,16 @@ molecule_functional_group_B7_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_B7B8B9B12_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1ccc([OH])c2c1cccn2", feature_descriptions=None, name="autogen_ochem_alerts_B7, B8, B9, B12"
+    smarts="c1ccc([OH])c2c1cccn2",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_B7, B8, B9, B12",
 )
 
 
 molecule_functional_group_B7Exc_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="n(:c)(:c):a", feature_descriptions="A = any aromatic atom", name="autogen_ochem_alerts_B7EXC"
+    smarts="n(:c)(:c):a",
+    feature_descriptions="A = any aromatic atom",
+    name="autogen_ochem_alerts_B7EXC",
 )
 
 
@@ -5250,7 +5406,9 @@ molecule_functional_group_Benzenediamines_featurizer = (
 
 
 molecule_functional_group_Benzhydrol_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OH1]-C(-c1ccccc1)c2ccccc2", feature_descriptions=None, name="autogen_ochem_alerts_Benzhydrol"
+    smarts="[OH1]-C(-c1ccccc1)c2ccccc2",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Benzhydrol",
 )
 
 
@@ -5536,7 +5694,9 @@ molecule_functional_group_Beta_Lactams__2_featurizer = (
 
 molecule_functional_group_Beta_Lactams__3_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="C1C(=O)NC1", feature_descriptions=None, name="autogen_ochem_alerts_β-Lactams"
+        smarts="C1C(=O)NC1",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_β-Lactams",
     )
 )
 
@@ -5547,7 +5707,9 @@ molecule_functional_group_Beta_Lactone_featurizer = MoleculeHasSubstructureFeatu
 )
 
 molecule_functional_group_Beta_Lactones_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C1C(=O)OC1", feature_descriptions=None, name="autogen_ochem_alerts_β-Lactones"
+    smarts="C1C(=O)OC1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_β-Lactones",
 )
 
 molecule_functional_group_Beta_LactonesAndGamma_Sultones_featurizer = MoleculeHasSubstructureFeaturizer(
@@ -5596,13 +5758,17 @@ molecule_functional_group_Betalactam_Ewg_featurizer = MoleculeHasSubstructureFea
 
 
 molecule_functional_group_BiotinAnalogue_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C12C(NC(N1)=O)CSC2", feature_descriptions=None, name="autogen_ochem_alerts_Biotin analogue"
+    smarts="C12C(NC(N1)=O)CSC2",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Biotin analogue",
 )
 
 
 molecule_functional_group_Biotin_Analogue_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="C12C(NC(N1)=O)CSC2", feature_descriptions=None, name="autogen_ochem_alerts_Biotin_analogue"
+        smarts="C12C(NC(N1)=O)CSC2",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Biotin_analogue",
     )
 )
 
@@ -5707,7 +5873,9 @@ molecule_functional_group_C10C11_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_C10C11__2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[CH3]c1nc([OH])cc([OH,CH3])n1", feature_descriptions=None, name="autogen_ochem_alerts_C10, C11"
+    smarts="[CH3]c1nc([OH])cc([OH,CH3])n1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_C10, C11",
 )
 
 
@@ -5717,7 +5885,9 @@ molecule_functional_group_C13_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_C2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[NH2]c1nc([NH2])cc([OH])n1", feature_descriptions=None, name="autogen_ochem_alerts_C2"
+    smarts="[NH2]c1nc([NH2])cc([OH])n1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_C2",
 )
 
 
@@ -5740,12 +5910,16 @@ molecule_functional_group_C2H5O2_47_Occoh_featurizer = (
 
 
 molecule_functional_group_C3C7C8_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[SH]c1nc([OH])ccn1", feature_descriptions=None, name="autogen_ochem_alerts_C3, C7, C8"
+    smarts="[SH]c1nc([OH])ccn1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_C3, C7, C8",
 )
 
 
 molecule_functional_group_C4_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OH]c1nc([SH])ccn1", feature_descriptions=None, name="autogen_ochem_alerts_C4"
+    smarts="[OH]c1nc([SH])ccn1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_C4",
 )
 
 
@@ -5773,7 +5947,9 @@ molecule_functional_group_C4H4S_50_Thiophene_featurizer = (
 
 
 molecule_functional_group_C5_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[SH]c1nc([CH3])cc([CH3])n1", feature_descriptions=None, name="autogen_ochem_alerts_C5"
+    smarts="[SH]c1nc([CH3])cc([CH3])n1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_C5",
 )
 
 
@@ -5815,12 +5991,16 @@ molecule_functional_group_C6C12_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_C6C12__2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OH]c1nc([OH])cc([CH3])n1", feature_descriptions=None, name="autogen_ochem_alerts_C6, C12"
+    smarts="[OH]c1nc([OH])cc([CH3])n1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_C6, C12",
 )
 
 
 molecule_functional_group_C9_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[NH2]c1ncnc2c1nc[nH]2", feature_descriptions=None, name="autogen_ochem_alerts_C9"
+    smarts="[NH2]c1ncnc2c1nc[nH]2",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_C9",
 )
 
 
@@ -5929,7 +6109,9 @@ molecule_functional_group_Carbazides_featurizer = MoleculeHasSubstructureFeaturi
 
 molecule_functional_group_CarboCation_Anion_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="[C+,c+,C-,c-]", feature_descriptions=None, name="autogen_ochem_alerts_Carbo cation/anion"
+        smarts="[C+,c+,C-,c-]",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Carbo cation/anion",
     )
 )
 
@@ -5944,7 +6126,9 @@ molecule_functional_group_Carbodiimide_Isothiocyanate_featurizer = (
 
 
 molecule_functional_group_Carbodiimides_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#6][NX2]=[CX2]=[NX2][#6]", feature_descriptions=None, name="autogen_ochem_alerts_Carbodiimides"
+    smarts="[#6][NX2]=[CX2]=[NX2][#6]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Carbodiimides",
 )
 
 
@@ -5966,7 +6150,9 @@ molecule_functional_group_Carbodiimides__3_featurizer = MoleculeHasSubstructureF
 
 molecule_functional_group_Carbodiimides__4_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="N=C=N", feature_descriptions=None, name="autogen_ochem_alerts_Carbodiimides"
+        smarts="N=C=N",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Carbodiimides",
     )
 )
 
@@ -6263,12 +6449,16 @@ molecule_functional_group_CatecholResorcinolAndHydroquinonePrecursors_featurizer
 
 
 molecule_functional_group_Catechol_A_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1ccc(c(c1)[OH1])[OH1]", feature_descriptions=None, name="autogen_ochem_alerts_Catechol_A"
+    smarts="c1ccc(c(c1)[OH1])[OH1]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Catechol_A",
 )
 
 
 molecule_functional_group_Catechols_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OH1]c1c([OH1])cccc1", feature_descriptions=None, name="autogen_ochem_alerts_Catechols"
+    smarts="[OH1]c1c([OH1])cccc1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Catechols",
 )
 
 
@@ -6289,7 +6479,9 @@ molecule_functional_group_CatecholsResorcinolsHydroquinones_featurizer = Molecul
 
 
 molecule_functional_group_Catechols__2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1([OH1])c([OH1])cccc1", feature_descriptions=None, name="autogen_ochem_alerts_Catechols"
+    smarts="c1([OH1])c([OH1])cccc1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Catechols",
 )
 
 
@@ -6301,7 +6493,9 @@ molecule_functional_group_Catechols__3_featurizer = MoleculeHasSubstructureFeatu
 
 
 molecule_functional_group_Cations_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#6+,#17+,#53+,#15+,#16+]", feature_descriptions=None, name="autogen_ochem_alerts_Cations"
+    smarts="[#6+,#17+,#53+,#15+,#16+]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Cations",
 )
 
 
@@ -6757,7 +6951,9 @@ molecule_functional_group_Chalcogens_OxygenGroup_featurizer = (
 
 
 molecule_functional_group_ChargedAtoms_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[+,-]", feature_descriptions="Any charged atoms", name="autogen_ochem_alerts_Charged atoms"
+    smarts="[+,-]",
+    feature_descriptions="Any charged atoms",
+    name="autogen_ochem_alerts_Charged atoms",
 )
 
 
@@ -6819,12 +7015,16 @@ molecule_functional_group_Chcl_21_Ccl_featurizer = MoleculeHasSubstructureFeatur
 
 
 molecule_functional_group_Chinone_1_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C1(=[O,N])C=CC(=[O,N])C=C1", feature_descriptions=None, name="autogen_ochem_alerts_Chinone (1)"
+    smarts="C1(=[O,N])C=CC(=[O,N])C=C1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Chinone (1)",
 )
 
 
 molecule_functional_group_Chinone_2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C1(=[O,N])C(=[O,N])C=CC=C1", feature_descriptions=None, name="autogen_ochem_alerts_Chinone (2)"
+    smarts="C1(=[O,N])C(=[O,N])C=CC=C1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Chinone (2)",
 )
 
 
@@ -7050,7 +7250,9 @@ molecule_functional_group_ConjugatedAlkadienes_1_3_Alkadienes_featurizer = (
 
 molecule_functional_group_ConjugatedNitrileGroup_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="C=[C!r]C#N", feature_descriptions=None, name="autogen_ochem_alerts_Conjugated nitrile group"
+        smarts="C=[C!r]C#N",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Conjugated nitrile group",
     )
 )
 
@@ -7066,7 +7268,9 @@ molecule_functional_group_ConjugatedOlefins_featurizer = (
 
 molecule_functional_group_Conjugated_Dithioether_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="SC(=[!r])S", feature_descriptions=None, name="autogen_ochem_alerts_Conjugated_dithioether"
+        smarts="SC(=[!r])S",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Conjugated_dithioether",
     )
 )
 
@@ -7102,7 +7306,9 @@ molecule_functional_group_Cooh_20_Cooh_featurizer = MoleculeHasSubstructureFeatu
 
 
 molecule_functional_group_Coumarin_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1cc2C=CC(=O)Oc2cc1", feature_descriptions=None, name="autogen_ochem_alerts_Coumarin"
+    smarts="c1cc2C=CC(=O)Oc2cc1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Coumarin",
 )
 
 
@@ -7121,7 +7327,9 @@ molecule_functional_group_Coumarin_B_featurizer = MoleculeHasSubstructureFeaturi
 
 
 molecule_functional_group_Coumarin_C_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C1(C=Nc4c(O1)ccc(Cl)c4)=[OX1]", feature_descriptions=None, name="autogen_ochem_alerts_Coumarin_C"
+    smarts="C1(C=Nc4c(O1)ccc(Cl)c4)=[OX1]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Coumarin_C",
 )
 
 
@@ -7253,14 +7461,18 @@ molecule_functional_group_Crown_Ether_featurizer = MoleculeHasSubstructureFeatur
 
 molecule_functional_group_Crown_Ether_12Cro4_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="O1CCOCCOCCOCC1", feature_descriptions=None, name="autogen_ochem_alerts_Crown_ether_12cro4"
+        smarts="O1CCOCCOCCOCC1",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Crown_ether_12cro4",
     )
 )
 
 
 molecule_functional_group_Crown_Ether_15Cro5_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="O1CCOCCOCCOCCOCC1", feature_descriptions=None, name="autogen_ochem_alerts_Crown_ether_15cro5"
+        smarts="O1CCOCCOCCOCCOCC1",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Crown_ether_15cro5",
     )
 )
 
@@ -7291,7 +7503,9 @@ molecule_functional_group_Cs2_28_CarbonDisulphide_featurizer = (
 
 
 molecule_functional_group_Cumarine_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1ccc2c(c1)ccc(=O)o2", feature_descriptions=None, name="autogen_ochem_alerts_Cumarine"
+    smarts="c1ccc2c(c1)ccc(=O)o2",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Cumarine",
 )
 
 
@@ -7335,7 +7549,9 @@ molecule_functional_group_Cyanate_Aminonitrile_Thiocyanate_featurizer = (
 
 
 molecule_functional_group_Cyanates_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[NX2]=[CX2]=[OX1,SX1]", feature_descriptions=None, name="autogen_ochem_alerts_Cyanates"
+    smarts="[NX2]=[CX2]=[OX1,SX1]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Cyanates",
 )
 
 
@@ -7355,7 +7571,9 @@ molecule_functional_group_Cyanidin_featurizer = MoleculeHasSubstructureFeaturize
 
 molecule_functional_group_CyanoCarbonylCompounds_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="N#CC(=O)", feature_descriptions=None, name="autogen_ochem_alerts_Cyano carbonyl compounds "
+        smarts="N#CC(=O)",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Cyano carbonyl compounds ",
     )
 )
 
@@ -7440,7 +7658,9 @@ molecule_functional_group_Cyano_Imine_C_featurizer = MoleculeHasSubstructureFeat
 )
 
 molecule_functional_group_Cyano_Imine_D_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OX1]=C1C(C#[NX1])=NNCC1", feature_descriptions=None, name="autogen_ochem_alerts_Cyano_imine_D"
+    smarts="[OX1]=C1C(C#[NX1])=NNCC1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Cyano_imine_D",
 )
 
 molecule_functional_group_Cyano_Keto_A_featurizer = MoleculeHasSubstructureFeaturizer(
@@ -7533,12 +7753,16 @@ molecule_functional_group_Cyanogrouponmorethaneightatomschain_featurizer = Molec
 
 
 molecule_functional_group_Cyanohydrin_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="N#CC[OH]", feature_descriptions=None, name="autogen_ochem_alerts_Cyanohydrin"
+    smarts="N#CC[OH]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Cyanohydrin",
 )
 
 
 molecule_functional_group_Cyanohydrin__2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="N#CC[OH1]", feature_descriptions=None, name="autogen_ochem_alerts_Cyanohydrin"
+    smarts="N#CC[OH1]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Cyanohydrin",
 )
 
 
@@ -7550,7 +7774,9 @@ molecule_functional_group_Cyanohydrin__3_featurizer = MoleculeHasSubstructureFea
 
 
 molecule_functional_group_Cyanohydrins_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="N#CC[OH]", feature_descriptions=None, name="autogen_ochem_alerts_Cyanohydrins"
+    smarts="N#CC[OH]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Cyanohydrins",
 )
 
 
@@ -7663,7 +7889,9 @@ molecule_functional_group_Cycloheptenones_featurizer = (
 
 
 molecule_functional_group_Cycloheximide_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="O=C1CCCC(N1)=O", feature_descriptions=None, name="autogen_ochem_alerts_Cycloheximide"
+    smarts="O=C1CCCC(N1)=O",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Cycloheximide",
 )
 
 
@@ -7709,7 +7937,9 @@ molecule_functional_group_CyclopropylAmines_featurizer = (
 
 
 molecule_functional_group_Cytochalasin_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="O=C1NCC2CCCCC21", feature_descriptions=None, name="autogen_ochem_alerts_Cytochalasin"
+    smarts="O=C1NCC2CCCCC21",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Cytochalasin",
 )
 
 
@@ -8086,7 +8316,9 @@ molecule_functional_group_DiazoCompounds_featurizer = MoleculeHasSubstructureFea
 
 
 molecule_functional_group_DiazoGroup_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[N!R]=[N!R]", feature_descriptions=None, name="autogen_ochem_alerts_Diazo group"
+    smarts="[N!R]=[N!R]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Diazo group",
 )
 
 
@@ -8105,7 +8337,9 @@ molecule_functional_group_Diazo_Specific_featurizer = MoleculeHasSubstructureFea
 
 
 molecule_functional_group_Diazoalkane_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C=[N+]=[N-]", feature_descriptions=None, name="autogen_ochem_alerts_Diazoalkane"
+    smarts="C=[N+]=[N-]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Diazoalkane",
 )
 
 
@@ -8165,17 +8399,23 @@ molecule_functional_group_Diazonium_Additional_featurizer = (
 
 
 molecule_functional_group_Diazonium_Salt_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[N+]#N", feature_descriptions=None, name="autogen_ochem_alerts_Diazonium_salt"
+    smarts="[N+]#N",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Diazonium_salt",
 )
 
 
 molecule_functional_group_Diazox_A_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="O(c2ccccc2)c3cc1nonc1cc3", feature_descriptions=None, name="autogen_ochem_alerts_Diazox_A"
+    smarts="O(c2ccccc2)c3cc1nonc1cc3",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Diazox_A",
 )
 
 
 molecule_functional_group_Diazox_B_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="Clc2cc1nonc1cc2", feature_descriptions=None, name="autogen_ochem_alerts_Diazox_B"
+    smarts="Clc2cc1nonc1cc2",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Diazox_B",
 )
 
 
@@ -8194,7 +8434,9 @@ molecule_functional_group_Diazox_D_featurizer = MoleculeHasSubstructureFeaturize
 
 
 molecule_functional_group_Diazox_E_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[NH2]c1c([NH2])[cH][cH]c2nonc12", feature_descriptions=None, name="autogen_ochem_alerts_Diazox_E"
+    smarts="[NH2]c1c([NH2])[cH][cH]c2nonc12",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Diazox_E",
 )
 
 
@@ -8305,7 +8547,9 @@ molecule_functional_group_DiketoGroup_featurizer = MoleculeHasSubstructureFeatur
 
 molecule_functional_group_Dimethylcarbamate_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="CN(C)C(=O)O([*:1])", feature_descriptions=None, name="autogen_ochem_alerts_dimethylcarbamate"
+        smarts="CN(C)C(=O)O([*:1])",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_dimethylcarbamate",
     )
 )
 
@@ -8385,7 +8629,9 @@ molecule_functional_group_Dioxines_Hs_featurizer = MoleculeHasSubstructureFeatur
 
 
 molecule_functional_group_Dioxiranes_Hs_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#8R1]1-[#8R1]-[#6R1]-1", feature_descriptions=None, name="autogen_ochem_alerts_Dioxiranes (HS)"
+    smarts="[#8R1]1-[#8R1]-[#6R1]-1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Dioxiranes (HS)",
 )
 
 
@@ -8432,12 +8678,16 @@ molecule_functional_group_Disulfide_Acyclic_featurizer = (
 
 
 molecule_functional_group_Disulfides_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="*[#16X2][#16X2]*", feature_descriptions=None, name="autogen_ochem_alerts_Disulfides"
+    smarts="*[#16X2][#16X2]*",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Disulfides",
 )
 
 
 molecule_functional_group_Disulfides__2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[SX2][SX2]", feature_descriptions="R = any atom/ group", name="autogen_ochem_alerts_Disulfides"
+    smarts="[SX2][SX2]",
+    feature_descriptions="R = any atom/ group",
+    name="autogen_ochem_alerts_Disulfides",
 )
 
 
@@ -8449,7 +8699,9 @@ molecule_functional_group_Disulfides__3_featurizer = MoleculeHasSubstructureFeat
 
 
 molecule_functional_group_Disulfides__4_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#16][#16]", feature_descriptions=None, name="autogen_ochem_alerts_Disulfides"
+    smarts="[#16][#16]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Disulfides",
 )
 
 
@@ -8482,12 +8734,16 @@ molecule_functional_group_Disulphide_featurizer = MoleculeHasSubstructureFeaturi
 
 
 molecule_functional_group_Disulphides_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="SS", feature_descriptions="R = any atom/ group", name="autogen_ochem_alerts_Disulphides"
+    smarts="SS",
+    feature_descriptions="R = any atom/ group",
+    name="autogen_ochem_alerts_Disulphides",
 )
 
 
 molecule_functional_group_Disulphides__2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[SX2][SX2]", feature_descriptions="R = any atom/ group", name="autogen_ochem_alerts_Disulphides"
+    smarts="[SX2][SX2]",
+    feature_descriptions="R = any atom/ group",
+    name="autogen_ochem_alerts_Disulphides",
 )
 
 
@@ -8539,7 +8795,9 @@ molecule_functional_group_Dithio_Carbamates_featurizer = (
 
 molecule_functional_group_Dithiocarbamate_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="NC(=S)S", feature_descriptions=None, name="autogen_ochem_alerts_Dithiocarbamate"
+        smarts="NC(=S)S",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Dithiocarbamate",
     )
 )
 
@@ -8571,14 +8829,18 @@ molecule_functional_group_Dithiolanes_Hs_featurizer = MoleculeHasSubstructureFea
 
 molecule_functional_group_Dithiole_2_Thione_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="S1SC=CC1=S", feature_descriptions=None, name="autogen_ochem_alerts_Dithiole-2-thione"
+        smarts="S1SC=CC1=S",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Dithiole-2-thione",
     )
 )
 
 
 molecule_functional_group_Dithiole_3_Thione_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="S1C=CSC1=C", feature_descriptions=None, name="autogen_ochem_alerts_Dithiole-3-thione"
+        smarts="S1C=CSC1=C",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Dithiole-3-thione",
     )
 )
 
@@ -8650,7 +8912,9 @@ molecule_functional_group_DoubleAcyclicNnAndNsBonds_featurizer = (
 
 
 molecule_functional_group_DoublePoBonds_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#15]=O", feature_descriptions=None, name="autogen_ochem_alerts_Double P=O bonds"
+    smarts="[#15]=O",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Double P=O bonds",
 )
 
 
@@ -8743,7 +9007,9 @@ molecule_functional_group_Dye32_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_Dye4_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c12ccccc1C(=O)c3ccccc3C2=O", feature_descriptions=None, name="autogen_ochem_alerts_Dye 4"
+    smarts="c12ccccc1C(=O)c3ccccc3C2=O",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Dye 4",
 )
 
 
@@ -8825,7 +9091,9 @@ molecule_functional_group_E12Exc_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_E13_Imides_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C(=O)-N-C=O", feature_descriptions=None, name="autogen_ochem_alerts_E13 - imides"
+    smarts="C(=O)-N-C=O",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_E13 - imides",
 )
 
 
@@ -8878,12 +9146,16 @@ molecule_functional_group_E3_E_G_Carbonates_featurizer = (
 
 
 molecule_functional_group_E4Exc_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C(=O)[OH1]", feature_descriptions="R = any atom/group", name="autogen_ochem_alerts_E4EXC"
+    smarts="C(=O)[OH1]",
+    feature_descriptions="R = any atom/group",
+    name="autogen_ochem_alerts_E4EXC",
 )
 
 
 molecule_functional_group_E5Exc_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C(=O)[SH1]", feature_descriptions="R = any atom/group", name="autogen_ochem_alerts_E5EXC"
+    smarts="C(=O)[SH1]",
+    feature_descriptions="R = any atom/group",
+    name="autogen_ochem_alerts_E5EXC",
 )
 
 
@@ -8996,17 +9268,23 @@ molecule_functional_group_Ene_Cyano_B_featurizer = MoleculeHasSubstructureFeatur
 
 
 molecule_functional_group_Ene_Cyano_C_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C=C(C#[NX1])C(=[NH])NN", feature_descriptions=None, name="autogen_ochem_alerts_Ene_cyano_C"
+    smarts="C=C(C#[NX1])C(=[NH])NN",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Ene_cyano_C",
 )
 
 
 molecule_functional_group_Ene_Cyano_D_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C(C#[NX1])(C#[NX1])=C(S)S", feature_descriptions=None, name="autogen_ochem_alerts_Ene_cyano_D"
+    smarts="C(C#[NX1])(C#[NX1])=C(S)S",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Ene_cyano_D",
 )
 
 
 molecule_functional_group_Ene_Cyano_E_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OX1]=C[C!H0]=C(C#[NX1])[#6]", feature_descriptions=None, name="autogen_ochem_alerts_Ene_cyano_E"
+    smarts="[OX1]=C[C!H0]=C(C#[NX1])[#6]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Ene_cyano_E",
 )
 
 
@@ -9032,7 +9310,9 @@ molecule_functional_group_Ene_Five_Het_A_featurizer = MoleculeHasSubstructureFea
 
 
 molecule_functional_group_Ene_Five_Het_B_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C1(=C)C(N=CS1)=O", feature_descriptions=None, name="autogen_ochem_alerts_Ene_five_het_B"
+    smarts="C1(=C)C(N=CS1)=O",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Ene_five_het_B",
 )
 
 
@@ -9044,7 +9324,9 @@ molecule_functional_group_Ene_Five_Het_C_featurizer = MoleculeHasSubstructureFea
 
 
 molecule_functional_group_Ene_Five_Het_D_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C1(=C)C(=[OX1])NNC1=[OX1]", feature_descriptions=None, name="autogen_ochem_alerts_Ene_five_het_D"
+    smarts="C1(=C)C(=[OX1])NNC1=[OX1]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Ene_five_het_D",
 )
 
 
@@ -9070,7 +9352,9 @@ molecule_functional_group_Ene_Five_Het_G_featurizer = MoleculeHasSubstructureFea
 
 
 molecule_functional_group_Ene_Five_Het_H_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="N1=CC(C(N1)=S)=C", feature_descriptions=None, name="autogen_ochem_alerts_Ene_five_het_H"
+    smarts="N1=CC(C(N1)=S)=C",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Ene_five_het_H",
 )
 
 
@@ -9131,7 +9415,9 @@ molecule_functional_group_Ene_Five_One_B_featurizer = MoleculeHasSubstructureFea
 
 
 molecule_functional_group_Ene_Misc_A_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C1([#8])OC([#6])([#8])C=C1", feature_descriptions=None, name="autogen_ochem_alerts_Ene_misc_A"
+    smarts="C1([#8])OC([#6])([#8])C=C1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Ene_misc_A",
 )
 
 
@@ -9243,7 +9529,9 @@ molecule_functional_group_Ene_One_One_B_featurizer = MoleculeHasSubstructureFeat
 
 
 molecule_functional_group_Ene_One_Yne_A_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C#CC(=[OX1])C#C", feature_descriptions=None, name="autogen_ochem_alerts_Ene_one_yne_A"
+    smarts="C#CC(=[OX1])C#C",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Ene_one_yne_A",
 )
 
 
@@ -9255,7 +9543,9 @@ molecule_functional_group_Ene_Quin_Methide_featurizer = MoleculeHasSubstructureF
 
 
 molecule_functional_group_Ene_Rhod_A_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="N1C(=S)SC(=C)C1=O", feature_descriptions=None, name="autogen_ochem_alerts_Ene_rhod_A"
+    smarts="N1C(=S)SC(=C)C1=O",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Ene_rhod_A",
 )
 
 
@@ -9337,7 +9627,9 @@ molecule_functional_group_Ene_Six_Het_B_featurizer = MoleculeHasSubstructureFeat
 
 
 molecule_functional_group_Ene_Six_Het_C_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OX1]=C1cc[CH2]NC1=[C!H0]", feature_descriptions=None, name="autogen_ochem_alerts_Ene_six_het_C"
+    smarts="[OX1]=C1cc[CH2]NC1=[C!H0]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Ene_six_het_C",
 )
 
 
@@ -9406,7 +9698,9 @@ molecule_functional_group_EpoxideAziridineThioepoxide_featurizer = (
 
 molecule_functional_group_Epoxide_Specific_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="[CX4]1[OX2][CX4]1", feature_descriptions=None, name="autogen_ochem_alerts_Epoxide (specific)"
+        smarts="[CX4]1[OX2][CX4]1",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Epoxide (specific)",
     )
 )
 
@@ -9463,7 +9757,9 @@ molecule_functional_group_Epoxides__5_featurizer = MoleculeHasSubstructureFeatur
 
 
 molecule_functional_group_Epoxides__6_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OX2]1[CX4][CX4]1", feature_descriptions=None, name="autogen_ochem_alerts_Epoxides"
+    smarts="[OX2]1[CX4][CX4]1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Epoxides",
 )
 
 
@@ -9573,12 +9869,16 @@ molecule_functional_group_Ethylenediamines__2_featurizer = (
 
 
 molecule_functional_group_F1F3_F12_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OH]c1ccccc1[CX3](=[OX1])[OH]", feature_descriptions=None, name="autogen_ochem_alerts_F1, F3-F12"
+    smarts="[OH]c1ccccc1[CX3](=[OX1])[OH]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_F1, F3-F12",
 )
 
 
 molecule_functional_group_F2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OH]c1ccccc1[CX3](=[OX1])[NH2]", feature_descriptions=None, name="autogen_ochem_alerts_F2"
+    smarts="[OH]c1ccccc1[CX3](=[OX1])[NH2]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_F2",
 )
 
 
@@ -9794,7 +10094,9 @@ molecule_functional_group_Filter31_So_Bond_featurizer = (
 
 molecule_functional_group_Filter32_Oo_Bond_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="[*,#1][OR0]O[*,#1]", feature_descriptions=None, name="autogen_ochem_alerts_Filter32_OO_bond"
+        smarts="[*,#1][OR0]O[*,#1]",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Filter32_OO_bond",
     )
 )
 
@@ -9819,14 +10121,18 @@ molecule_functional_group_Filter34_Isotope_featurizer = (
 
 molecule_functional_group_Filter35_Pp_Bond_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="P-P", feature_descriptions=None, name="autogen_ochem_alerts_Filter35_PP_bond"
+        smarts="P-P",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Filter35_PP_bond",
     )
 )
 
 
 molecule_functional_group_Filter36_Ss_Double_Bond_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="S=S", feature_descriptions=None, name="autogen_ochem_alerts_Filter36_SS_double_bond"
+        smarts="S=S",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Filter36_SS_double_bond",
     )
 )
 
@@ -9894,7 +10200,9 @@ molecule_functional_group_Filter42_12_Dicarbonyl_Tautomer_featurizer = (
 
 molecule_functional_group_Filter43_Michael_Acceptor_Sp1_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="C#CC=O", feature_descriptions=None, name="autogen_ochem_alerts_Filter43_michael_acceptor_sp1"
+        smarts="C#CC=O",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Filter43_michael_acceptor_sp1",
     )
 )
 
@@ -9925,12 +10233,16 @@ molecule_functional_group_Filter46_Nhalide_featurizer = (
 
 
 molecule_functional_group_Filter47_So2F_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="O=S(=O)(*)F", feature_descriptions="Any atom but H", name="autogen_ochem_alerts_Filter47_SO2F"
+    smarts="O=S(=O)(*)F",
+    feature_descriptions="Any atom but H",
+    name="autogen_ochem_alerts_Filter47_SO2F",
 )
 
 
 molecule_functional_group_Filter48_Foso_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="O=S(*)OF", feature_descriptions="A = any atom but H", name="autogen_ochem_alerts_Filter48_FOSO"
+    smarts="O=S(*)OF",
+    feature_descriptions="A = any atom but H",
+    name="autogen_ochem_alerts_Filter48_FOSO",
 )
 
 
@@ -9962,7 +10274,9 @@ molecule_functional_group_Filter50_Grignard_featurizer = (
 
 
 molecule_functional_group_Filter51_Pn3_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="N[PX3](N)N", feature_descriptions=None, name="autogen_ochem_alerts_Filter51_PN3"
+    smarts="N[PX3](N)N",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Filter51_PN3",
 )
 
 
@@ -9986,28 +10300,36 @@ molecule_functional_group_Filter53_Para_Quinones_featurizer = (
 
 molecule_functional_group_Filter56_Ss_Bond_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="S-S", feature_descriptions=None, name="autogen_ochem_alerts_Filter56_SS_bond"
+        smarts="S-S",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Filter56_SS_bond",
     )
 )
 
 
 molecule_functional_group_Filter57_Polyphenol1_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="Oc1cc(O)cc(O)c1", feature_descriptions=None, name="autogen_ochem_alerts_Filter57_polyphenol1"
+        smarts="Oc1cc(O)cc(O)c1",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Filter57_polyphenol1",
     )
 )
 
 
 molecule_functional_group_Filter58_Polyphenol2_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="Oc1c(O)cc(O)cc1", feature_descriptions=None, name="autogen_ochem_alerts_Filter58_polyphenol2"
+        smarts="Oc1c(O)cc(O)cc1",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Filter58_polyphenol2",
     )
 )
 
 
 molecule_functional_group_Filter59_Phoshorous_Ylide_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="C=P", feature_descriptions=None, name="autogen_ochem_alerts_Filter59_phoshorous_ylide"
+        smarts="C=P",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Filter59_phoshorous_ylide",
     )
 )
 
@@ -10021,7 +10343,9 @@ molecule_functional_group_Filter5_Azo_featurizer = MoleculeHasSubstructureFeatur
 
 molecule_functional_group_Filter60_Acyclic_N_S_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="N!@[SX2]", feature_descriptions=None, name="autogen_ochem_alerts_Filter60_Acyclic_N-S"
+        smarts="N!@[SX2]",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Filter60_Acyclic_N-S",
     )
 )
 
@@ -10147,7 +10471,9 @@ molecule_functional_group_Filter73_Thio_Ketone_featurizer = (
 
 
 molecule_functional_group_Filter74_Thiol_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="*[SX2H]", feature_descriptions="A = any atom but H", name="autogen_ochem_alerts_Filter74_thiol"
+    smarts="*[SX2H]",
+    feature_descriptions="A = any atom but H",
+    name="autogen_ochem_alerts_Filter74_thiol",
 )
 
 
@@ -10298,7 +10624,9 @@ molecule_functional_group_Filter8_Thio_Isocyanat_Diimin_featurizer = (
 
 molecule_functional_group_Filter90_N_Double_Bond_S_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="N=!@S", feature_descriptions=None, name="autogen_ochem_alerts_Filter90_N_double_bond_S"
+        smarts="N=!@S",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Filter90_N_double_bond_S",
     )
 )
 
@@ -10471,14 +10799,18 @@ molecule_functional_group_Fluorescein_featurizer = MoleculeHasSubstructureFeatur
 
 molecule_functional_group_Fluorinated_Carbon_1_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="C(C(CF)F)F", feature_descriptions=None, name="autogen_ochem_alerts_Fluorinated_carbon_1"
+        smarts="C(C(CF)F)F",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Fluorinated_carbon_1",
     )
 )
 
 
 molecule_functional_group_Fluorinated_Carbon_2_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="C(C(F)F)(F)F", feature_descriptions=None, name="autogen_ochem_alerts_Fluorinated_carbon_2"
+        smarts="C(C(F)F)(F)F",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Fluorinated_carbon_2",
     )
 )
 
@@ -10498,7 +10830,9 @@ molecule_functional_group_FlutamideDerivatives_featurizer = MoleculeHasSubstruct
 
 
 molecule_functional_group_Formaldehyde_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[CX3H2](=O)", feature_descriptions=None, name="autogen_ochem_alerts_Formaldehyde"
+    smarts="[CX3H2](=O)",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Formaldehyde",
 )
 
 
@@ -10591,14 +10925,18 @@ molecule_functional_group_Formate_Formide_featurizer = (
 
 molecule_functional_group_FourMemberLactones_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="C1(=O)OCC1", feature_descriptions=None, name="autogen_ochem_alerts_Four member lactones"
+        smarts="C1(=O)OCC1",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Four member lactones",
     )
 )
 
 
 molecule_functional_group_Four_Member_Lactones_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="C1(=O)OCC1", feature_descriptions=None, name="autogen_ochem_alerts_Four_member_lactones"
+        smarts="C1(=O)OCC1",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Four_member_lactones",
     )
 )
 
@@ -10686,7 +11024,9 @@ molecule_functional_group_Furans_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_Furans_Hs_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[oR1]1[cR1][cR1][cR1][cR1]1", feature_descriptions=None, name="autogen_ochem_alerts_Furans (HS)"
+    smarts="[oR1]1[cR1][cR1][cR1][cR1]1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Furans (HS)",
 )
 
 
@@ -10721,7 +11061,9 @@ molecule_functional_group_FusedAzacycles_B_featurizer = MoleculeHasSubstructureF
 
 
 molecule_functional_group_G1_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[CX4][CX3](=[OX1])[NX3H1][OH]", feature_descriptions="R1 = Csp3", name="autogen_ochem_alerts_G1"
+    smarts="[CX4][CX3](=[OX1])[NX3H1][OH]",
+    feature_descriptions="R1 = Csp3",
+    name="autogen_ochem_alerts_G1",
 )
 
 
@@ -10740,7 +11082,9 @@ molecule_functional_group_G1__2_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_G2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[nX3H]1cccc1C(=[OX1])[OH]", feature_descriptions=None, name="autogen_ochem_alerts_G2"
+    smarts="[nX3H]1cccc1C(=[OX1])[OH]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_G2",
 )
 
 
@@ -10752,7 +11096,9 @@ molecule_functional_group_G2__2_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_G3_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1ccnc(c1)C[NX3H]Cc2ccccn2", feature_descriptions=None, name="autogen_ochem_alerts_G3"
+    smarts="c1ccnc(c1)C[NX3H]Cc2ccccn2",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_G3",
 )
 
 
@@ -10764,7 +11110,9 @@ molecule_functional_group_G3__2_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_G4_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C1C[NX3H1]CC[NX3H1]CC[NX3H1]1", feature_descriptions=None, name="autogen_ochem_alerts_G4"
+    smarts="C1C[NX3H1]CC[NX3H1]CC[NX3H1]1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_G4",
 )
 
 
@@ -10790,12 +11138,16 @@ molecule_functional_group_G6_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_G7_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1cc2c(nc1)c3c(cccn3)cc2", feature_descriptions=None, name="autogen_ochem_alerts_G7"
+    smarts="c1cc2c(nc1)c3c(cccn3)cc2",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_G7",
 )
 
 
 molecule_functional_group_G8_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1ccc(c(c1)[OH])[OH]", feature_descriptions=None, name="autogen_ochem_alerts_G8"
+    smarts="c1ccc(c(c1)[OH])[OH]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_G8",
 )
 
 
@@ -10816,19 +11168,25 @@ molecule_functional_group_Gem_DihaloPropaneAndCyclopropane_featurizer = (
 
 
 molecule_functional_group_Geminal_Amines_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[NH1;!r][CX4][NH1;!r]", feature_descriptions=None, name="autogen_ochem_alerts_Geminal_amines"
+    smarts="[NH1;!r][CX4][NH1;!r]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Geminal_amines",
 )
 
 
 molecule_functional_group_Geminal_Dinitriles_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="N#CCC#N", feature_descriptions=None, name="autogen_ochem_alerts_Geminal_dinitriles"
+        smarts="N#CCC#N",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Geminal_dinitriles",
     )
 )
 
 
 molecule_functional_group_Glutarimides_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C1CC(=O)NC(=O)C1", feature_descriptions=None, name="autogen_ochem_alerts_Glutarimides"
+    smarts="C1CC(=O)NC(=O)C1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Glutarimides",
 )
 
 
@@ -10950,37 +11308,51 @@ molecule_functional_group_Guanidines_featurizer = MoleculeHasSubstructureFeaturi
 
 
 molecule_functional_group_H1_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1ccc2c(c1)ccc(c2[OH])[OH]", feature_descriptions=None, name="autogen_ochem_alerts_H1"
+    smarts="c1ccc2c(c1)ccc(c2[OH])[OH]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_H1",
 )
 
 
 molecule_functional_group_H2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1ccc2cc(c(cc2c1)[OH])[OH]", feature_descriptions=None, name="autogen_ochem_alerts_H2"
+    smarts="c1ccc2cc(c(cc2c1)[OH])[OH]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_H2",
 )
 
 
 molecule_functional_group_H2O_7_Water_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OX2H2]", feature_descriptions=None, name="autogen_ochem_alerts_17 - H2O (7 - Water)"
+    smarts="[OX2H2]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_17 - H2O (7 - Water)",
 )
 
 
 molecule_functional_group_H3_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1cc(c(c(c1)[NH2])[OH])C(=[OX1])[OH]", feature_descriptions=None, name="autogen_ochem_alerts_H3"
+    smarts="c1cc(c(c(c1)[NH2])[OH])C(=[OX1])[OH]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_H3",
 )
 
 
 molecule_functional_group_H4_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1cc(c(c(c1)[OH])[OH])C(=[OX1])[OH]", feature_descriptions=None, name="autogen_ochem_alerts_H4"
+    smarts="c1cc(c(c(c1)[OH])[OH])C(=[OX1])[OH]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_H4",
 )
 
 
 molecule_functional_group_H5_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1ccc(c(c1)c2nc3ccccc3o2)[OH]", feature_descriptions=None, name="autogen_ochem_alerts_H5"
+    smarts="c1ccc(c(c1)c2nc3ccccc3o2)[OH]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_H5",
 )
 
 
 molecule_functional_group_H6_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1ccc(c(c1)c2nc3ccccc3s2)[OH]", feature_descriptions=None, name="autogen_ochem_alerts_H6"
+    smarts="c1ccc(c(c1)c2nc3ccccc3s2)[OH]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_H6",
 )
 
 
@@ -11149,7 +11521,9 @@ molecule_functional_group_Haloamines_featurizer = MoleculeHasSubstructureFeaturi
 
 
 molecule_functional_group_Haloamines__2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#6][NX3][F,Cl,Br]", feature_descriptions="X = F, Cl, Br", name="autogen_ochem_alerts_Haloamines"
+    smarts="[#6][NX3][F,Cl,Br]",
+    feature_descriptions="X = F, Cl, Br",
+    name="autogen_ochem_alerts_Haloamines",
 )
 
 
@@ -11325,7 +11699,9 @@ molecule_functional_group_HalogenatedRing_2_featurizer = (
 
 
 molecule_functional_group_Halogens_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#9,#17,#35,#53,#85,#117]", feature_descriptions=None, name="autogen_ochem_alerts_Halogens"
+    smarts="[#9,#17,#35,#53,#85,#117]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Halogens",
 )
 
 
@@ -11468,7 +11844,9 @@ molecule_functional_group_Heptanes_featurizer = MoleculeHasSubstructureFeaturize
 
 
 molecule_functional_group_Het_465_Misc_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1c4CCc4cc2OCOc12", feature_descriptions=None, name="autogen_ochem_alerts_Het_465_misc"
+    smarts="c1c4CCc4cc2OCOc12",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Het_465_misc",
 )
 
 
@@ -11480,7 +11858,9 @@ molecule_functional_group_Het_55_A_featurizer = MoleculeHasSubstructureFeaturize
 
 
 molecule_functional_group_Het_55_B_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1cOC2[CH2]C(=[OX1])OC12", feature_descriptions=None, name="autogen_ochem_alerts_Het_55_B"
+    smarts="c1cOC2[CH2]C(=[OX1])OC12",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Het_55_B",
 )
 
 
@@ -11576,7 +11956,9 @@ molecule_functional_group_Het_65_C_featurizer = MoleculeHasSubstructureFeaturize
 
 
 molecule_functional_group_Het_65_Da_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="N1=C([#6])C2=CC=CC2=C([#6])N1", feature_descriptions=None, name="autogen_ochem_alerts_Het_65_Da"
+    smarts="N1=C([#6])C2=CC=CC2=C([#6])N1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Het_65_Da",
 )
 
 
@@ -11637,7 +12019,9 @@ molecule_functional_group_Het_65_J_featurizer = MoleculeHasSubstructureFeaturize
 
 
 molecule_functional_group_Het_65_K_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="N1=NNN=C2C=CC=C12", feature_descriptions=None, name="autogen_ochem_alerts_Het_65_K"
+    smarts="N1=NNN=C2C=CC=C12",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Het_65_K",
 )
 
 
@@ -11691,7 +12075,9 @@ molecule_functional_group_Het_666_C_featurizer = MoleculeHasSubstructureFeaturiz
 
 
 molecule_functional_group_Het_66_A_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1ccc7c(c1)nnc(n7)[CH2]C=[OX1]", feature_descriptions=None, name="autogen_ochem_alerts_Het_66_A"
+    smarts="c1ccc7c(c1)nnc(n7)[CH2]C=[OX1]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Het_66_A",
 )
 
 
@@ -11977,7 +12363,9 @@ molecule_functional_group_Het_Thio_67_A_featurizer = MoleculeHasSubstructureFeat
 
 
 molecule_functional_group_Het_Thio_6_Ene_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1cN=CC(=CN[#6])S1", feature_descriptions=None, name="autogen_ochem_alerts_Het_thio_6_ene"
+    smarts="c1cN=CC(=CN[#6])S1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Het_thio_6_ene",
 )
 
 
@@ -11998,7 +12386,9 @@ molecule_functional_group_Het_Thio_N_55_featurizer = MoleculeHasSubstructureFeat
 
 
 molecule_functional_group_Het_Thio_N_5A_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="N=C1N=CNS1", feature_descriptions=None, name="autogen_ochem_alerts_Het_thio_N_5A"
+    smarts="N=C1N=CNS1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Het_thio_N_5A",
 )
 
 
@@ -12024,7 +12414,9 @@ molecule_functional_group_Het_Thio_N_5D_featurizer = MoleculeHasSubstructureFeat
 
 
 molecule_functional_group_Het_Thio_N_65A_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1cC2=C(SNC2=S)CN1", feature_descriptions=None, name="autogen_ochem_alerts_Het_thio_N_65A"
+    smarts="c1cC2=C(SNC2=S)CN1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Het_thio_N_65A",
 )
 
 
@@ -12188,7 +12580,9 @@ molecule_functional_group_HighHalogenContent_Gt3_featurizer = (
 
 
 molecule_functional_group_HobtEster_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C(=O)Onnn", feature_descriptions=None, name="autogen_ochem_alerts_HOBT ester"
+    smarts="C(=O)Onnn",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_HOBT ester",
 )
 
 
@@ -12200,7 +12594,9 @@ molecule_functional_group_Hobt_Ester_featurizer = MoleculeHasSubstructureFeaturi
 
 
 molecule_functional_group_Hydantoin_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C1NC(=O)NC(=O)1", feature_descriptions=None, name="autogen_ochem_alerts_Hydantoin"
+    smarts="C1NC(=O)NC(=O)1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Hydantoin",
 )
 
 
@@ -12331,14 +12727,18 @@ molecule_functional_group_HydrazonesAndSimilar_featurizer = (
 
 molecule_functional_group_Hydrazothiourea_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="N=NC(=S)N", feature_descriptions=None, name="autogen_ochem_alerts_Hydrazothiourea"
+        smarts="N=NC(=S)N",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Hydrazothiourea",
     )
 )
 
 
 molecule_functional_group_Hydrazothiourea__2_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="N=NC(S)N", feature_descriptions=None, name="autogen_ochem_alerts_Hydrazothiourea"
+        smarts="N=NC(S)N",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Hydrazothiourea",
     )
 )
 
@@ -12354,7 +12754,9 @@ molecule_functional_group_Hydrazothiourea__3_featurizer = (
 
 molecule_functional_group_HydrogenPeroxide_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="[#1][OX2][OX2][#1]", feature_descriptions=None, name="autogen_ochem_alerts_Hydrogen peroxide"
+        smarts="[#1][OX2][OX2][#1]",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Hydrogen peroxide",
     )
 )
 
@@ -12383,7 +12785,9 @@ molecule_functional_group_Hydroquin_A_featurizer = MoleculeHasSubstructureFeatur
 
 
 molecule_functional_group_Hydroquinone_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1c([OH1])c([OH1])ccc1", feature_descriptions=None, name="autogen_ochem_alerts_Hydroquinone"
+    smarts="c1c([OH1])c([OH1])ccc1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Hydroquinone",
 )
 
 
@@ -12397,7 +12801,9 @@ molecule_functional_group_Hydroquinone__2_featurizer = (
 
 
 molecule_functional_group_Hydroquinones_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OH1]c1ccc([OH1])cc1", feature_descriptions=None, name="autogen_ochem_alerts_Hydroquinones"
+    smarts="[OH1]c1ccc([OH1])cc1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Hydroquinones",
 )
 
 
@@ -12427,7 +12833,9 @@ molecule_functional_group_Hydroxamate_Warhead_featurizer = (
 
 
 molecule_functional_group_HydroxamicAcid_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C(=O)N[OH]", feature_descriptions=None, name="autogen_ochem_alerts_Hydroxamic acid"
+    smarts="C(=O)N[OH]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Hydroxamic acid",
 )
 
 
@@ -12457,7 +12865,9 @@ molecule_functional_group_HydroxyCompounds_AlcoholsOrPhenols_featurizer = Molecu
 
 
 molecule_functional_group_Hydroxylamines_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OH1][NX3][#6]", feature_descriptions=None, name="autogen_ochem_alerts_Hydroxylamines"
+    smarts="[OH1][NX3][#6]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Hydroxylamines",
 )
 
 
@@ -12603,7 +13013,9 @@ molecule_functional_group_Hzone_Phenol_A_featurizer = MoleculeHasSubstructureFea
 
 
 molecule_functional_group_Hzone_Phenol_B_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1(ccc(cc1)C=N[#7])[OH1]", feature_descriptions=None, name="autogen_ochem_alerts_Hzone_phenol_B"
+    smarts="c1(ccc(cc1)C=N[#7])[OH1]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Hzone_phenol_B",
 )
 
 
@@ -12622,7 +13034,9 @@ molecule_functional_group_Hzone_Pipzn_featurizer = MoleculeHasSubstructureFeatur
 
 
 molecule_functional_group_Hzone_Pyrrol_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="n1(C)[cH1][cH1][cH1]c1C=NN", feature_descriptions=None, name="autogen_ochem_alerts_Hzone_pyrrol"
+    smarts="n1(C)[cH1][cH1][cH1]c1C=NN",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Hzone_pyrrol",
 )
 
 
@@ -12668,7 +13082,9 @@ molecule_functional_group_I12_Thioesters_featurizer = MoleculeHasSubstructureFea
 
 
 molecule_functional_group_I13_Cyanamides_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="N[CH2]C#N", feature_descriptions=None, name="autogen_ochem_alerts_I13 - Cyanamides"
+    smarts="N[CH2]C#N",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_I13 - Cyanamides",
 )
 
 
@@ -12730,7 +13146,9 @@ molecule_functional_group_I4_Disulphides_featurizer = MoleculeHasSubstructureFea
 
 
 molecule_functional_group_I5_Thiols_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[SH]", feature_descriptions="R = any atom/group", name="autogen_ochem_alerts_I5 - Thiols"
+    smarts="[SH]",
+    feature_descriptions="R = any atom/group",
+    name="autogen_ochem_alerts_I5 - Thiols",
 )
 
 
@@ -12763,7 +13181,9 @@ molecule_functional_group_I8_2_3_4Trihydroxyphenyl_featurizer = (
 
 molecule_functional_group_I9_Hydrazothiourea_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="N=NC(=S)N", feature_descriptions=None, name="autogen_ochem_alerts_I9 - Hydrazothiourea"
+        smarts="N=NC(=S)N",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_I9 - Hydrazothiourea",
     )
 )
 
@@ -12891,7 +13311,9 @@ molecule_functional_group_Imine1_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_Imine2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#6,#8,#16]-[CH1]=[NH1]", feature_descriptions=None, name="autogen_ochem_alerts_Imine2"
+    smarts="[#6,#8,#16]-[CH1]=[NH1]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Imine2",
 )
 
 
@@ -12933,7 +13355,9 @@ molecule_functional_group_Imine_Imine_A_featurizer = MoleculeHasSubstructureFeat
 
 
 molecule_functional_group_Imine_Imine_B_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="cc[C!H0]=[C!H0][C!H0]=NN=C", feature_descriptions=None, name="autogen_ochem_alerts_Imine_imine_B"
+    smarts="cc[C!H0]=[C!H0][C!H0]=NN=C",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Imine_imine_B",
 )
 
 
@@ -13022,12 +13446,16 @@ molecule_functional_group_Imine_One_Sixes_featurizer = (
 
 
 molecule_functional_group_Imine_Phenol_A_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#6]=[N!R]c3c([OH1])cccc3", feature_descriptions=None, name="autogen_ochem_alerts_Imine_phenol_A"
+    smarts="[#6]=[N!R]c3c([OH1])cccc3",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Imine_phenol_A",
 )
 
 
 molecule_functional_group_Imine__2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="N=[CR0][N,n,O,S]", feature_descriptions=None, name="autogen_ochem_alerts_Imine"
+    smarts="N=[CR0][N,n,O,S]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Imine",
 )
 
 
@@ -13109,7 +13537,9 @@ molecule_functional_group_Indolines_featurizer = MoleculeHasSubstructureFeaturiz
 
 
 molecule_functional_group_Indolones_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="O=C1[#7]c2ccccc2C1=N[#7]", feature_descriptions=None, name="autogen_ochem_alerts_Indolones"
+    smarts="O=C1[#7]c2ccccc2C1=N[#7]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Indolones",
 )
 
 
@@ -13131,7 +13561,9 @@ molecule_functional_group_Iodine__2_featurizer = MoleculeHasSubstructureFeaturiz
 
 
 molecule_functional_group_IodoCompounds_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[I]", feature_descriptions="R = any atom", name="autogen_ochem_alerts_32 - Iodo compounds"
+    smarts="[I]",
+    feature_descriptions="R = any atom",
+    name="autogen_ochem_alerts_32 - Iodo compounds",
 )
 
 
@@ -13146,7 +13578,9 @@ molecule_functional_group_IodosoAndSimilarHypervalentCompounds_featurizer = (
 
 molecule_functional_group_IodososChlorosos_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="[Cl,I]=O", feature_descriptions=None, name="autogen_ochem_alerts_Iodosos, chlorosos"
+        smarts="[Cl,I]=O",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Iodosos, chlorosos",
     )
 )
 
@@ -13497,7 +13931,9 @@ molecule_functional_group_Ketone_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_Ketone__2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#6]-C(=O)-[#6]", feature_descriptions=None, name="autogen_ochem_alerts_Ketone"
+    smarts="[#6]-C(=O)-[#6]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Ketone",
 )
 
 
@@ -13600,7 +14036,9 @@ molecule_functional_group_LinearDithiocarbamates_featurizer = (
 
 molecule_functional_group_LinearThioureas_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="N[CX3](=[SX1])N", feature_descriptions=None, name="autogen_ochem_alerts_Linear thioureas"
+        smarts="N[CX3](=[SX1])N",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Linear thioureas",
     )
 )
 
@@ -13726,7 +14164,9 @@ molecule_functional_group_Metal_Carbon_Bond_featurizer = MoleculeHasSubstructure
 
 
 molecule_functional_group_Metalloids_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#5,#14,#32,#33,#51,#52,#84]", feature_descriptions=None, name="autogen_ochem_alerts_Metalloids"
+    smarts="[#5,#14,#32,#33,#51,#52,#84]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Metalloids",
 )
 
 
@@ -13789,7 +14229,9 @@ molecule_functional_group_Methylendiamines_3_featurizer = (
 
 molecule_functional_group_Methylidene_1_3_Dithiole_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="S1C=CSC1=S", feature_descriptions=None, name="autogen_ochem_alerts_Methylidene-1,3-dithiole"
+        smarts="S1C=CSC1=S",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Methylidene-1,3-dithiole",
     )
 )
 
@@ -13805,7 +14247,9 @@ molecule_functional_group_Methylpyrrolidone_featurizer = (
 
 molecule_functional_group_MichaelAcceptor5_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="N#CC(=C)C#N", feature_descriptions=None, name="autogen_ochem_alerts_Michael acceptor 5"
+        smarts="N#CC(=C)C#N",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Michael acceptor 5",
     )
 )
 
@@ -13821,7 +14265,9 @@ molecule_functional_group_MichaelAcceptor6_featurizer = (
 
 molecule_functional_group_MichaelAcceptor_1_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="C=!@CC=[O,S]", feature_descriptions=None, name="autogen_ochem_alerts_Michael acceptor (1)"
+        smarts="C=!@CC=[O,S]",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Michael acceptor (1)",
     )
 )
 
@@ -13842,7 +14288,9 @@ molecule_functional_group_MichaelAcceptor_3_featurizer = MoleculeHasSubstructure
 
 molecule_functional_group_MichaelAcceptor_4_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="C=C(C=O)C=O", feature_descriptions=None, name="autogen_ochem_alerts_Michael acceptor (4)"
+        smarts="C=C(C=O)C=O",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Michael acceptor (4)",
     )
 )
 
@@ -13888,12 +14336,10 @@ molecule_functional_group_MichaelAcceptors_CarbonylContainingAcrylonitrileDeriva
     name="autogen_ochem_alerts_Michael acceptors (carbonyl containing acrylonitrile derivatives)",
 )
 
-molecule_functional_group_MichaelAcceptors_MethylAcrylonitrileDerivatives_featurizer = (
-    MoleculeHasSubstructureFeaturizer(
-        smarts="C[CX3H1]=[CX3!R][CX2]#[NX1]",
-        feature_descriptions=None,
-        name="autogen_ochem_alerts_Michael acceptors (methyl acrylonitrile derivatives)",
-    )
+molecule_functional_group_MichaelAcceptors_MethylAcrylonitrileDerivatives_featurizer = MoleculeHasSubstructureFeaturizer(
+    smarts="C[CX3H1]=[CX3!R][CX2]#[NX1]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Michael acceptors (methyl acrylonitrile derivatives)",
 )
 
 
@@ -14044,7 +14490,9 @@ molecule_functional_group_MixedAlkylEstersOfThiophosphoricAcid_featurizer = Mole
 
 
 molecule_functional_group_Monensin_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="O1CCCCC1C2CCCO2", feature_descriptions=None, name="autogen_ochem_alerts_Monensin"
+    smarts="O1CCCCC1C2CCCO2",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Monensin",
 )
 
 
@@ -14111,7 +14559,9 @@ molecule_functional_group_Morpholine_featurizer = MoleculeHasSubstructureFeaturi
 
 
 molecule_functional_group_Morpholines_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="O1CC[NH1]CC1", feature_descriptions=None, name="autogen_ochem_alerts_Morpholines"
+    smarts="O1CC[NH1]CC1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Morpholines",
 )
 
 
@@ -14169,7 +14619,9 @@ molecule_functional_group_N1_Quinones_featurizer = MoleculeHasSubstructureFeatur
 
 
 molecule_functional_group_N2_Polyenes_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C=CC=CC=CC=C", feature_descriptions=None, name="autogen_ochem_alerts_N2 - Polyenes"
+    smarts="C=CC=CC=CC=C",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_N2 - Polyenes",
 )
 
 
@@ -14355,7 +14807,9 @@ molecule_functional_group_N_C_HalOrCyanoMethyl_featurizer = (
 
 
 molecule_functional_group_N_C_Halo_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="NC[F,Cl,Br,I]", feature_descriptions="Hal = F, Cl, Br or I", name="autogen_ochem_alerts_N-c-halo"
+    smarts="NC[F,Cl,Br,I]",
+    feature_descriptions="Hal = F, Cl, Br or I",
+    name="autogen_ochem_alerts_N-c-halo",
 )
 
 
@@ -14519,7 +14973,9 @@ molecule_functional_group_N_Nitro_featurizer = MoleculeHasSubstructureFeaturizer
 
 
 molecule_functional_group_N_Nitroso_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#7][NX2]=[OX1]", feature_descriptions=None, name="autogen_ochem_alerts_N-Nitroso"
+    smarts="[#7][NX2]=[OX1]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_N-Nitroso",
 )
 
 
@@ -14580,7 +15036,9 @@ molecule_functional_group_N_Nitroso__2_featurizer = MoleculeHasSubstructureFeatu
 
 molecule_functional_group_N_Oxide_Aliphatic_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="[N+!$(N=O)][O-X1]", feature_descriptions=None, name="autogen_ochem_alerts_N-oxide_aliphatic"
+        smarts="[N+!$(N=O)][O-X1]",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_N-oxide_aliphatic",
     )
 )
 
@@ -14805,7 +15263,9 @@ molecule_functional_group_Nitriles_featurizer = MoleculeHasSubstructureFeaturize
 
 
 molecule_functional_group_Nitrites_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[!#1]ON=O", feature_descriptions="R = any atom except H", name="autogen_ochem_alerts_Nitrites"
+    smarts="[!#1]ON=O",
+    feature_descriptions="R = any atom except H",
+    name="autogen_ochem_alerts_Nitrites",
 )
 
 
@@ -14979,7 +15439,9 @@ molecule_functional_group_Nitrosamine_Specific_featurizer = (
 
 
 molecule_functional_group_Nitroso_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#6][NX2]=[OX1]", feature_descriptions=None, name="autogen_ochem_alerts_Nitroso"
+    smarts="[#6][NX2]=[OX1]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Nitroso",
 )
 
 
@@ -15018,12 +15480,16 @@ molecule_functional_group_Nitroso_General_featurizer = (
 
 
 molecule_functional_group_Nitroso__2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[NX2]=[OX1]", feature_descriptions="R = any atom/ group", name="autogen_ochem_alerts_Nitroso"
+    smarts="[NX2]=[OX1]",
+    feature_descriptions="R = any atom/ group",
+    name="autogen_ochem_alerts_Nitroso",
 )
 
 
 molecule_functional_group_Nitroso__3_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[N&D2](=O)", feature_descriptions="R = any atom/group but H", name="autogen_ochem_alerts_Nitroso"
+    smarts="[N&D2](=O)",
+    feature_descriptions="R = any atom/group but H",
+    name="autogen_ochem_alerts_Nitroso",
 )
 
 
@@ -15051,7 +15517,9 @@ molecule_functional_group_Nitrosone_Not_Nitro_featurizer = MoleculeHasSubstructu
 
 
 molecule_functional_group_Nitrosos_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[NX2]=[OX1]", feature_descriptions="R = any atom/ group", name="autogen_ochem_alerts_Nitrosos"
+    smarts="[NX2]=[OX1]",
+    feature_descriptions="R = any atom/ group",
+    name="autogen_ochem_alerts_Nitrosos",
 )
 
 
@@ -15239,7 +15707,9 @@ molecule_functional_group_O_PhenylPhosphonothioate_featurizer = (
 
 
 molecule_functional_group_O_Quinones_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="O=C1C(=O)C=CC=C1", feature_descriptions=None, name="autogen_ochem_alerts_o-Quinones"
+    smarts="O=C1C(=O)C=CC=C1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_o-Quinones",
 )
 
 
@@ -15272,7 +15742,9 @@ molecule_functional_group_O_Quinones_4_featurizer = MoleculeHasSubstructureFeatu
 
 
 molecule_functional_group_O_Quinones_5_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="CC(=[OX1])C(=S)C", feature_descriptions=None, name="autogen_ochem_alerts_o-Quinones (5)"
+    smarts="CC(=[OX1])C(=S)C",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_o-Quinones (5)",
 )
 
 
@@ -15401,7 +15873,9 @@ molecule_functional_group_OrganophosphorothionateEsters_featurizer = (
 
 molecule_functional_group_OrganotinCompounds_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="[Sn][#6]", feature_descriptions=None, name="autogen_ochem_alerts_Organotin compounds"
+        smarts="[Sn][#6]",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Organotin compounds",
     )
 )
 
@@ -15503,7 +15977,9 @@ molecule_functional_group_OrthocarboxylicAcidDerivatives_featurizer = MoleculeHa
 
 
 molecule_functional_group_Orthoester_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C(O)(O)[OH]", feature_descriptions=None, name="autogen_ochem_alerts_Orthoester"
+    smarts="C(O)(O)[OH]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Orthoester",
 )
 
 
@@ -15591,7 +16067,9 @@ molecule_functional_group_Oxatriazoles_Hs_featurizer = (
 
 
 molecule_functional_group_Oxazirenes_Hs_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#7R1]1=[#6R1]-[#8R1]-1", feature_descriptions=None, name="autogen_ochem_alerts_Oxazirenes  (HS)"
+    smarts="[#7R1]1=[#6R1]-[#8R1]-1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Oxazirenes  (HS)",
 )
 
 
@@ -15619,18 +16097,24 @@ molecule_functional_group_Oxazoles_Hs_featurizer = MoleculeHasSubstructureFeatur
 
 
 molecule_functional_group_Oxepine_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="O1C=CC=CC=C1", feature_descriptions=None, name="autogen_ochem_alerts_Oxepine"
+    smarts="O1C=CC=CC=C1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Oxepine",
 )
 
 
 molecule_functional_group_Oxetanes_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[CX4]1[OX2][CX4][CX4]1", feature_descriptions=None, name="autogen_ochem_alerts_Oxetanes"
+    smarts="[CX4]1[OX2][CX4][CX4]1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Oxetanes",
 )
 
 
 molecule_functional_group_OxetanesThietanes_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="C1[O,S]CC1", feature_descriptions=None, name="autogen_ochem_alerts_Oxetanes, thietanes"
+        smarts="C1[O,S]CC1",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Oxetanes, thietanes",
     )
 )
 
@@ -15678,7 +16162,9 @@ molecule_functional_group_Oxime_1_featurizer = MoleculeHasSubstructureFeaturizer
 
 
 molecule_functional_group_Oxime_2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[C,c]=NOC=O", feature_descriptions=None, name="autogen_ochem_alerts_Oxime (2)"
+    smarts="[C,c]=NOC=O",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Oxime (2)",
 )
 
 
@@ -15697,7 +16183,9 @@ molecule_functional_group_Oximes_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_Oxiranes_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[CX4]1[OX2][CX4]1", feature_descriptions=None, name="autogen_ochem_alerts_Oxiranes"
+    smarts="[CX4]1[OX2][CX4]1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Oxiranes",
 )
 
 
@@ -15711,18 +16199,24 @@ molecule_functional_group_OxiranesAndAziridines_featurizer = (
 
 
 molecule_functional_group_Oxiranes_Hs_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#8R1]1-[#6R1]-[#6R1]-1", feature_descriptions=None, name="autogen_ochem_alerts_Oxiranes (HS)"
+    smarts="[#8R1]1-[#6R1]-[#6R1]-1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Oxiranes (HS)",
 )
 
 
 molecule_functional_group_Oxirenes_Hs_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#8R1]1-[#6R1]=[#6R1]-1", feature_descriptions=None, name="autogen_ochem_alerts_Oxirenes (HS)"
+    smarts="[#8R1]1-[#6R1]=[#6R1]-1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Oxirenes (HS)",
 )
 
 
 molecule_functional_group_Oxobenzothiepine_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="C1(=O)C=CCSC=C1", feature_descriptions=None, name="autogen_ochem_alerts_Oxobenzothiepine"
+        smarts="C1(=O)C=CCSC=C1",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Oxobenzothiepine",
     )
 )
 
@@ -15742,7 +16236,9 @@ molecule_functional_group_Oxonium_featurizer = MoleculeHasSubstructureFeaturizer
 
 
 molecule_functional_group_Oxy_Amide_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#6]C(=O)!@C!@C(=O)N", feature_descriptions=None, name="autogen_ochem_alerts_Oxy-amide"
+    smarts="[#6]C(=O)!@C!@C(=O)N",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Oxy-amide",
 )
 
 
@@ -15808,7 +16304,9 @@ molecule_functional_group_P_Or_S_Halides_featurizer = MoleculeHasSubstructureFea
 
 
 molecule_functional_group_P_Quinones_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="O=C1C=CC(=O)C=C1", feature_descriptions=None, name="autogen_ochem_alerts_p-Quinones"
+    smarts="O=C1C=CC(=O)C=C1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_p-Quinones",
 )
 
 
@@ -16023,7 +16521,9 @@ molecule_functional_group_Pentazines_featurizer = MoleculeHasSubstructureFeaturi
 
 
 molecule_functional_group_Pentazoles_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[nR1]1[nR1][nR1][nR1][nR1]1", feature_descriptions=None, name="autogen_ochem_alerts_Pentazoles"
+    smarts="[nR1]1[nR1][nR1][nR1][nR1]1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Pentazoles",
 )
 
 
@@ -16112,7 +16612,9 @@ molecule_functional_group_Peroxide_featurizer = MoleculeHasSubstructureFeaturize
 
 molecule_functional_group_PeroxideLikeCompounds_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="O[F,Cl,Br,I]", feature_descriptions=None, name="autogen_ochem_alerts_Peroxide like compounds"
+        smarts="O[F,Cl,Br,I]",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Peroxide like compounds",
     )
 )
 
@@ -16125,12 +16627,16 @@ molecule_functional_group_Peroxide__2_featurizer = MoleculeHasSubstructureFeatur
 
 
 molecule_functional_group_Peroxides_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OX2][OX2]", feature_descriptions=None, name="autogen_ochem_alerts_Peroxides"
+    smarts="[OX2][OX2]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Peroxides",
 )
 
 
 molecule_functional_group_Peroxides__2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="OO", feature_descriptions="R = any atom/ group", name="autogen_ochem_alerts_Peroxides"
+    smarts="OO",
+    feature_descriptions="R = any atom/ group",
+    name="autogen_ochem_alerts_Peroxides",
 )
 
 
@@ -16149,7 +16655,9 @@ molecule_functional_group_Phenalene_featurizer = MoleculeHasSubstructureFeaturiz
 
 
 molecule_functional_group_Phenanthrene_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c12cccc3c1c4c(cc3)cccc4cc2", feature_descriptions=None, name="autogen_ochem_alerts_Phenanthrene"
+    smarts="c12cccc3c1c4c(cc3)cccc4cc2",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Phenanthrene",
 )
 
 
@@ -16163,7 +16671,9 @@ molecule_functional_group_PhenanthreneAndPhenanthrene_ContainingCompounds_featur
 
 
 molecule_functional_group_Phenanthrenes_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c12ccccc1ccc3ccccc23", feature_descriptions=None, name="autogen_ochem_alerts_Phenanthrenes"
+    smarts="c12ccccc1ccc3ccccc23",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Phenanthrenes",
 )
 
 
@@ -16215,7 +16725,9 @@ molecule_functional_group_PhenylCarbamate_featurizer = (
 
 molecule_functional_group_PhenylCarbonate_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="c1ccccc1OC(=O)O", feature_descriptions=None, name="autogen_ochem_alerts_Phenyl carbonate"
+        smarts="c1ccccc1OC(=O)O",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Phenyl carbonate",
     )
 )
 
@@ -16237,7 +16749,9 @@ molecule_functional_group_PhenylEsters_featurizer = MoleculeHasSubstructureFeatu
 
 
 molecule_functional_group_Phenylester_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C(=O)!@Oc1ccccc1", feature_descriptions=None, name="autogen_ochem_alerts_Phenylester"
+    smarts="C(=O)!@Oc1ccccc1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Phenylester",
 )
 
 
@@ -16321,7 +16835,9 @@ molecule_functional_group_Phosphite_featurizer = MoleculeHasSubstructureFeaturiz
 
 molecule_functional_group_Phosphocyanates_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="PC#N", feature_descriptions=None, name="autogen_ochem_alerts_Phosphocyanates"
+        smarts="PC#N",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Phosphocyanates",
     )
 )
 
@@ -16334,7 +16850,9 @@ molecule_functional_group_Phosphonate_Esters_featurizer = MoleculeHasSubstructur
 
 
 molecule_functional_group_Phosphonates_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#6]P(=O)O[#6]", feature_descriptions=None, name="autogen_ochem_alerts_Phosphonates"
+    smarts="[#6]P(=O)O[#6]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Phosphonates",
 )
 
 
@@ -16410,12 +16928,16 @@ molecule_functional_group_PhosphorWithDoubleBondedSulphur_featurizer = (
 
 
 molecule_functional_group_Phosphoramide_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="NP(=O)(N)N", feature_descriptions=None, name="autogen_ochem_alerts_Phosphoramide"
+    smarts="NP(=O)(N)N",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Phosphoramide",
 )
 
 
 molecule_functional_group_Phosphoramides_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="NP(=O)(N)N", feature_descriptions=None, name="autogen_ochem_alerts_Phosphoramides"
+    smarts="NP(=O)(N)N",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Phosphoramides",
 )
 
 
@@ -16489,7 +17011,9 @@ molecule_functional_group_PhosphoricAcids_featurizer = (
 
 molecule_functional_group_PhosphoricAnhydrides_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="P(=O)OP(=O)", feature_descriptions=None, name="autogen_ochem_alerts_Phosphoric anhydrides"
+        smarts="P(=O)OP(=O)",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Phosphoric anhydrides",
     )
 )
 
@@ -16537,7 +17061,9 @@ molecule_functional_group_Phosphorus_featurizer = MoleculeHasSubstructureFeaturi
 
 molecule_functional_group_PhosphorusCations_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="[#15+]", feature_descriptions=None, name="autogen_ochem_alerts_Phosphorus cations"
+        smarts="[#15+]",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Phosphorus cations",
     )
 )
 
@@ -16671,17 +17197,17 @@ molecule_functional_group_Phosphoryl_featurizer = MoleculeHasSubstructureFeaturi
 )
 
 
-molecule_functional_group_PhthalicAnhydridesAndTheirThioAndAzaAnalogues_featurizer = (
-    MoleculeHasSubstructureFeaturizer(
-        smarts="[C,O]=[#6]1[#7,#8,#16][#6](=[O,N,SX1])c2ccccc12",
-        feature_descriptions=None,
-        name="autogen_ochem_alerts_Phthalic anhydrides and their thio and aza analogues",
-    )
+molecule_functional_group_PhthalicAnhydridesAndTheirThioAndAzaAnalogues_featurizer = MoleculeHasSubstructureFeaturizer(
+    smarts="[C,O]=[#6]1[#7,#8,#16][#6](=[O,N,SX1])c2ccccc12",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Phthalic anhydrides and their thio and aza analogues",
 )
 
 
 molecule_functional_group_Phthalimide_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[cR,CR]~C(=O)NC(=O)~[cR,CR]", feature_descriptions=None, name="autogen_ochem_alerts_Phthalimide"
+    smarts="[cR,CR]~C(=O)NC(=O)~[cR,CR]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Phthalimide",
 )
 
 
@@ -16739,7 +17265,9 @@ molecule_functional_group_Piperidines_Hs_featurizer = MoleculeHasSubstructureFea
 
 
 molecule_functional_group_Piperizines_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[NH]1CC[NH1]CC1", feature_descriptions=None, name="autogen_ochem_alerts_Piperizines"
+    smarts="[NH]1CC[NH1]CC1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Piperizines",
 )
 
 
@@ -16992,12 +17520,10 @@ molecule_functional_group_PolarizedAlkenesWithAHalogenLeavingGroup_featurizer = 
 )
 
 
-molecule_functional_group_PolarizedAlkenesWithAnAlkylSulfateLeavingGroup_featurizer = (
-    MoleculeHasSubstructureFeaturizer(
-        smarts="C=[CH]OS(=O)(=O)O[#6]",
-        feature_descriptions="R = any carbon atom",
-        name="autogen_ochem_alerts_Polarized alkenes with an alkyl sulfate leaving group",
-    )
+molecule_functional_group_PolarizedAlkenesWithAnAlkylSulfateLeavingGroup_featurizer = MoleculeHasSubstructureFeaturizer(
+    smarts="C=[CH]OS(=O)(=O)O[#6]",
+    feature_descriptions="R = any carbon atom",
+    name="autogen_ochem_alerts_Polarized alkenes with an alkyl sulfate leaving group",
 )
 
 
@@ -17030,7 +17556,9 @@ molecule_functional_group_PolyAromaticHydrocarbons_featurizer = MoleculeHasSubst
 
 
 molecule_functional_group_PolyEthers_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="O[CH2][CH2]O-!@[CH2][CH2]O", feature_descriptions=None, name="autogen_ochem_alerts_Poly ethers"
+    smarts="O[CH2][CH2]O-!@[CH2][CH2]O",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Poly ethers",
 )
 
 
@@ -17134,7 +17662,9 @@ molecule_functional_group_PolycyclicPlanarSystem_Additional_featurizer = Molecul
 
 
 molecule_functional_group_Polyene_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[CR0]=[CR0][CR0]=[CR0]", feature_descriptions=None, name="autogen_ochem_alerts_Polyene"
+    smarts="[CR0]=[CR0][CR0]=[CR0]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Polyene",
 )
 
 
@@ -17148,7 +17678,9 @@ molecule_functional_group_Polyene_Chain_Between_Aromatics_featurizer = (
 
 
 molecule_functional_group_Polyene__2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C=CC=CC=CC=C", feature_descriptions=None, name="autogen_ochem_alerts_Polyene"
+    smarts="C=CC=CC=CC=C",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Polyene",
 )
 
 
@@ -17165,7 +17697,9 @@ molecule_functional_group_Polyene__4_featurizer = MoleculeHasSubstructureFeaturi
 
 
 molecule_functional_group_Polyenes_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C=CC=CC=CC=C", feature_descriptions=None, name="autogen_ochem_alerts_Polyenes"
+    smarts="C=CC=CC=CC=C",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Polyenes",
 )
 
 
@@ -17379,7 +17913,9 @@ molecule_functional_group_PropargylAmines_featurizer = MoleculeHasSubstructureFe
 
 
 molecule_functional_group_Propiolactone_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C1(=O)OCC1", feature_descriptions=None, name="autogen_ochem_alerts_Propiolactone"
+    smarts="C1(=O)OCC1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Propiolactone",
 )
 
 
@@ -17405,12 +17941,16 @@ molecule_functional_group_PropiolactonesOrPropiosultones_featurizer = MoleculeHa
 
 
 molecule_functional_group_Pt_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[Pt]", feature_descriptions="Pt containing molecules", name="autogen_ochem_alerts_Pt"
+    smarts="[Pt]",
+    feature_descriptions="Pt containing molecules",
+    name="autogen_ochem_alerts_Pt",
 )
 
 
 molecule_functional_group_Pyranone_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="O=C1C=COC=C1", feature_descriptions=None, name="autogen_ochem_alerts_Pyranone"
+    smarts="O=C1C=COC=C1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Pyranone",
 )
 
 
@@ -17517,7 +18057,9 @@ molecule_functional_group_Pyridine_featurizer = MoleculeHasSubstructureFeaturize
 
 
 molecule_functional_group_Pyridinering_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[$(n1ccccc1)]", feature_descriptions=None, name="autogen_ochem_alerts_PyridineRing"
+    smarts="[$(n1ccccc1)]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_PyridineRing",
 )
 
 
@@ -17717,7 +18259,9 @@ molecule_functional_group_Pyrrolines_Hs_featurizer = MoleculeHasSubstructureFeat
 
 
 molecule_functional_group_Pyrylium_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1ccc[o+]c1", feature_descriptions=None, name="autogen_ochem_alerts_Pyrylium"
+    smarts="c1ccc[o+]c1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Pyrylium",
 )
 
 
@@ -17736,7 +18280,9 @@ molecule_functional_group_Quat_N_N_featurizer = MoleculeHasSubstructureFeaturize
 
 
 molecule_functional_group_Quaternary_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[C+,Cl+,I+,P+,S+]", feature_descriptions=None, name="autogen_ochem_alerts_Quaternary"
+    smarts="[C+,Cl+,I+,P+,S+]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Quaternary",
 )
 
 
@@ -17783,7 +18329,9 @@ molecule_functional_group_QuaternaryNitrogen_3_featurizer = (
 
 molecule_functional_group_QuaternaryNitroxy_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="C[N+](-[O-])(C)C", feature_descriptions=None, name="autogen_ochem_alerts_Quaternary nitroxy"
+        smarts="C[N+](-[O-])(C)C",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Quaternary nitroxy",
     )
 )
 
@@ -17993,7 +18541,9 @@ molecule_functional_group_R18_QuaternaryC_Cl_I_POrS_featurizer = (
 
 molecule_functional_group_R19_Phosphoranes_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="C=P", feature_descriptions=None, name="autogen_ochem_alerts_R19 - Phosphoranes"
+        smarts="C=P",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_R19 - Phosphoranes",
     )
 )
 
@@ -18017,7 +18567,9 @@ molecule_functional_group_R20_Chloramidines_featurizer = (
 
 
 molecule_functional_group_R21_Nitroso_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[N&D2](=O)", feature_descriptions="R = any atom/group", name="autogen_ochem_alerts_R21 - Nitroso"
+    smarts="[N&D2](=O)",
+    feature_descriptions="R = any atom/group",
+    name="autogen_ochem_alerts_R21 - Nitroso",
 )
 
 
@@ -18168,7 +18720,9 @@ molecule_functional_group_R9_ParanitrophenylEsters_featurizer = (
 
 
 molecule_functional_group_Radical_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#16;X3v3+0]", feature_descriptions="S with 3 single bonds", name="autogen_ochem_alerts_Radical"
+    smarts="[#16;X3v3+0]",
+    feature_descriptions="S with 3 single bonds",
+    name="autogen_ochem_alerts_Radical",
 )
 
 
@@ -18191,7 +18745,9 @@ molecule_functional_group_Reactive_Carbonyls__2_featurizer = (
 
 
 molecule_functional_group_Resorcinols_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OH1]c1cc([OH1])ccc1", feature_descriptions=None, name="autogen_ochem_alerts_Resorcinols"
+    smarts="[OH1]c1cc([OH1])ccc1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Resorcinols",
 )
 
 
@@ -18405,27 +18961,37 @@ molecule_functional_group_Sa16_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_Sa17_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1cc(ccc1)-[#6](-c2ccccc2)-[#6]", feature_descriptions=None, name="autogen_ochem_alerts_SA17"
+    smarts="c1cc(ccc1)-[#6](-c2ccccc2)-[#6]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_SA17",
 )
 
 
 molecule_functional_group_Sa18_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1c(cccc1)-c2ccccc2", feature_descriptions=None, name="autogen_ochem_alerts_SA18"
+    smarts="c1c(cccc1)-c2ccccc2",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_SA18",
 )
 
 
 molecule_functional_group_Sa19_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1c(cccc1)-c2ccccc2-[Cl]", feature_descriptions=None, name="autogen_ochem_alerts_SA19"
+    smarts="c1c(cccc1)-c2ccccc2-[Cl]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_SA19",
 )
 
 
 molecule_functional_group_Sa20C_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1c(cccc1)-c2ccc(cc2)-[#8]-[#1]", feature_descriptions=None, name="autogen_ochem_alerts_SA20c"
+    smarts="c1c(cccc1)-c2ccc(cc2)-[#8]-[#1]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_SA20c",
 )
 
 
 molecule_functional_group_Sa21_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1cc-3c(cc1)-[#8]-c2ccccc2-[#8]-3", feature_descriptions=None, name="autogen_ochem_alerts_SA21"
+    smarts="c1cc-3c(cc1)-[#8]-c2ccccc2-[#8]-3",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_SA21",
 )
 
 
@@ -18444,7 +19010,9 @@ molecule_functional_group_Sa24_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_Sa25C_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#8](-[#6])-c1ccc(cc1)-[#8]-[#1]", feature_descriptions=None, name="autogen_ochem_alerts_SA25c"
+    smarts="[#8](-[#6])-c1ccc(cc1)-[#8]-[#1]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_SA25c",
 )
 
 
@@ -18484,7 +19052,9 @@ molecule_functional_group_Sa32B_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_Sa34A_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#8](-[#1])-c1ccc(cc1)-[#6]-[#6]", feature_descriptions=None, name="autogen_ochem_alerts_SA34a"
+    smarts="[#8](-[#1])-c1ccc(cc1)-[#6]-[#6]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_SA34a",
 )
 
 
@@ -18496,7 +19066,9 @@ molecule_functional_group_Sa34D_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_Sa35_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c12ccc3c(c1cccc2)cccc3", feature_descriptions=None, name="autogen_ochem_alerts_SA35"
+    smarts="c12ccc3c(c1cccc2)cccc3",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_SA35",
 )
 
 
@@ -18536,7 +19108,9 @@ molecule_functional_group_Sa41_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_Sa43_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1c(cccc1)-[#6]-[#8]-c2ccccc2", feature_descriptions=None, name="autogen_ochem_alerts_SA43"
+    smarts="c1c(cccc1)-[#6]-[#8]-c2ccccc2",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_SA43",
 )
 
 
@@ -18555,12 +19129,16 @@ molecule_functional_group_Sa47_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_Sa48_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1(c(cccc1)-[#8]-c2ccccc2)-[Br]", feature_descriptions=None, name="autogen_ochem_alerts_SA48"
+    smarts="c1(c(cccc1)-[#8]-c2ccccc2)-[Br]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_SA48",
 )
 
 
 molecule_functional_group_Sa49_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1-2c(cccc1)-[#6]-[#6]-[#6]-2", feature_descriptions=None, name="autogen_ochem_alerts_SA49"
+    smarts="c1-2c(cccc1)-[#6]-[#6]-[#6]-2",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_SA49",
 )
 
 
@@ -18572,7 +19150,9 @@ molecule_functional_group_Salts_C_featurizer = MoleculeHasSubstructureFeaturizer
 
 
 molecule_functional_group_Saponin_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="O1CCCCC1OC2CCC3CCCCC3C2", feature_descriptions=None, name="autogen_ochem_alerts_Saponin"
+    smarts="O1CCCCC1OC2CCC3CCCCC3C2",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Saponin",
 )
 
 
@@ -18893,7 +19473,9 @@ molecule_functional_group_Selen_featurizer = MoleculeHasSubstructureFeaturizer(
 
 
 molecule_functional_group_SelenInChain_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[Sev2X2]", feature_descriptions=None, name="autogen_ochem_alerts_Selen in chain"
+    smarts="[Sev2X2]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Selen in chain",
 )
 
 
@@ -18919,7 +19501,9 @@ molecule_functional_group_Si_42_Sih2_featurizer = MoleculeHasSubstructureFeaturi
 
 
 molecule_functional_group_Si_B_SeAtoms_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[Si,B,Se]", feature_descriptions=None, name="autogen_ochem_alerts_Si,B,Se atoms"
+    smarts="[Si,B,Se]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Si,B,Se atoms",
 )
 
 
@@ -18995,7 +19579,9 @@ molecule_functional_group_SimpleAnilinesAndPhenols_featurizer = (
 
 molecule_functional_group_SingelAcyclicN_NBonds_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="[#7]!@-N", feature_descriptions=None, name="autogen_ochem_alerts_Singel acyclic N-N bonds"
+        smarts="[#7]!@-N",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Singel acyclic N-N bonds",
     )
 )
 
@@ -19136,7 +19722,9 @@ molecule_functional_group_Six_MemberedHeterocycles_Ls_featurizer = MoleculeHasSu
 
 
 molecule_functional_group_Sn_Not_Ring_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[S;R0]=[N;R0]", feature_descriptions=None, name="autogen_ochem_alerts_S=N (not_ring)"
+    smarts="[S;R0]=[N;R0]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_S=N (not_ring)",
 )
 
 
@@ -19325,7 +19913,9 @@ molecule_functional_group_Sp3HybridizedCarbonAtoms_9_featurizer = (
 
 
 molecule_functional_group_Squalestatin_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C12OCCC(O1)CC2", feature_descriptions=None, name="autogen_ochem_alerts_Squalestatin"
+    smarts="C12OCCC(O1)CC2",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Squalestatin",
 )
 
 
@@ -19337,12 +19927,16 @@ molecule_functional_group_Steroid_A_featurizer = MoleculeHasSubstructureFeaturiz
 
 
 molecule_functional_group_Stilbene_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1ccccc1C=Cc2ccccc2", feature_descriptions=None, name="autogen_ochem_alerts_Stilbene"
+    smarts="c1ccccc1C=Cc2ccccc2",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Stilbene",
 )
 
 
 molecule_functional_group_Styrene_A_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C1Cc3ccccc3C(c5c1cccc5)=CC", feature_descriptions=None, name="autogen_ochem_alerts_Styrene_A"
+    smarts="C1Cc3ccccc3C(c5c1cccc5)=CC",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Styrene_A",
 )
 
 
@@ -19732,7 +20326,9 @@ molecule_functional_group_SulfonicAcidEsters__3_featurizer = (
 
 molecule_functional_group_SulfonicAcid__2_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="S(=O)(=O)[O-,OH]", feature_descriptions=None, name="autogen_ochem_alerts_Sulfonic acid"
+        smarts="S(=O)(=O)[O-,OH]",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Sulfonic acid",
     )
 )
 
@@ -19770,13 +20366,17 @@ molecule_functional_group_SulfoniumCompounds_featurizer = (
 
 
 molecule_functional_group_SulfoniumSalts_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[SX3+]([#6])([#6])([#6])", feature_descriptions=None, name="autogen_ochem_alerts_Sulfonium salts"
+    smarts="[SX3+]([#6])([#6])([#6])",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Sulfonium salts",
 )
 
 
 molecule_functional_group_SulfonylCyanide_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="S(=O)(=O)C#N", feature_descriptions=None, name="autogen_ochem_alerts_Sulfonyl cyanide"
+        smarts="S(=O)(=O)C#N",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Sulfonyl cyanide",
     )
 )
 
@@ -19801,7 +20401,9 @@ molecule_functional_group_Sulfonyl_Anhydride_featurizer = (
 
 molecule_functional_group_Sulfonyl_Cyanide_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="S(=O)(=O)C#N", feature_descriptions=None, name="autogen_ochem_alerts_Sulfonyl_cyanide"
+        smarts="S(=O)(=O)C#N",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Sulfonyl_cyanide",
     )
 )
 
@@ -19849,7 +20451,9 @@ molecule_functional_group_Sulfonylanhydrides_featurizer = (
 
 molecule_functional_group_Sulfonylanhydrides__2_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="S(=O)OS=O", feature_descriptions=None, name="autogen_ochem_alerts_Sulfonylanhydrides"
+        smarts="S(=O)OS=O",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Sulfonylanhydrides",
     )
 )
 
@@ -19871,7 +20475,9 @@ molecule_functional_group_Sulfonylureas_featurizer = MoleculeHasSubstructureFeat
 
 
 molecule_functional_group_Sulfoxides_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[Sv4X3](=[OX1])", feature_descriptions="R = any atom", name="autogen_ochem_alerts_Sulfoxides"
+    smarts="[Sv4X3](=[OX1])",
+    feature_descriptions="R = any atom",
+    name="autogen_ochem_alerts_Sulfoxides",
 )
 
 
@@ -19910,7 +20516,9 @@ molecule_functional_group_SulfurOxygenSingleBond_featurizer = (
 
 
 molecule_functional_group_Sulfuranes_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C1[SX2]C1", feature_descriptions=None, name="autogen_ochem_alerts_Sulfuranes"
+    smarts="C1[SX2]C1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Sulfuranes",
 )
 
 
@@ -20012,7 +20620,9 @@ molecule_functional_group_SulfurylHalides_featurizer = (
 
 
 molecule_functional_group_Sulphate_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="OS(=O)(=O)[O-]", feature_descriptions=None, name="autogen_ochem_alerts_Sulphate"
+    smarts="OS(=O)(=O)[O-]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Sulphate",
 )
 
 
@@ -20124,7 +20734,9 @@ molecule_functional_group_Sulphonyl_Cyanide_featurizer = (
 
 
 molecule_functional_group_SulphurAtom_1_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[SX2H1]", feature_descriptions="R = any atom/group", name="autogen_ochem_alerts_Sulphur atom (1)"
+    smarts="[SX2H1]",
+    feature_descriptions="R = any atom/group",
+    name="autogen_ochem_alerts_Sulphur atom (1)",
 )
 
 
@@ -20318,7 +20930,9 @@ molecule_functional_group_Tertiaryamine_featurizer = MoleculeHasSubstructureFeat
 
 
 molecule_functional_group_Tetraazinane_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C1NNC=NN1", feature_descriptions=None, name="autogen_ochem_alerts_Tetraazinane"
+    smarts="C1NNC=NN1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Tetraazinane",
 )
 
 
@@ -20543,7 +21157,9 @@ molecule_functional_group_Thiaziridines_Hs_featurizer = (
 
 
 molecule_functional_group_Thiazol_Sc_A_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#6][SX2]c1n[cH]cs1", feature_descriptions=None, name="autogen_ochem_alerts_Thiazol_SC_A"
+    smarts="[#6][SX2]c1n[cH]cs1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Thiazol_SC_A",
 )
 
 
@@ -20696,7 +21312,9 @@ molecule_functional_group_Thiazolidinediones_featurizer = (
 
 
 molecule_functional_group_Thiazolidinone_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="O=C1CSCN1", feature_descriptions=None, name="autogen_ochem_alerts_Thiazolidinone"
+    smarts="O=C1CSCN1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Thiazolidinone",
 )
 
 
@@ -20729,7 +21347,9 @@ molecule_functional_group_Thienopyrimidinone_B_featurizer = MoleculeHasSubstruct
 
 
 molecule_functional_group_Thietanes_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[CX4]1[SX2][CX4][CX4]1", feature_descriptions=None, name="autogen_ochem_alerts_Thietanes"
+    smarts="[CX4]1[SX2][CX4][CX4]1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Thietanes",
 )
 
 
@@ -20748,7 +21368,9 @@ molecule_functional_group_Thietenes_Hs_featurizer = MoleculeHasSubstructureFeatu
 
 
 molecule_functional_group_Thiiranes_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[CX4]1[SX2][CX4]1", feature_descriptions=None, name="autogen_ochem_alerts_Thiiranes"
+    smarts="[CX4]1[SX2][CX4]1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Thiiranes",
 )
 
 
@@ -20767,7 +21389,9 @@ molecule_functional_group_Thiirenes_Hs_featurizer = MoleculeHasSubstructureFeatu
 
 
 molecule_functional_group_ThioAldehydes_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#6,#1][CX3]([H])=[SX1]", feature_descriptions=None, name="autogen_ochem_alerts_Thio aldehydes"
+    smarts="[#6,#1][CX3]([H])=[SX1]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Thio aldehydes",
 )
 
 
@@ -20777,12 +21401,16 @@ molecule_functional_group_ThioCyanates_featurizer = MoleculeHasSubstructureFeatu
 
 
 molecule_functional_group_ThioHalogens_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#16][F,Cl,Br,I]", feature_descriptions=None, name="autogen_ochem_alerts_Thio halogens"
+    smarts="[#16][F,Cl,Br,I]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Thio halogens",
 )
 
 
 molecule_functional_group_Thio_Aldehyd_A_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#1,#6][C!H0](=[SX1])", feature_descriptions=None, name="autogen_ochem_alerts_Thio_aldehyd_A"
+    smarts="[#1,#6][C!H0](=[SX1])",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Thio_aldehyd_A",
 )
 
 
@@ -20822,7 +21450,9 @@ molecule_functional_group_Thio_Amide_E_featurizer = MoleculeHasSubstructureFeatu
 
 
 molecule_functional_group_Thio_Amide_F_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="acC(=S)[N!H0][N!H0]ca", feature_descriptions=None, name="autogen_ochem_alerts_Thio_amide_F"
+    smarts="acC(=S)[N!H0][N!H0]ca",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Thio_amide_F",
 )
 
 
@@ -20835,7 +21465,9 @@ molecule_functional_group_Thio_Carbam_A_featurizer = MoleculeHasSubstructureFeat
 
 molecule_functional_group_Thio_Carbam_Ene_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="S1C(=S)NC=C[CX4]1", feature_descriptions=None, name="autogen_ochem_alerts_Thio_carbam_ene"
+        smarts="S1C(=S)NC=C[CX4]1",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Thio_carbam_ene",
     )
 )
 
@@ -20898,7 +21530,9 @@ molecule_functional_group_Thio_Est_Cyano_A_featurizer = (
 
 
 molecule_functional_group_Thio_Ester_A_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C1=C(SC(C=C1)=S)[#7]", feature_descriptions=None, name="autogen_ochem_alerts_Thio_ester_A"
+    smarts="C1=C(SC(C=C1)=S)[#7]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Thio_ester_A",
 )
 
 
@@ -20947,12 +21581,16 @@ molecule_functional_group_Thio_Keto_Het_featurizer = MoleculeHasSubstructureFeat
 
 
 molecule_functional_group_Thio_Ketone_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#6]-,:[CX3](=[SX1])-,:[#6]", feature_descriptions=None, name="autogen_ochem_alerts_Thio_ketone"
+    smarts="[#6]-,:[CX3](=[SX1])-,:[#6]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Thio_ketone",
 )
 
 
 molecule_functional_group_Thio_Lactones_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C1C(=O)SC1", feature_descriptions=None, name="autogen_ochem_alerts_Thio-lactones"
+    smarts="C1C(=O)SC1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Thio-lactones",
 )
 
 
@@ -21134,7 +21772,9 @@ molecule_functional_group_Thioamide_featurizer = MoleculeHasSubstructureFeaturiz
 
 
 molecule_functional_group_Thioamides_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#6][CX3](=[SX1])[#7]", feature_descriptions=None, name="autogen_ochem_alerts_Thioamides"
+    smarts="[#6][CX3](=[SX1])[#7]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Thioamides",
 )
 
 
@@ -21269,7 +21909,9 @@ molecule_functional_group_ThiocarbonylGroup_featurizer = (
 
 molecule_functional_group_Thiocarbonyl_Group_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="C=S", feature_descriptions=None, name="autogen_ochem_alerts_Thiocarbonyl_group"
+        smarts="C=S",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Thiocarbonyl_group",
     )
 )
 
@@ -21345,7 +21987,9 @@ molecule_functional_group_Thiocyanates__2_featurizer = (
 
 molecule_functional_group_Thiocyanates__3_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="SC#N", feature_descriptions=None, name="autogen_ochem_alerts_Thiocyanates"
+        smarts="SC#N",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Thiocyanates",
     )
 )
 
@@ -21392,7 +22036,9 @@ molecule_functional_group_Thioenols_featurizer = MoleculeHasSubstructureFeaturiz
 
 
 molecule_functional_group_Thioester_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[CX3](=[SX1])([#6])S", feature_descriptions=None, name="autogen_ochem_alerts_Thioester"
+    smarts="[CX3](=[SX1])([#6])S",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Thioester",
 )
 
 
@@ -21402,12 +22048,16 @@ molecule_functional_group_Thioester__2_featurizer = MoleculeHasSubstructureFeatu
 
 
 molecule_functional_group_Thioester__3_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C-C(=O)[SD2]", feature_descriptions="R = any atom/group", name="autogen_ochem_alerts_Thioester"
+    smarts="C-C(=O)[SD2]",
+    feature_descriptions="R = any atom/group",
+    name="autogen_ochem_alerts_Thioester",
 )
 
 
 molecule_functional_group_Thioester__4_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C[O,S;R0][C;R0](=S)", feature_descriptions=None, name="autogen_ochem_alerts_Thioester"
+    smarts="C[O,S;R0][C;R0](=S)",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Thioester",
 )
 
 
@@ -21426,7 +22076,9 @@ molecule_functional_group_Thioesters_featurizer = MoleculeHasSubstructureFeaturi
 
 
 molecule_functional_group_Thioesters__2_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C[O,S;R0][C;R0](=S)", feature_descriptions=None, name="autogen_ochem_alerts_Thioesters"
+    smarts="C[O,S;R0][C;R0](=S)",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Thioesters",
 )
 
 
@@ -21493,7 +22145,9 @@ molecule_functional_group_Thiolactones_featurizer = MoleculeHasSubstructureFeatu
 
 
 molecule_functional_group_Thioles_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[Sv2X2H1]", feature_descriptions="R = any atom/ group", name="autogen_ochem_alerts_Thioles"
+    smarts="[Sv2X2H1]",
+    feature_descriptions="R = any atom/ group",
+    name="autogen_ochem_alerts_Thioles",
 )
 
 
@@ -21526,7 +22180,9 @@ molecule_functional_group_Thiols__3_featurizer = MoleculeHasSubstructureFeaturiz
 
 
 molecule_functional_group_Thiols__4_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#6][Sv2H]", feature_descriptions="R = any carbon atom", name="autogen_ochem_alerts_Thiols"
+    smarts="[#6][Sv2H]",
+    feature_descriptions="R = any carbon atom",
+    name="autogen_ochem_alerts_Thiols",
 )
 
 
@@ -21538,19 +22194,25 @@ molecule_functional_group_Thiols__5_featurizer = MoleculeHasSubstructureFeaturiz
 
 
 molecule_functional_group_Thiols__6_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="*-[S!H0]", feature_descriptions="A = any atom/group", name="autogen_ochem_alerts_Thiols"
+    smarts="*-[S!H0]",
+    feature_descriptions="A = any atom/group",
+    name="autogen_ochem_alerts_Thiols",
 )
 
 
 molecule_functional_group_Thiomorpholinedione_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="N1C(=O)CSCC1=O", feature_descriptions=None, name="autogen_ochem_alerts_Thiomorpholinedione"
+        smarts="N1C(=O)CSCC1=O",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Thiomorpholinedione",
     )
 )
 
 
 molecule_functional_group_Thione_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[CX3]=[SX1!R]", feature_descriptions="R = any atom/ group", name="autogen_ochem_alerts_Thione"
+    smarts="[CX3]=[SX1!R]",
+    feature_descriptions="R = any atom/ group",
+    name="autogen_ochem_alerts_Thione",
 )
 
 
@@ -21562,12 +22224,16 @@ molecule_functional_group_ThioneEsters_featurizer = MoleculeHasSubstructureFeatu
 
 
 molecule_functional_group_Thiones_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#6][CX3](=[SX1])[#6]", feature_descriptions=None, name="autogen_ochem_alerts_Thiones"
+    smarts="[#6][CX3](=[SX1])[#6]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Thiones",
 )
 
 
 molecule_functional_group_Thionoester_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="COC(=S)C", feature_descriptions=None, name="autogen_ochem_alerts_Thionoester"
+    smarts="COC(=S)C",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Thionoester",
 )
 
 
@@ -21696,7 +22362,9 @@ molecule_functional_group_Thiophene_Hydroxy_featurizer = (
 
 
 molecule_functional_group_Thiophenes_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1ccc[sX2]1", feature_descriptions=None, name="autogen_ochem_alerts_Thiophenes"
+    smarts="c1ccc[sX2]1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Thiophenes",
 )
 
 
@@ -21715,7 +22383,9 @@ molecule_functional_group_Thiophenes__2_featurizer = MoleculeHasSubstructureFeat
 
 
 molecule_functional_group_Thiophenols_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c[Sv2H1]", feature_descriptions="R = aryl", name="autogen_ochem_alerts_Thiophenols"
+    smarts="c[Sv2H1]",
+    feature_descriptions="R = aryl",
+    name="autogen_ochem_alerts_Thiophenols",
 )
 
 
@@ -21771,7 +22441,9 @@ molecule_functional_group_Thiopyrans_Hs_featurizer = MoleculeHasSubstructureFeat
 
 
 molecule_functional_group_Thiopyrylium_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1[#16+]cccc1", feature_descriptions=None, name="autogen_ochem_alerts_Thiopyrylium"
+    smarts="c1[#16+]cccc1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Thiopyrylium",
 )
 
 
@@ -21829,7 +22501,9 @@ molecule_functional_group_Thiosulphonates_featurizer = (
 
 
 molecule_functional_group_Thiourea_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#7][CX3](=[SX1])[#7]", feature_descriptions=None, name="autogen_ochem_alerts_Thiourea"
+    smarts="[#7][CX3](=[SX1])[#7]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Thiourea",
 )
 
 
@@ -21839,7 +22513,9 @@ molecule_functional_group_Thiourea__2_featurizer = MoleculeHasSubstructureFeatur
 
 
 molecule_functional_group_Thiourea__3_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[N;!r][C;!r](=S)[N;!r]", feature_descriptions=None, name="autogen_ochem_alerts_Thiourea"
+    smarts="[N;!r][C;!r](=S)[N;!r]",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Thiourea",
 )
 
 
@@ -22006,7 +22682,9 @@ molecule_functional_group_TooManyCoohGroups_Gt1_featurizer = (
 
 molecule_functional_group_TooManyCyanoGroups_Gt1_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="C#N.C#N", feature_descriptions=None, name="autogen_ochem_alerts_Too many cyano groups (>1)"
+        smarts="C#N.C#N",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Too many cyano groups (>1)",
     )
 )
 
@@ -22029,13 +22707,17 @@ molecule_functional_group_TriPhosphoricEsters_featurizer = (
 
 molecule_functional_group_Tri_Pentavalent_S_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="[#16v3,#16v5]", feature_descriptions=None, name="autogen_ochem_alerts_Tri_pentavalent_S"
+        smarts="[#16v3,#16v5]",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Tri_pentavalent_S",
     )
 )
 
 
 molecule_functional_group_Triacyloxime_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C(=O)N(C(=O))OC(=O)", feature_descriptions=None, name="autogen_ochem_alerts_Triacyloxime"
+    smarts="C(=O)N(C(=O))OC(=O)",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Triacyloxime",
 )
 
 
@@ -22120,7 +22802,9 @@ molecule_functional_group_Trichloromethyl_Ketone_featurizer = (
 
 
 molecule_functional_group_Triflate_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="OS(=O)(=O)C(F)(F)F", feature_descriptions=None, name="autogen_ochem_alerts_Triflate"
+    smarts="OS(=O)(=O)C(F)(F)F",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Triflate",
 )
 
 
@@ -22178,7 +22862,9 @@ molecule_functional_group_Trifluoromethyl_Ketone_featurizer = (
 
 molecule_functional_group_Trifluroacetate_Amide_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="FC(F)(F)C(=O)N", feature_descriptions=None, name="autogen_ochem_alerts_Trifluroacetate_amide"
+        smarts="FC(F)(F)C(=O)N",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Trifluroacetate_amide",
     )
 )
 
@@ -22239,7 +22925,9 @@ molecule_functional_group_Trioxanes_Hs_featurizer = MoleculeHasSubstructureFeatu
 
 
 molecule_functional_group_Trioxiranes_Hs_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[#8R1]1-[#8R1]-[#8R1]-1", feature_descriptions=None, name="autogen_ochem_alerts_Trioxiranes (HS)"
+    smarts="[#8R1]1-[#8R1]-[#8R1]-1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Trioxiranes (HS)",
 )
 
 
@@ -22339,7 +23027,9 @@ molecule_functional_group_Trithiiranes_Hs_featurizer = (
 
 molecule_functional_group_Trithiocarbonates_featurizer = (
     MoleculeHasSubstructureFeaturizer(
-        smarts="[CX3](=[SX1])(S)S", feature_descriptions=None, name="autogen_ochem_alerts_Trithiocarbonates"
+        smarts="[CX3](=[SX1])(S)S",
+        feature_descriptions=None,
+        name="autogen_ochem_alerts_Trithiocarbonates",
     )
 )
 
@@ -22354,7 +23044,9 @@ molecule_functional_group_Trithiolanes_Hs_featurizer = (
 
 
 molecule_functional_group_Tropone_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="C1C(=O)C=CC=CC=1", feature_descriptions=None, name="autogen_ochem_alerts_Tropone"
+    smarts="C1C(=O)C=CC=CC=1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Tropone",
 )
 
 
@@ -22699,7 +23391,9 @@ molecule_functional_group_Vic_DiiodoalkylGroup_featurizer = MoleculeHasSubstruct
 
 
 molecule_functional_group_VinylBenzenes_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="c1([CX3!R]=[CX3!R])ccccc1", feature_descriptions=None, name="autogen_ochem_alerts_Vinyl benzenes"
+    smarts="c1([CX3!R]=[CX3!R])ccccc1",
+    feature_descriptions=None,
+    name="autogen_ochem_alerts_Vinyl benzenes",
 )
 
 
@@ -22828,7 +23522,9 @@ molecule_functional_group_VinylsulfonesAndSimilar_featurizer = (
 
 
 molecule_functional_group_Water_featurizer = MoleculeHasSubstructureFeaturizer(
-    smarts="[OX2H2]", feature_descriptions="Matches strictly water", name="autogen_ochem_alerts_7 - Water"
+    smarts="[OX2H2]",
+    feature_descriptions="Matches strictly water",
+    name="autogen_ochem_alerts_7 - Water",
 )
 
 _available_featurizer = {

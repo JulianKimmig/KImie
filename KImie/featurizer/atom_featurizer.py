@@ -22,7 +22,6 @@ try:
 except ImportError as e:
     raise e
 except Exception as e:
-
     KIMIE_LOGGER.exception(e)
 
 try:
