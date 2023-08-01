@@ -358,6 +358,7 @@ for s in succs[::-1]:
     # if f in loded_funcs:
     #    continue
     loded_funcs.append(f)
+
     # print(n)
     def try_f(mol):
         try:
@@ -393,7 +394,6 @@ for s in succs[::-1]:
         s["type"] = "string"
         continue
     elif isinstance(r, (list, tuple)):
-
         l1 = len(r)
         if l1 == 0:
             s["type"] = "unknown"
@@ -723,7 +723,6 @@ def numeric_coder(s):
             ("dual_sig_norm", "dual_sigmoidal_norm_parameter", "dual_sig"),
             ("genlog_norm", "genlog_norm_parameter", "genlog"),
         ]:
-
             if datakey in ecdf_data:
                 norm_data = ecdf_data[datakey]
                 precode += f"    {parakey} = ({', '.join([str(i) for i in norm_data['parameter']])})"

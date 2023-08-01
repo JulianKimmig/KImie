@@ -17,7 +17,6 @@ class MolDataloaderTest(KImieTest):
         dl = moldataloader_from_df(df, "test")
         for mols in zip(dl(), ESOL()):
             self.assertDictEqual(mols[0].GetPropsAsDict(), mols[1].GetPropsAsDict())
-            
 
     def test_in_memory_lighning(self):
         from KImie.dataloader.lighning import InMemoryLoader

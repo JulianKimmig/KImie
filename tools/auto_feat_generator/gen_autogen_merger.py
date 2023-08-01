@@ -7,7 +7,6 @@ from KImie.featurizer import molecule_featurizer
 dirs = {"molecule_featurizer": os.path.dirname(molecule_featurizer.__file__)}
 
 for feat_base_class in ["molecule_featurizer"]:
-
     mdir = os.path.dirname(__file__)
     code = ""
     imp_code = "from KImie.featurizer.{mod}  import * \n"

@@ -8,6 +8,12 @@ class TorchGeomTest(KImieTest):
         raise NotImplementedError()
 
     def test_pooling(self):
-        from KImie.nn.graph.pooling import PoolingBase, PoolWeightedSum, PoolMax, PoolMin, PoolMean
+        from KImie.nn.graph.pooling import (
+            PoolingBase,
+            PoolWeightedSum,
+            PoolMax,
+            PoolMin,
+            PoolMean,
+        )
 
         raise NotImplementedError()

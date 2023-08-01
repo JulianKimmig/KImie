@@ -38,7 +38,6 @@ def main():
     df.index.name = "atomic_number"
 
     for symbol, num in ATOMIC_SYMBOL_NUMBERS.items():
-
         # find link by text
         link = table.find("a", text=symbol)
         if link is None:
