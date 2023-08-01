@@ -55,6 +55,9 @@ def _add_filehandler():
     if hasattr(KIMIE_LOGGER, "_kimielogger_filehandler"):
         if KIMIE_LOGGER._kimielogger_filehandler is not None:
             KIMIE_LOGGER.removeHandler(KIMIE_LOGGER._kimielogger_filehandler)
+            if isinstance(KIMIE_LOGGER._kimielogger_filehandler, RotatingFileHandler):
+                KIMIE_LOGGER._kimielogger_filehandler.close()
+
     filehandler = RotatingFileHandler(
         os.path.join(get_user_folder(), "logs", "KImie.csv"),
         maxBytes=2**20,
