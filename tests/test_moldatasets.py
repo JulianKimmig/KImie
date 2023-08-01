@@ -9,6 +9,8 @@ from KImie.dataloader.molecular.ESOL import ESOL
 from KImie.dataloader.molecular.Tox21 import Tox21Train
 from KImie.dataloader.molecular.ChEMBLdb import ChemBLdb29
 from KImie.dataloader.molecular.FreeSolv import FreeSolv_0_51
+from KImie.dataloader.molecular.logp import LogPNadinUlrich
+from KImie.dataloader.molecular.pka import IUPAC_DissociationConstantsV1_0
 
 from KImie.dataloader.molecular.dataloader import MolDataLoader
 from KImie.dataloader.molecular.prepmol import (
@@ -54,8 +56,6 @@ class BaseTestClass:
             expdc = self.loader.expected_data_size
             expmc = self.loader.expected_mol_count
             for m in tqdm(self.loader, total=expdc, mininterval=1):
-                if iter_count % 10_000 == 0:
-                    print(iter_count, end=" ")
                 iter_count += 1
                 if m is not None:
                     mol_count += 1
@@ -120,6 +120,34 @@ class BaseTestClass:
 class ESOLTest(BaseTestClass.DataSetTest):
     DS_NAME = "ESOL"
     DS_CLASS = ESOL
+
+    TEST_DL = False
+    TEST_PREPMOL = True
+    TEST_PREPMOLPROPS = True
+    TEST_PREPMOLADJ = True
+
+    ADJ_TEST_FIRST_SAMPLE = np.array(
+        [[0, 6], [1, 6], [2, 6], [3, 7], [4, 7], [5, 7], [6, 7]]
+    )
+
+
+class IUPAC_DissociationConstantsV1_0Test(BaseTestClass.DataSetTest):
+    DS_NAME = "IUPAC_DissociationConstantsV1_0"
+    DS_CLASS = IUPAC_DissociationConstantsV1_0
+
+    TEST_DL = False
+    TEST_PREPMOL = True
+    TEST_PREPMOLPROPS = True
+    TEST_PREPMOLADJ = True
+
+    ADJ_TEST_FIRST_SAMPLE = np.array(
+        [[0, 6], [1, 6], [2, 6], [3, 7], [4, 7], [5, 7], [6, 7]]
+    )
+
+
+class LogPNadinUlrichTest(BaseTestClass.DataSetTest):
+    DS_NAME = "LogPNadinUlrich"
+    DS_CLASS = LogPNadinUlrich
 
     TEST_DL = False
     TEST_PREPMOL = True
@@ -307,8 +335,10 @@ class BradleyDoublePlusGoodMPTest(BaseTestClass.DataSetTest):
         ]
     )
 
+
 from KImie.dataloader.molecular.nmrshiftdb2 import NMRShiftDB2_1H
+
+
 class NMRShiftDB2_1HTest(BaseTestClass.DataSetTest):
     DS_NAME = "NMRShiftDB2_1H"
     DS_CLASS = NMRShiftDB2_1H
-
