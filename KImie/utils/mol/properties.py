@@ -108,7 +108,7 @@ def _single_call_asset_conformers(data):
 
 
 def parallel_asset_conformers(
-    mols: List[Mol], iterations=100, cores="all-1", progess_bar=True
+    mols: List[Mol], iterations=100, cores="all-1", progess_bar=True, **kwargs
 ):
     return parallelize(
         _single_call_asset_conformers,
@@ -116,4 +116,5 @@ def parallel_asset_conformers(
         cores=cores,
         progess_bar=progess_bar,
         progress_bar_kwargs=dict(unit=" mol"),
+        **kwargs,
     )

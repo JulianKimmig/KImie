@@ -95,4 +95,4 @@ venv.bak/
 .vscode/
 KImie.code-workspace
 
-./dev
+/dev

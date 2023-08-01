@@ -1,4 +1,5 @@
 from KImie.dataloader.molecular.ESOL import ESOL
+from KImie.dataloader.molecular.dataloader import moldataloader_from_df
 from KImie.dataloader.molecular.prepmol import PreparedMolDataLoader
 from KImie.featurizer._molecule_featurizer import check_mol_is_prepared
 
@@ -10,6 +11,13 @@ class MolDataloaderTest(KImieTest):
         laoder = PreparedMolDataLoader(ESOL())
         for mol in laoder:
             assert check_mol_is_prepared(mol)
+
+    def test_moldl_from_df(self):
+        df = ESOL().to_df()
+        dl = moldataloader_from_df(df, "test")
+        for mols in zip(dl(), ESOL()):
+            self.assertDictEqual(mols[0].GetPropsAsDict(), mols[1].GetPropsAsDict())
+            
 
     def test_in_memory_lighning(self):
         from KImie.dataloader.lighning import InMemoryLoader
