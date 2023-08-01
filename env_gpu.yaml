@@ -27,4 +27,5 @@ dependencies:
   #gpu
   - pytorch-cuda
   - pip:
+      - coverage # for pytest-cov
       - chemprop
