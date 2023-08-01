@@ -6,7 +6,7 @@ channels:
 
 dependencies:
   #base
-  - python==3.8
+  - python=3.8
   - rdkit
   - numpy
   - networkx
@@ -20,9 +20,12 @@ dependencies:
   - ipykernel
   - coloredlogs
   - openpyxl
+  - scikit-learn
   - ipywidgets
   #dev
   - pytest
   - black
   #no_gpu
   - cpuonly
+  - pip:
+      - chemprop
