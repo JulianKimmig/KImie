@@ -2,6 +2,7 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from typing import Any, List
 import os
+import numpy as np
 
 from KImie.dataloader.dataloader import DataLoader
 from KImie.dataloader.molecular.dataloader import MolDataLoader
@@ -61,10 +62,10 @@ class Predictor(ABC):
         self.run_train(dl, *args, **kwargs)
 
     @abstractmethod
-    def run_predict(self, data: DataLoader):
+    def run_predict(self, data: DataLoader) -> np.ndarray:
         pass
 
-    def predict(self, data: DataLoader | List[Any], *args, **kwargs):
+    def predict(self, data: DataLoader | List[Any], *args, **kwargs) -> np.ndarray:
         if isinstance(data, DataLoader):
             self.check_dl(data)
         self.prepare_predict()

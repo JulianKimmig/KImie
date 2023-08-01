@@ -3,6 +3,7 @@ import os
 from typing import List
 import sklearn
 from KImie.dataloader.molecular.dataloader import MolDataLoader
+from KImie.predictor import ToManyMolProperties, UnknownMolProperties
 from KImie.predictor.predictor import MolPropertyPredictor
 from KImie.dataloader.dataloader import DataLoader
 import KImie
@@ -29,13 +30,13 @@ class ChempropPredictor(MolPropertyPredictor):
 
         if mol_property is None:
             if len(dl.mol_properties) > 1:
-                raise ValueError(
+                raise ToManyMolProperties(
                     f"mol_property must be specified when there are multiple for {dl} with {dl.mol_properties}"
                 )
             mol_property = dl.mol_properties[0]
 
         if mol_property not in dl.mol_properties:
-            raise ValueError(
+            raise UnknownMolProperties(
                 f"{mol_property} is not a mol_property of {dl} with {dl.mol_properties}"
             )
 
@@ -55,7 +56,7 @@ class ChempropPredictor(MolPropertyPredictor):
         args.gpu = gpu
         cross_validate(args=args, train_func=run_training)
 
-    def run_predict(self, data: DataLoader | List[str]):
+    def run_predict(self, data: DataLoader | List[str]) -> np.ndarray:
         from chemprop.train import make_predictions
         from chemprop.args import PredictArgs
 

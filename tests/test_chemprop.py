@@ -1,5 +1,6 @@
 import os
 import KImie
+from KImie.predictor import ToManyMolProperties, UnknownMolProperties
 from KImie.predictor.chemprop_wrapper import ChempropPredictor
 from tests._kimie_test_base import KImieTest
 import numpy as np
@@ -46,3 +47,15 @@ class ChempropPredictorTest(KImieTest):
 
     def test_predict(self):
         res = self.predictor.predict(self.smiles[:10])
+        self.assertEqual(res.shape, (10,))
+
+    def test_predict_dl(self):
+        res = self.predictor.predict(ESOL())
+        self.assertEqual(res.shape, (ESOL.expected_mol_count,))
+
+    def test_multiple_props(self):
+        with self.assertRaises(ToManyMolProperties):
+            self.predictor.train(dl=self.dl)
+
+        with self.assertRaises(UnknownMolProperties):
+            self.predictor.train(dl=self.dl, mol_property="picklerick")
