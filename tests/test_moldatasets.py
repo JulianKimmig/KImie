@@ -11,6 +11,7 @@ from KImie.dataloader.molecular.ChEMBLdb import ChemBLdb29
 from KImie.dataloader.molecular.FreeSolv import FreeSolv_0_51
 from KImie.dataloader.molecular.logp import LogPNadinUlrich
 from KImie.dataloader.molecular.pka import IUPAC_DissociationConstantsV1_0
+from KImie.dataloader.molecular.flashpoint import MorganFlashpoint
 
 from KImie.dataloader.molecular.dataloader import MolDataLoader
 from KImie.dataloader.molecular.prepmol import (
@@ -134,6 +135,20 @@ class ESOLTest(BaseTestClass.DataSetTest):
 class IUPAC_DissociationConstantsV1_0Test(BaseTestClass.DataSetTest):
     DS_NAME = "IUPAC_DissociationConstantsV1_0"
     DS_CLASS = IUPAC_DissociationConstantsV1_0
+
+    TEST_DL = False
+    TEST_PREPMOL = True
+    TEST_PREPMOLPROPS = True
+    TEST_PREPMOLADJ = True
+
+    ADJ_TEST_FIRST_SAMPLE = np.array(
+        [[0, 6], [1, 6], [2, 6], [3, 7], [4, 7], [5, 7], [6, 7]]
+    )
+
+
+class MorganFlashpointTest(BaseTestClass.DataSetTest):
+    DS_NAME = "MorganFlashpoint"
+    DS_CLASS = MorganFlashpoint
 
     TEST_DL = False
     TEST_PREPMOL = True

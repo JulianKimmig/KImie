@@ -10,6 +10,7 @@ from tqdm import tqdm
 from KImie.dataloader.streamer import DataStreamer
 
 from KImie import get_user_folder, KIMIE_LOGGER
+from KImie.utils.files import string_to_valid_filename
 
 CITED_SOURCES = []
 
@@ -66,6 +67,7 @@ class DataLoader:
                     else:
                         fname = self.source.split("/")[-1]
 
+                    fname = string_to_valid_filename(fname)
                     with open(
                         os.path.join(self.parent_dir, fname), "wb"
                     ) as handle, tqdm(
@@ -84,6 +86,8 @@ class DataLoader:
                         )[0]
                     else:
                         fname = self.source.split("/")[-1]
+
+                    fname = string_to_valid_filename(fname)
 
                     with open(os.path.join(self.parent_dir, fname), "wb") as handle:
                         handle.write(response.content)
@@ -174,5 +178,6 @@ class DataLoader:
         self,
         split: list[float],
         method: str | Callable[[DataLoader, List[float]], list[DataLoader]] = "random",
+        seed=None,
     ) -> list[DataLoader]:
         raise NotImplementedError("split not implemented for this data source")
