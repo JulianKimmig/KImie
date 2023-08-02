@@ -1,7 +1,8 @@
+from __future__ import annotations
 import os
 import re
 import shutil
-from typing import Callable
+from typing import List, Tuple, Dict, Any, Type, Callable
 
 import requests
 from tqdm import tqdm
@@ -20,6 +21,7 @@ class DataLoader:
     data_streamer_generator: Callable = None
     citation = None
     local_source = None
+    default_metric = "rmse"
 
     dl_chunk_size = 2**16
 
@@ -167,3 +169,10 @@ class DataLoader:
 
     def __str__(self):
         return f"{self.__class__.__module__}.{self.__class__.__name__}"
+
+    def split(
+        self,
+        split: list[float],
+        method: str | Callable[[DataLoader, List[float]], list[DataLoader]] = "random",
+    ) -> list[DataLoader]:
+        raise NotImplementedError("split not implemented for this data source")

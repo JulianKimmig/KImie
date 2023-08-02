@@ -1,4 +1,5 @@
-from typing import List
+from __future__ import annotations
+from typing import List, Tuple, Dict, Any, Type, Callable, Literal, Generator
 
 from KImie.dataloader.dataloader import DataLoader
 from KImie.dataloader.streamer import MemoryStreamer
@@ -7,6 +8,7 @@ from rdkit.Chem.PropertyMol import PropertyMol
 import pandas as pd
 
 from KImie.utils.logging import KIMIE_LOGGER
+from KImie.utils.data import normalize_split
 
 
 class MolDataLoader(DataLoader):
@@ -20,6 +22,9 @@ class MolDataLoader(DataLoader):
 
     def __len__(self):
         return self.expected_mol_count
+
+    def __iter__(self) -> Generator[PropertyMol, None, None]:
+        return super().__iter__()
 
     def to_df(self, include_mol=True, smiles="smiles", mols="mol"):
         KIMIE_LOGGER.debug("convert to df")
@@ -87,6 +92,9 @@ class MolDataLoader(DataLoader):
         from rdkit.Chem import MolFromSmiles
         from rdkit.Chem.PropertyMol import PropertyMol
 
+        if len(df) == 0:
+            return df
+
         if mols not in df.columns:
             df[mols] = None
 
@@ -100,6 +108,9 @@ class MolDataLoader(DataLoader):
         df.loc[indices, mols] = df.loc[indices, smiles].apply(MolFromSmiles)
 
         df.drop(df[df[mols].apply(lambda x: x is None)].index, inplace=True)
+
+        if len(df) == 0:
+            return df
 
         if conformers:
             kwargs = dict()
@@ -131,6 +142,76 @@ class MolDataLoader(DataLoader):
                 f.write(cont)
         return cont
 
+    def _split_sorted(self, split: list[float]) -> list[MolDataLoader]:
+        df = self.to_df(smiles="smiles", mols="mol")
+
+        # split
+        splits = []
+        start = 0
+        for s in split:
+            end = start + int(s * len(df))
+            splits.append(df.iloc[start:end].copy())
+            start = end
+
+        # create dataloaders
+        dataloaders: List[MolDataLoader] = []
+        for dfs in splits:
+            dataloaders.append(
+                moldataloader_from_df(
+                    df=dfs,
+                    name=f"{self}_S{'_'.join([str(s) for s in split])}",
+                    smiles="smiles",
+                    mols="mol",
+                    properties=self.mol_properties,
+                )()
+            )
+        return dataloaders
+
+    def _split_random(self, split: list[float], seed=None) -> list[MolDataLoader]:
+        df = self.to_df(smiles="smiles", mols="mol")
+
+        # shuffle
+        df = df.sample(frac=1, random_state=seed).reset_index(drop=True)
+
+        # split
+        splits = []
+        start = 0
+        for s in split:
+            end = start + int(s * len(df))
+            splits.append(df.iloc[start:end].copy())
+            start = end
+
+        # create dataloaders
+        dataloaders: List[MolDataLoader] = []
+        for dfs in splits:
+            dataloaders.append(
+                moldataloader_from_df(
+                    df=dfs,
+                    name=f"{self}_R{'_'.join([str(s) for s in split])}",
+                    smiles="smiles",
+                    mols="mol",
+                    properties=self.mol_properties,
+                )()
+            )
+        return dataloaders
+
+    def split(
+        self,
+        split: list[float],
+        method: Literal["random", "sorted"]
+        | Callable[[DataLoader, List[float]], list[DataLoader]] = "random",
+        seed=None,
+    ) -> list[MolDataLoader]:
+        split = normalize_split(split, n=len(split))
+        if callable(method):
+            return method(self, split)
+        if method == "random":
+            return self._split_random(split, seed=seed)
+        if method == "sorted":
+            return self._split_sorted(split)
+
+        raise NotImplementedError(f"split method {method} not implemented")
+
 
 def moldataloader_from_df(
     df: pd.DataFrame,
@@ -138,7 +219,7 @@ def moldataloader_from_df(
     smiles: str = "smiles",
     mols: str = "mol",
     properties: List[str] = None,
-):
+) -> Type[MolDataLoader]:
     if properties is None:
         properties = [c for c in df.columns]
     if mols in properties:
@@ -165,6 +246,7 @@ def moldataloader_from_df(
             "expected_data_size": len(mols),
             "data_streamer_generator": MemoryStreamer.generator(data=mols),
             "__iter__": lambda self: (i for i in self.data_streamer),
+            "__str__": lambda self: name,
         },
     )
 

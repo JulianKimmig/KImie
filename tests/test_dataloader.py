@@ -1,3 +1,4 @@
+import numpy as np
 from KImie.dataloader.molecular.ESOL import ESOL
 from KImie.dataloader.molecular.dataloader import moldataloader_from_df
 from KImie.dataloader.molecular.prepmol import PreparedMolDataLoader
@@ -76,3 +77,60 @@ class MolDataloaderTest(KImieTest):
 
         # test seed
         raise NotImplementedError()
+
+    def test_random_split(self):
+        dl = ESOL()
+        split = [0.8, 0.1, 0.1]
+        sdl = dl.split(split=split, method="random", seed=42)
+        self.assertEqual(len(sdl), len(split))
+        for i in range(len(split)):
+            self.assertEqual(len(sdl[i]), int(len(dl) * split[i]))
+
+        dldf = dl.to_df()
+        smiles = dldf["smiles"].tolist()
+        smiles1 = sdl[0].to_df()["smiles"].tolist()
+
+        # check if smiles0 is randomly distributed in smiles
+        for s in smiles1:
+            self.assertIn(s, smiles)
+
+        from KImie.utils.tests.dist import wald_wolfowitz_runs_test
+
+        test_result = wald_wolfowitz_runs_test(smiles, smiles1)
+
+        self.assertGreaterEqual(
+            test_result[1],
+            0.05,
+            f"Not randomly distributed,  Test statistic: {test_result[0]}, p-value: {test_result[1]}",
+        )
+
+    def test_sorted_split(self):
+        dl = ESOL()
+        split = [0.8, 0.1, 0.1]
+        sdl = dl.split(split=split, method="sorted", seed=42)
+        self.assertEqual(len(sdl), len(split))
+        for i in range(len(split)):
+            self.assertEqual(len(sdl[i]), int(len(dl) * split[i]))
+
+        dldf = dl.to_df()
+        smiles = dldf["smiles"].tolist()
+        smiles1 = sdl[0].to_df()["smiles"].tolist()
+
+        # check if smiles0 is randomly distributed in smiles
+        for s in smiles1:
+            self.assertIn(s, smiles)
+
+        from KImie.utils.tests.dist import wald_wolfowitz_runs_test
+
+        test_result = wald_wolfowitz_runs_test(smiles, smiles1)
+
+        self.assertLessEqual(
+            test_result[1],
+            0.05,
+            f"Randomly distributed,  Test statistic: {test_result[0]}, p-value: {test_result[1]}",
+        )
+
+        self.assertEqual(
+            smiles1,
+            smiles[: len(smiles1)],
+        )
