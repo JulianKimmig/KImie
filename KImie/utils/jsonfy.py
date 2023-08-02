@@ -30,5 +30,9 @@ def make_json_serializable(data: Any):
     return json.loads(json.dumps(_make_json_serializable(data)))
 
 
-def dumps(data: Any, **kwargs):
+def dumps(data: Any, **kwargs) -> str:
     return json.dumps(make_json_serializable(data), **kwargs)
+
+
+def dump(data: Any, fp, **kwargs):
+    return json.dump(make_json_serializable(data), fp, **kwargs)
