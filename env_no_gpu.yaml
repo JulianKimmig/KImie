@@ -25,8 +25,10 @@ dependencies:
   #dev
   - pytest
   - black
+  - torchmetrics
   #no_gpu
   - cpuonly
   - pip:
       - coverage # for pytest-cov
       - chemprop
+      - tensorboard

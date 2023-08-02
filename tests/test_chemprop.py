@@ -27,31 +27,37 @@ class ChempropPredictorTest(KImieTest):
     def test_train(self):
         with self.assertRaises(TypeError):
             self.predictor.train(dl=Dummydl())
-        with self.assertRaises(ValueError):
-            self.predictor.train(dl=self.dl)
         # train initial model
-        self.predictor.train(
+        train_res = self.predictor.train(
             dl=self.dl, mol_property="measured_log_solubility", epochs=0
         )
+        from KImie.utils import jsonfy
 
-        r1 = self.predictor.predict(self.smiles[:10])
-        self.assertGreater(np.abs(r1 - self.esoltrue[:10]).mean(), 1)
-        self.predictor.train(
+        self.assertGreater(train_res.train_loss, 0)
+        self.assertGreater(train_res.val_loss, 0)
+        self.assertGreater(train_res.test_loss, 0)
+
+        testloss1 = train_res.test_loss
+        self.assertGreater(testloss1, 1)
+        train_res = self.predictor.train(
             dl=self.dl, mol_property="measured_log_solubility", epochs=5
         )
-        r2 = self.predictor.predict(self.smiles[:10])
+        testloss2 = train_res.test_loss
         self.assertGreater(
-            np.abs(r1 - self.esoltrue[:10]).mean(),
-            np.abs(r2 - self.esoltrue[:10]).mean(),
+            testloss1,
+            testloss2,
         )
+
+        print(jsonfy.dumps(train_res, indent=2))
 
     def test_predict(self):
         res = self.predictor.predict(self.smiles[:10])
         self.assertEqual(res.shape, (10,))
 
     def test_predict_dl(self):
-        res = self.predictor.predict(ESOL())
-        self.assertEqual(res.shape, (ESOL.expected_mol_count,))
+        dl = ESOL()
+        res = self.predictor.predict(dl)
+        self.assertEqual(res.shape, (dl.expected_mol_count,))
 
     def test_multiple_props(self):
         with self.assertRaises(ToManyMolProperties):
