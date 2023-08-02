@@ -2,6 +2,7 @@ import pandas as pd
 
 from KImie.dataloader.molecular.dataloader import MolDataLoader
 from KImie.dataloader.molecular.streamer import SDFStreamer
+from KImie.dataloader.molecular.dataloader import MolDataLoader, moldataloader_from_df
 import os
 import numpy as np
 
@@ -55,3 +56,16 @@ class IUPAC_DissociationConstantsV1_0(MolDataLoader):
 
         self.df_to_sdf(df, file=raw_file, mol_col="mol")
         return raw_file
+
+
+def IUPAC_DissociationConstantsV1_0T25_5(*args, **kwargs):
+    ds = IUPAC_DissociationConstantsV1_0()
+    df = IUPAC_DissociationConstantsV1_0().to_df()
+    df = df[(df["T"] <= 30) & (df["T"] >= 20)].copy()
+    df["distTo25"] = np.abs(df["T"] - 25)
+    df.sort_values("distTo25", inplace=True)
+    df = MolDataLoader.df_canonize_smiles(df, smiles="smiles")
+    df.drop_duplicates(subset=["smiles"], inplace=True)
+    df.reset_index(inplace=True, drop=True)
+
+    return moldataloader_from_df(df, f"{ds}T25_5")(*args, **kwargs)
