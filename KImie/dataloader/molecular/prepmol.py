@@ -49,9 +49,11 @@ class PreparedMolDataLoader(MolDataLoader):
                 # for i,mol in enumerate(tqdm(self._mdl,total=self.expected_data_size,desc="generate prepared mols")):
                 #    if mol is None:
                 #        continue
-                pmol = prepare_mol_for_featurization(mol)
-                with open(os.path.join(self.raw_file_path, f"{i}.mol"), "w+b") as f:
-                    pickle.dump(pmol, f)
+                _path = os.path.join(self.raw_file_path, f"{i}.mol")
+                if not os.path.exists(_path):
+                    pmol = prepare_mol_for_featurization(mol)
+                    with open(os.path.join(self.raw_file_path, f"{i}.mol"), "w+b") as f:
+                        pickle.dump(pmol, f)
 
     def _raw_gen(self, desc=None):
         KIMIE_LOGGER.debug("generate raw mols")

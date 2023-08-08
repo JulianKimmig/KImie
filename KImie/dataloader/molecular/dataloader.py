@@ -1,7 +1,7 @@
 from __future__ import annotations
-from typing import List, Tuple, Dict, Any, Type, Callable, Literal, Generator
+from typing import List, Tuple, Dict, Any, Type, Callable, Literal, Generator, TypedDict
 
-from KImie.dataloader.dataloader import DataLoader
+from KImie.dataloader.dataloader import DataLoader, DataFrameLoader, DfStreamer
 from KImie.dataloader.streamer import MemoryStreamer
 
 from rdkit.Chem.PropertyMol import PropertyMol
@@ -9,11 +9,21 @@ import pandas as pd
 
 from KImie.utils.logging import KIMIE_LOGGER
 from KImie.utils.data import normalize_split
+import os
+
+
+class MolDataTarget(TypedDict):
+    field: str
+    task_type: Literal["regression", "classification", "std"]
+    unit: str
+    description: str
 
 
 class MolDataLoader(DataLoader):
     mol_properties: List[str] = None
     expected_mol_count: int = None
+
+    targets: List[MolDataTarget] = None
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -47,11 +57,16 @@ class MolDataLoader(DataLoader):
         return pd.DataFrame(data, columns=datacols)
 
     def to_csv(self, path, *args, **kwargs):
-        KIMIE_LOGGER.debug("convert to csv")
-        df = self.to_df(include_mol=False, *args, **kwargs)
-        df.to_csv(
-            path,
-        )
+        return super().to_csv(path, *args, include_mol=False, **kwargs)
+
+    def loads_csv(self, *args, csv_path=None, **kwargs):
+        if csv_path is None:
+            csv_path = os.path.join(self.parent_dir, "dataframe.csv")
+        if not os.path.exists(csv_path):
+            return self.to_csv(csv_path, *args, **kwargs)
+        df = pd.read_csv(csv_path)
+        df.path = csv_path
+        return df
 
     @classmethod
     def df_canonize_smiles(cls, df, smiles="smiles", mols="mol"):
@@ -211,6 +226,48 @@ class MolDataLoader(DataLoader):
             return self._split_sorted(split)
 
         raise NotImplementedError(f"split method {method} not implemented")
+
+    def to_df_loader(self, path=None):
+        if path is None:
+            path = os.path.join(self.parent_dir, "dataframe.csv")
+        if not os.path.exists(path):
+            self.to_csv(path)
+        return MolDataFrameLoader(
+            path=path,
+        )
+
+
+class MolDataFrameLoader(DataFrameLoader):
+    data_streamer_generator = DfStreamer.generator()
+
+    def smiles(self, col="smiles"):
+        return self.df[col].tolist()
+
+    def selfies(self, col="selfies", smiles="smiles"):
+        if col not in self.df.columns:
+            from KImie.utils.parallelization.multiprocessing import parallelize
+            from KImie.utils.mol.descriptor import batch_smiles_to_selfies
+
+            smiles = self.df[smiles].tolist()
+            self.df[col] = parallelize(batch_smiles_to_selfies, smiles)
+            self.save()
+
+        selfies = self.df[col].tolist()
+        # replace nans with None
+        selfies = [None if type(s) == float else s for s in selfies]
+        return selfies
+
+    def mol(self, smiles="smiles"):
+        if not hasattr(self, "_mols"):
+            from KImie.utils.parallelization.multiprocessing import parallelize
+            from KImie.utils.mol.descriptor import batch_smiles_to_mol
+
+            smiles = self.df[smiles].tolist()
+            self._mols = parallelize(batch_smiles_to_mol, smiles)
+        return self._mols
+
+    def save(self):
+        super().save()
 
 
 def moldataloader_from_df(

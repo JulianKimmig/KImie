@@ -210,7 +210,7 @@ class CSVStreamer(DataStreamer):
 
 
 class MemoryStreamer(DataStreamer):
-    def __init__(self, dataloader, data, *args, cached=False, **kwargs):
+    def __init__(self, dataloader, data, *args, cached=False, mod=None, **kwargs):
         super(MemoryStreamer, self).__init__(
             dataloader,
             *args,
@@ -219,11 +219,17 @@ class MemoryStreamer(DataStreamer):
             progress_bar_kwargs=dict(unit="array", unit_scale=True),
         )
         self._data = data
+        if mod is None:
+            mod = lambda x: x
+        self._mod = mod
+
+    def update_data(self, data):
+        return self._mod(super().update_data(data))
 
     def get_iterator(self):
         def _it():
             for d in self._data:
-                yield d
+                yield self.update_data(d)
 
         return _it()
 
