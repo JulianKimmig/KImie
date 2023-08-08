@@ -28,5 +28,11 @@ class ChemBLdb30(ChemBLdbBase):
     expected_data_size = 2_136_187
 
 
+class ChemBLdb33(ChemBLdbBase):
+    source = "http://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_33/chembl_33.sdf.gz"
+    raw_file = "chembl_33.sdf.gz"
+    expected_data_size = 2_196_377
+
+
 # latest
-ChemBLdbLatest = ChemBLdb30
+ChemBLdbLatest = ChemBLdb33
