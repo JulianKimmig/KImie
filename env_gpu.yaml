@@ -21,6 +21,7 @@ dependencies:
   - coloredlogs
   - openpyxl
   - ipywidgets
+  - pytorch-scatter
   - torchmetrics
   #dev
   - pytest
@@ -31,3 +32,4 @@ dependencies:
       - coverage # for pytest-cov
       - chemprop
       - tensorboard
+      - selfies

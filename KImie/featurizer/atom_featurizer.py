@@ -1,7 +1,7 @@
 import numpy as np
 
 from KImie import KIMIE_LOGGER
-from KImie.featurizer._atom_featurizer import SingleValueAtomFeaturizer
+from KImie.featurizer._atom_featurizer import SingleValueAtomFeaturizer, _AtomFeaturizer
 from KImie.featurizer.featurizer import FeaturizerList
 
 _available_featurizer = {}
@@ -45,7 +45,7 @@ except Exception as e:
     KIMIE_LOGGER.exception(e)
 
 
-class AllSingleValueAtomFeaturizer(FeaturizerList):
+class AllSingleValueAtomFeaturizer(_AtomFeaturizer, FeaturizerList):
     dtype = np.float32
 
     def __init__(self, *args, **kwargs):

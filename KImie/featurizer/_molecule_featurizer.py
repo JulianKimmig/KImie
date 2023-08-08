@@ -8,6 +8,7 @@ from KImie.utils.mol.properties import assert_conformers
 from KImie.featurizer.featurizer import (
     Featurizer,
     FixedSizeFeaturizer,
+    OneHotFeaturizer,
     StringFeaturizer,
 )
 from KImie import KIMIE_LOGGER
@@ -110,3 +111,6 @@ class MoleculeHasSubstructureFeaturizer(SingleValueMoleculeFeaturizer):
 
     def featurize(self, mol):
         return mol.HasSubstructMatch(self._pattern)
+
+class OneHotMoleculeFeaturizer(_MoleculeFeaturizer, OneHotFeaturizer):
+    pass

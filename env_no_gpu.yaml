@@ -16,6 +16,7 @@ dependencies:
   - torchaudio
   - pytorch-lightning>=1.5
   - pyg
+  - pytorch-scatter
   - numba>=0.55
   - ipykernel
   - coloredlogs
@@ -32,3 +33,4 @@ dependencies:
       - coverage # for pytest-cov
       - chemprop
       - tensorboard
+      - selfies

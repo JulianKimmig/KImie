@@ -1,5 +1,5 @@
 from rdkit.Chem.rdchem import Atom
-
+from rdkit.Chem import Mol
 from KImie import KIMIE_LOGGER
 from KImie.featurizer._molecule_featurizer import (
     prepare_mol_for_featurization,
@@ -11,6 +11,8 @@ from KImie.featurizer.featurizer import (
     OneHotFeaturizer,
     StringFeaturizer,
 )
+
+import numpy as np
 
 
 def atom_pre_featurize(featurizer, atom: Atom):
@@ -28,8 +30,6 @@ def atom_pre_featurize(featurizer, atom: Atom):
             )
             featurizer._unprepared_logged = True
 
-        from rdkit.Chem.rdchem import Mol
-
         mol: Mol = prepare_mol_for_featurization(mol, renumber=False)
         atom = mol.GetAtomWithIdx(atom.GetIdx())
     return atom
@@ -40,6 +40,12 @@ class _AtomFeaturizer(Featurizer):
         self._unprepared_logged = False
         super().__init__(*args, **kwargs)
         self.prepend_prefeaturizer(atom_pre_featurize, "atom_pre_featurize")
+
+    def featurize_mol(self, mol: Mol) -> np.ndarray:
+        if not check_mol_is_prepared(mol):
+            mol = prepare_mol_for_featurization(mol)
+
+        return np.array([self(atom) for atom in mol.GetAtoms()])
 
 
 class VarSizeAtomFeaturizer(_AtomFeaturizer, Featurizer):

@@ -1,4 +1,5 @@
-from typing import List, Union, Callable, Any
+from __future__ import annotations
+from typing import List, Union, Callable, Tuple, Any
 from warnings import warn
 
 AS_NUMPY_ARRY = False
@@ -157,14 +158,26 @@ class Featurizer:
 class FixedSizeFeaturizer(Featurizer):
     LENGTH: int = -1
     DESCRIPTION: Union[str, List[str]] = None
+    SHAPE: Union[Tuple[int], List[int]] = None
 
-    def __init__(self, length=None, *args, **kwargs):
+    def __init__(self, length=None, *args, shape=None, **kwargs):
         if length is None and self.LENGTH > 0:
             length = self.LENGTH
         if length is None:
             raise ValueError(
                 f"no length given to {self}, please define via 'LENGTH' as class attribute or via keyword 'length' during initialization"
             )
+        if shape is None:
+            shape = self.SHAPE
+        if shape is None:
+            shape = (length,)
+
+        if shape[0] != length:
+            raise ValueError(
+                f"first dimension of shape {shape} does not match length {length}"
+            )
+        self._shape = shape
+
         self._length = length
         if len(self) <= 0:
             raise ValueError(
@@ -181,6 +194,10 @@ class FixedSizeFeaturizer(Featurizer):
                 )
             )
         return self._length
+
+    @property
+    def shape(self):
+        return self._shape
 
     def __call__(self, to_featurize, **kwargs):
         f = super().__call__(to_featurize, **kwargs)
@@ -212,7 +229,7 @@ class OneHotFeaturizer(FixedSizeFeaturizer):
             possible_values = self.POSSIBLE_VALUES
         if possible_values is None:
             raise ValueError(
-                f"no possible values given to {self}, please define via 'POSSIBLE_VALUES' as class attribute or via keyword 'possible_values' during initialization"
+                f"no possible values given to {self.__class__.__name__}, please define via 'POSSIBLE_VALUES' as class attribute or via keyword 'possible_values' during initialization"
             )
         self._possible_values = possible_values
         kwargs["length"] = len(possible_values)
@@ -226,17 +243,38 @@ class OneHotFeaturizer(FixedSizeFeaturizer):
         d["possible_values"] = self._possible_values
         return d
 
+    def indexmap(self):
+        return {v: i for i, v in enumerate(self._possible_values)}
+
     def _oh_featurize(self, x):
         x = self._ofeaturize(x)
-        if None in self._possible_values and x not in self._possible_values:
-            x = None
-        if x not in self._possible_values:
-            raise OneHotEncodingException(
-                "cannot one hot encode '{}' in '{}', allowed values are {}".format(
-                    x, self, self._possible_values
+        shape = self.shape
+        oh_x = np.zeros(shape, dtype=self.dtype)
+        indexmap = self.indexmap()
+        if len(shape) == 1:
+            if None in self._possible_values and x not in self._possible_values:
+                x = None
+            if x not in self._possible_values:
+                raise OneHotEncodingException(
+                    "cannot one hot encode '{}' in '{}', allowed values are {}".format(
+                        x, self, self._possible_values
+                    )
                 )
-            )
-        return [v == x for v in self._possible_values]
+            oh_x[indexmap[x]] = True
+        else:
+            for i in range(min(len(x), shape[1])):
+                xi = x[i]
+                if None in self._possible_values and xi not in self._possible_values:
+                    xi = None
+                if xi not in self._possible_values:
+                    raise OneHotEncodingException(
+                        "cannot one hot encode '{}' in '{}', allowed values are {}".format(
+                            xi, self, self._possible_values
+                        )
+                    )
+                oh_x[indexmap[xi], i] = True
+
+        return oh_x
 
     def describe_features(self):
         if self._feature_descriptions is None:
